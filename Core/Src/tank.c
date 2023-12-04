@@ -18,8 +18,27 @@ Tank_T greenTank = {
 };
 
 void tank_Init(Tank_T *tank) {
-    tank->xPos = 240;
-    tank->yPos = 60;
+    static uint32_t RNG_Value;
+    tank->bulletNum = 5;
+    if ( HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value) != HAL_OK) {
+        RNG_Value = 0;
+    }
+    tank->direction = RNG_Value % 20;
+    uint8_t xHalfLenOfImage = tank->tankImage[tank->direction].xLen >> 1;
+    uint8_t yHalfLenOfImage = tank->tankImage[tank->direction].yLen >> 1;
+    do{
+        HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
+        tank->xPos = RNG_Value % ScreenXLen;
+        HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
+        tank->yPos = RNG_Value % ScreenYLen;
+    }while( isTankTouchWall( (Point_T){tank->xPos - xHalfLenOfImage,
+                                       tank->yPos - yHalfLenOfImage},
+                             (Point_T){tank->xPos + xHalfLenOfImage - 1,
+                                       tank->yPos - yHalfLenOfImage},
+                             (Point_T){tank->xPos - xHalfLenOfImage,
+                                       tank->yPos + yHalfLenOfImage - 1},
+                             (Point_T){tank->xPos + xHalfLenOfImage - 1,
+                                       tank->yPos + yHalfLenOfImage - 1}) );
 }
 
 void LCD_ClearToBackground(Point_T LeftUp, Point_T RightDown) {
@@ -85,7 +104,7 @@ uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDir
     static Point_T oldPos;
     static Point_T newPos;
     static uint8_t OldXLen, OldYLen, NewXLen, NewYLen;
-    static bool isOld1InRange, isOld2InRange, isOld3InRange, isOld4InRange;
+    static uint8_t isOld1InRange, isOld2InRange, isOld3InRange, isOld4InRange;
     OldXLen = tank->tankImage[tank->direction].xLen;
     OldYLen = tank->tankImage[tank->direction].yLen;
     NewXLen = tank->tankImage[newDirection].xLen;
@@ -199,27 +218,33 @@ uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDir
     return 1;
 }
 
-bool isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4){
+uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4){
     if(     (0 < p1.x && p1.x < ScreenXLen && 0 < p1.y && p1.y < ScreenYLen)
         &&  (0 < p2.x && p2.x < ScreenXLen && 0 < p2.y && p2.y < ScreenYLen)
         &&  (0 < p3.x && p3.x < ScreenXLen && 0 < p3.y && p3.y < ScreenYLen)
         &&  (0 < p4.x && p4.x < ScreenXLen && 0 < p4.y && p4.y < ScreenYLen) ){
-        return false;
+
+        for (uint16_t i = p1.x; i < p2.x; i += wallWidth) if ( isWall(i, p1.y) ) return 1;
+        for (uint16_t i = p3.x; i < p4.x; i += wallWidth) if ( isWall(i, p3.y) ) return 1;
+        for (uint16_t i = p1.y; i < p3.y; i += wallWidth) if ( isWall(p1.x, i) ) return 1;
+        for (uint16_t i = p2.y; i < p4.y; i += wallWidth) if ( isWall(p2.x, i) ) return 1;
+
+        return 0; // not touch wall
     }else{
-        return true;
+        return 1; // touch wall
     }
 }
 
 void drawTank(Tank_T *tank, uint8_t direction) {
-    DirectionAdd_T directionAdd = getDirectionAdd(direction);
-    if ( tankMove_clear(tank, directionAdd, direction) ) {
-        LCD_Fill(tank->xPos - (tank->tankImage[tank->direction].xLen >> 1),
-                 tank->yPos - (tank->tankImage[tank->direction].yLen >> 1),
-                 tank->tankImage[tank->direction].xLen,
-                 tank->tankImage[tank->direction].yLen,
-                 (uint8_t *) tank->tankImage[tank->direction].image);
-        LL_mDelay(1);
+    if ( direction < 20 ) {
+        DirectionAdd_T directionAdd = getDirectionAdd(direction);
+        tankMove_clear(tank, directionAdd, direction);
     }
+    LCD_Fill(tank->xPos - (tank->tankImage[tank->direction].xLen >> 1),
+             tank->yPos - (tank->tankImage[tank->direction].yLen >> 1),
+             tank->tankImage[tank->direction].xLen,
+             tank->tankImage[tank->direction].yLen,
+             (uint8_t *) tank->tankImage[tank->direction].image);
 }
 
 

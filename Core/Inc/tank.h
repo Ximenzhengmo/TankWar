@@ -6,8 +6,8 @@
 #define TANKWAR_TACK_H
 
 #include "lcd_driver.h"
-#include "stdbool.h"
 #include "map.h"
+#include "main.h"
 
 typedef struct{
     int16_t x;
@@ -43,7 +43,7 @@ void tank_Init(Tank_T* tank);
 
 void LCD_ClearToBackground(Point_T LeftUp, Point_T RightDown);
 
-bool isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4);
+uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4);
 
 DirectionAdd_T getDirectionAdd(uint8_t newDirection);
 

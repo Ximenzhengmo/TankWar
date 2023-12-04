@@ -34,7 +34,7 @@ uint8_t get_l_state() {
         x = x * l_x_adjust;
     if (y > 0)
         y = y * l_y_adjust;
-    printf("%d %d\n", x, y);
+//    printf("%d %d\n", x, y);
     //stop condition
     if ((x > -start_edge) && (x < start_edge) && (y < start_edge) && (y > -start_edge))
         return 20;

@@ -27,6 +27,7 @@
 #include "tank.h"
 #include "map.h"
 #include "Touch.h"
+#include "lever_control.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -72,22 +73,25 @@ static void MX_RNG_Init(void);
 uint8_t FPS = 0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 void showTank() {
-    static uint8_t stat = 15;
-    uint8_t test = 0;
-//    tank_Init(&greenTank);
-    greenTank.yPos = 60;
-    greenTank.xPos = 100;
-    redTank.yPos = 60;
-    redTank.xPos = 360;
+    static uint8_t direction_r;
+    static uint8_t direction_l;
+    static uint8_t test = 0;
+    tank_Init(&redTank);
+    tank_Init(&greenTank);
+    direction_l = redTank.direction;
+    direction_r = greenTank.direction;
+
     while (1) {
         FPS++;
+        direction_l = get_l_state();
+        direction_r = get_r_state();
         if( test ) {
-            drawTank(&redTank, stat);
-            drawTank(&greenTank, stat);
+            drawTank(&redTank, direction_l);
+            drawTank(&greenTank, direction_r);
             test = 0;
         }else{
-            drawTank(&greenTank, stat);
-            drawTank(&redTank, stat);
+            drawTank(&greenTank, direction_r);
+            drawTank(&redTank, direction_l);
             test = 1;
         }
     }
@@ -180,7 +184,6 @@ int main(void)
     LCD_Fill(30,20,420,280,gImage_MainMenu);
     drawMap();
     showTank();
-    Touch();
   while (1)
   {
       uint32_t value[2];
