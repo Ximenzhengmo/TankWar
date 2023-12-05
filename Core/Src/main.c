@@ -27,6 +27,7 @@
 #include "tank.h"
 #include "map.h"
 #include "Touch.h"
+#include "bullet.h"
 #include "lever_control.h"
 /* USER CODE END Includes */
 
@@ -75,7 +76,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 void showTank() {
     static uint8_t direction_r;
     static uint8_t direction_l;
-    static uint8_t test = 0;
+    static uint8_t test = 1;
     tank_Init(&redTank);
     tank_Init(&greenTank);
     direction_l = redTank.direction;
@@ -183,6 +184,7 @@ int main(void)
     LCD_Clear(WHITE);	// 蓝色清屏
     LCD_Fill(30,20,420,280,gImage_MainMenu);
     drawMap();
+    LCD_Fill(10,10,7,7,gImage_bullet);
     showTank();
   while (1)
   {
