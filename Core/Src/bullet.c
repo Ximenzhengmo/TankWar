@@ -1,11 +1,333 @@
 #include "bullet.h"
 
-const unsigned char gImage_bullet[] = {
-    0xFF,0xFF,0xFF,0xFF,0x00,0x00,0x00,0x00,0x00,0x00,0xFF,0xFF,0xFF,0xFF,
-    0xFF,0xFF,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xFF,0xFF,
-    0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
-    0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
-    0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
-    0xFF,0xFF,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xFF,0xFF,
-    0xFF,0xFF,0xFF,0xFF,0x00,0x00,0x00,0x00,0x00,0x00,0xFF,0xFF,0xFF,0xFF,
+Bullet_T bullet = {
+        .direction=6,
+        .xPos=20,
+        .yPos=20
 };
+
+const unsigned char gImage_bullet[] = {
+        0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
+        0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF,
+        0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+//const uint8_t bullet_detection[20][2]={
+//        //每个二维数组存储对应方向运动的子弹检测碰撞面的先后，1、2、3、4依次表示上侧、左侧、下侧、右侧
+//        {1,0},{1,2},{1,2},{1,2},{1,2},
+//        {2,0},{2,3},{2,3},{2,3},{2,3},
+//        {3,0},{3,4},{3,4},{3,4},{3,4},
+//        {4,0},{4,1},{4,1},{4,1},{4,1}
+//};
+
+DirectionAdd_T getDirectionAdd_Bullet(uint8_t newDirection) {
+    // 26 * 38   0 ->         y+=-1 ,       y+=-2
+    // 32 * 40  18 ->         y+=-2 , x+=-1 y+=-1
+    // 38 * 40  36 ->   x+=-1 y+=-1 , x+=-1 y+=-2 , x+=-1 y+=-1
+    // 40 * 38  54 ->   x+=-1 y+=-1 , x+=-2 y+=-1 , x+=-1 y+=-1
+    // 40 * 32  72 ->   x+=-1       , x+=-2 y+=-1
+#define DIRECTION_FIRST_DIM_LEN (5)
+    static const DirectionAdd_T directionAdd[DIRECTION_FIRST_DIM_LEN][3] = {
+            {{0,  -1}, {0,  -2}, {0,  0}},
+            {{0,  -2}, {-1, -1}, {0,  0}},
+            {{-1, -1}, {-1, -2}, {-1, -1}},
+            {{-1, -1}, {-2, -1}, {-1, -1}},
+            {{-1, 0},  {-2, -1}, {0,  0}},
+    };
+    static uint8_t subscript[DIRECTION_FIRST_DIM_LEN] = {1, 1, 2, 1, 1};
+    static uint8_t sub;
+    uint8_t degreeMap = newDirection % DIRECTION_FIRST_DIM_LEN;
+    if (degreeMap == 2 || degreeMap == 3) {
+        sub = (subscript[degreeMap] = (subscript[degreeMap] + 1) % 3);
+    } else {
+        sub = (subscript[degreeMap] = (subscript[degreeMap] + 1) % 2);
+    }
+    switch (newDirection / DIRECTION_FIRST_DIM_LEN) {
+        case 0: // [0 , 90)
+            return (DirectionAdd_T) {
+                    .x_add =   directionAdd[degreeMap][sub].x_add,
+                    .y_add =   directionAdd[degreeMap][sub].y_add,
+            };
+            break;
+        case 1: // [90, 180)
+            return (DirectionAdd_T) {
+                    .x_add =  directionAdd[degreeMap][sub].y_add,
+                    .y_add = -directionAdd[degreeMap][sub].x_add,
+            };
+            break;
+        case 2: // [180, 270)
+            return (DirectionAdd_T) {
+                    .x_add = -directionAdd[degreeMap][sub].x_add,
+                    .y_add = -directionAdd[degreeMap][sub].y_add,
+            };
+            break;
+        case 3: // [270, 360)
+            return (DirectionAdd_T) {
+                    .x_add = -directionAdd[degreeMap][sub].y_add,
+                    .y_add =  directionAdd[degreeMap][sub].x_add,
+            };
+            break;
+    }
+}
+
+Bullet_Touch_State isBulletTouchWall(Bullet_T *bullet, Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
+#define boolIsWall(x, y) (isWall(x, y)!=0?1:0)
+    if ((0 < p1.x && p1.x < ScreenXLen && 0 < p1.y && p1.y < ScreenYLen)
+        && (0 < p2.x && p2.x < ScreenXLen && 0 < p2.y && p2.y < ScreenYLen)
+        && (0 < p3.x && p3.x < ScreenXLen && 0 < p3.y && p3.y < ScreenYLen)
+        && (0 < p4.x && p4.x < ScreenXLen && 0 < p4.y && p4.y < ScreenYLen)) {
+        uint8_t direction = bullet->direction;
+        int16_t cent_x = (p1.x + p2.x) >> 1, cent_y = (p1.y + p3.y) >> 1;
+        uint8_t num1 = 0, num2 = 0;
+        switch (direction) {
+            case 0:
+                if (boolIsWall(cent_x + 3, cent_y - 3) || boolIsWall(cent_x, cent_y - 3) ||
+                    boolIsWall(cent_x - 3, cent_y - 3))
+                    return up;
+                else
+                    return notouch;
+            case 5:
+                if (boolIsWall(cent_x - 3, cent_y - 3) || boolIsWall(cent_x - 3, cent_y) ||
+                    boolIsWall(cent_x - 3, cent_y + 3))
+                    return left;
+                else
+                    return notouch;
+            case 10:
+                if (boolIsWall(cent_x - 3, cent_y + 3) || boolIsWall(cent_x, cent_y + 3) ||
+                    boolIsWall(cent_x + 3, cent_y + 3))
+                    return down;
+                else
+                    return notouch;
+            case 15:
+                if (boolIsWall(cent_x + 3, cent_y - 3) || boolIsWall(cent_x + 3, cent_y) ||
+                    boolIsWall(cent_x + 3, cent_y - 3))
+                    return right;
+                else
+                    return notouch;
+            default:
+                if (direction > 0 && direction < 5) {
+                    num1 = boolIsWall(cent_x + 3, cent_y - 3) + boolIsWall(cent_x, cent_y - 3) +
+                           boolIsWall(cent_x - 3, cent_y - 3);
+                    num2 = boolIsWall(cent_x - 3, cent_y + 3) + boolIsWall(cent_x - 3, cent_y) +
+                           boolIsWall(cent_x - 3, cent_y - 3);
+                    if (num1 > num2)
+                        return up;
+                    else if (num1 < num2)
+                        return left;
+                    else if (num1 == 0 && num2 == 0)
+                        return notouch;
+                    else if(num1==num2)
+                        return rebound;
+                } else if (direction > 5 && direction < 10) {
+                    num1 = boolIsWall(cent_x - 3, cent_y + 3) + boolIsWall(cent_x - 3, cent_y) +
+                           boolIsWall(cent_x - 3, cent_y - 3);
+                    num2 = boolIsWall(cent_x - 3, cent_y + 3) + boolIsWall(cent_x, cent_y + 3) +
+                           boolIsWall(cent_x + 3, cent_y + 3);
+                    if (num1 > num2)
+                        return left;
+                    else if (num1 < num2)
+                        return down;
+                    else if (num1 == 0 && num2 == 0)
+                        return notouch;
+                    else if(num1==num2)
+                        return rebound;
+                } else if (direction > 11 && direction < 15) {
+                    num1 = boolIsWall(cent_x - 3, cent_y + 3) + boolIsWall(cent_x, cent_y + 3) +
+                           boolIsWall(cent_x + 3, cent_y + 3);
+                    num2 = boolIsWall(cent_x + 3, cent_y + 3) + boolIsWall(cent_x + 3, cent_y) +
+                           boolIsWall(cent_x + 3, cent_y - 3);
+                    if (num1 > num2)
+                        return down;
+                    else if (num1 < num2)
+                        return right;
+                    else if (num1 == 0 && num2 == 0)
+                        return notouch;
+                    else if(num1==num2)
+                        return rebound;
+                } else {
+                    num1 = boolIsWall(cent_x + 3, cent_y + 3) + boolIsWall(cent_x + 3, cent_y) +
+                           boolIsWall(cent_x + 3, cent_y - 3);
+                    num2 = boolIsWall(cent_x + 3, cent_y - 3) + boolIsWall(cent_x, cent_y - 3) +
+                           boolIsWall(cent_x - 3, cent_y - 3);
+                    if (num1 > num2)
+                        return right;
+                    else if (num1 < num2)
+                        return up;
+                    else if (num1 == 0 && num2 == 0)
+                        return notouch;
+                    else if(num1==num2)
+                        return rebound;
+                }
+        }
+    } else {
+        if (p1.x <= 0)
+            return left;
+        else if (p1.y <= 0)
+            return up;
+        else if (p4.x >= ScreenXLen)
+            return right;
+        else return down; // touch wall
+    }
+}
+
+void BulletBound(Bullet_T *bullet, Bullet_Touch_State state) {
+    switch (state) {
+        case up:
+            bullet->direction = bullet->direction >= 10 ? 30 - bullet->direction : 10 - bullet->direction;
+            break;
+        case down:
+            bullet->direction = bullet->direction >= 10 ? 30 - bullet->direction : 10 - bullet->direction;
+            break;
+        case left:
+            bullet->direction = 20 - bullet->direction;
+            break;
+        case right:
+            bullet->direction = 20 - bullet->direction;
+            break;
+        case rebound:
+            bullet->direction = bullet->direction >= 10 ? 19-bullet->direction : 10+bullet->direction;
+    }
+}
+
+uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd, uint8_t newDirection) {
+#define InRange(pos, pos1, pos4) (((pos).x >= (pos1).x && (pos).x <= (pos4).x) && ((pos).y >= (pos1).y && (pos).y <= (pos4).y))
+    static Point_T old1, old2, old3, old4;
+    static Point_T new1, new2, new3, new4;
+    static Point_T oldPos;
+    static Point_T newPos;
+    static uint8_t XLen, YLen;
+    static uint8_t isOld1InRange, isOld2InRange, isOld3InRange, isOld4InRange;
+    oldPos.x = bullet->xPos;
+    oldPos.y = bullet->yPos;
+    newPos.x = bullet->xPos + directionAdd.x_add;
+    newPos.y = bullet->yPos + directionAdd.y_add;
+    XLen = Bullet_Image_Length;
+    YLen = Bullet_Image_Length;
+    //存疑，子弹的图片大小为奇数,减1是什么意思
+    old1.x = oldPos.x - (XLen >> 1);
+    old1.y = oldPos.y - (YLen >> 1);
+    old2.x = oldPos.x + (XLen >> 1);
+    old2.y = oldPos.y - (YLen >> 1);
+    old3.x = oldPos.x - (XLen >> 1);
+    old3.y = oldPos.y + (YLen >> 1);
+    old4.x = oldPos.x + (XLen >> 1);
+    old4.y = oldPos.y + (YLen >> 1);
+    new1.x = newPos.x - (XLen >> 1);
+    new1.y = newPos.y - (YLen >> 1);
+    new2.x = newPos.x + (XLen >> 1);
+    new2.y = newPos.y - (YLen >> 1);
+    new3.x = newPos.x - (XLen >> 1);
+    new3.y = newPos.y + (YLen >> 1);
+    new4.x = newPos.x + (XLen >> 1);
+    new4.y = newPos.y + (YLen >> 1);
+    //反弹逻辑
+    if (isBulletTouchWall(bullet, new1, new2, new3, new4) != notouch) {
+        BulletBound(bullet, isBulletTouchWall(bullet, new1, new2, new3, new4));
+        return 0;
+    }
+    isOld1InRange = InRange(old1, new1, new4);
+    isOld2InRange = InRange(old2, new1, new4);
+    isOld3InRange = InRange(old3, new1, new4);
+    isOld4InRange = InRange(old4, new1, new4);
+    switch (isOld1InRange + isOld2InRange + isOld3InRange + isOld4InRange) {
+        case 4:
+        case 3:
+            break;
+        case 2:
+            if (isOld1InRange) {
+                if (isOld2InRange) {
+                    LCD_ClearToBackground((Point_T) {old3.x, new3.y}, old4);
+                } else if (isOld3InRange) {
+                    LCD_ClearToBackground((Point_T) {new2.x, old2.y}, old4);
+                } else {
+                    perror("bulletMove_clear error");
+                }
+            } else {
+                if (isOld2InRange) {
+                    LCD_ClearToBackground(old1, (Point_T) {new3.x, old3.y});
+                } else if (isOld3InRange) {
+                    LCD_ClearToBackground(old1, (Point_T) {old2.x, new2.y});
+                } else {
+                    perror("bulletMove_clear error");
+                }
+            }
+            break;
+        case 1:
+            if (isOld1InRange) {
+                LCD_ClearToBackground((Point_T) {new4.x, old1.y}, old4);
+                LCD_ClearToBackground((Point_T) {old3.x, new3.y}, (Point_T) {new4.x, old4.y});
+            } else if (isOld2InRange) {
+                LCD_ClearToBackground(old1, (Point_T) {new1.x, old3.y});
+                LCD_ClearToBackground(new3, old4);
+            } else if (isOld3InRange) {
+                LCD_ClearToBackground(old1, (Point_T) {old2.x, new2.y});
+                LCD_ClearToBackground(new2, old4);
+            } else {
+                LCD_ClearToBackground(old1, (Point_T) {new1.x, old3.y});
+                LCD_ClearToBackground((Point_T) {new1.x, old1.y}, (Point_T) {old2.x, new2.y});
+            }
+            break;
+        case 0:
+//            LCD_Fill(old1.x, old1.y, OldXLen, OldYLen, whiteBackground);
+            if (old1.x <= new1.x && old1.y <= new1.y) {
+                if (old4.x >= new4.x && (old4.y >= new2.y && old4.y <= new4.y)) {
+                    LCD_ClearToBackground(old1, (Point_T) {old2.x, new2.y});
+                    LCD_ClearToBackground((Point_T) {old1.x, new1.y}, (Point_T) {new3.x, old3.y});
+                    LCD_ClearToBackground(new2, old4);
+                } else if (old4.y >= new4.y && old4.x >= new4.x) {
+                    LCD_ClearToBackground(old1, (Point_T) {new3.x, old3.y});
+                    LCD_ClearToBackground((Point_T) {new1.x, old1.y}, (Point_T) {old2.x, new2.y});
+                    LCD_ClearToBackground(new3, old4);
+                    LCD_ClearToBackground(new2, (Point_T) {old4.x, new4.y});
+                } else if (old4.y >= new4.y && (old4.x >= new3.x && old4.x <= new4.x)) {
+                    LCD_ClearToBackground(old1, (Point_T) {new3.x, old3.y});
+                    LCD_ClearToBackground(new3, old4);
+                    LCD_ClearToBackground((Point_T) {new1.x, old1.y}, (Point_T) {old2.x, new2.y});
+                }
+            } else if (old1.x >= new1.x && old1.y <= new1.y) {
+                if (old4.y >= new4.y && old4.x >= new4.x) {
+                    LCD_ClearToBackground(old1, new2);
+                    LCD_ClearToBackground((Point_T) {new2.x, old2.y}, old4);
+                    LCD_ClearToBackground((Point_T) {old3.x, new3.y}, (Point_T) {new4.x, old4.y});
+                } else if (old4.y >= new4.y && (old4.x >= new3.x && old4.x <= new4.x)) {
+                    LCD_ClearToBackground(old1, (Point_T) {old2.x, new2.y});
+                    LCD_ClearToBackground((Point_T) {old3.x, new3.y}, old4);
+                }
+            } else if (old1.x <= new1.x && old1.y >= new1.y) {
+                if (old4.x >= new4.x && (old4.y >= new2.y && old4.y <= new4.y)) {
+                    LCD_ClearToBackground(old1, (Point_T) {new3.x, old3.y});
+                    LCD_ClearToBackground((Point_T) {new2.x, old2.y}, old4);
+                } else if (old4.y >= new4.y && old4.x >= new4.x) {
+                    LCD_ClearToBackground(old1, (Point_T) {new3.x, old3.y});
+                    LCD_ClearToBackground(new3, old4);
+                    LCD_ClearToBackground((Point_T) {new2.x, old2.y}, (Point_T) {old4.x, new4.y});
+                }
+            }
+            break;
+    }
+    bullet->xPos = newPos.x;
+    bullet->yPos = newPos.y;
+//    bullet->direction = newDirection;
+    return 1;
+}
+
+void drawBullet(Bullet_T *bullet, uint8_t direction) {
+    DirectionAdd_T directionAdd = getDirectionAdd_Bullet(direction);
+    bulletMove_clear(bullet, directionAdd, direction);
+    LCD_Fill(bullet->xPos - (Bullet_Image_Length >> 1),
+             bullet->yPos - (Bullet_Image_Length >> 1),
+             Bullet_Image_Length, Bullet_Image_Length,
+             gImage_bullet
+    );
+}
+
+void Bullet_Init(Bullet_T *bullet,int16_t x,int16_t y,uint8_t direction)
+{
+    bullet->xPos=x;
+    bullet->yPos=y;
+    bullet->direction=direction;
+}

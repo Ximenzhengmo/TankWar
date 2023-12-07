@@ -86,6 +86,7 @@ void showTank() {
         FPS++;
         direction_l = get_l_state();
         direction_r = get_r_state();
+        drawBullet(&bullet,bullet.direction);
         if( test ) {
             drawTank(&redTank, direction_l);
             drawTank(&greenTank, direction_r);
@@ -126,6 +127,7 @@ void SPI_DMAWrite(uint8_t *data, uint32_t length) {
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 #ifdef __GNUC__
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
 #else
@@ -184,8 +186,10 @@ int main(void)
     LCD_Clear(WHITE);	// 蓝色清屏
     LCD_Fill(30,20,420,280,gImage_MainMenu);
     drawMap();
-    LCD_Fill(10,10,7,7,gImage_bullet);
-    showTank();
+    //LCD_Fill(10,10,7,7,gImage_bullet);
+    //showTank();
+    //Touch();
+
   while (1)
   {
       uint32_t value[2];

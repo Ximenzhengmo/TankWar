@@ -48,32 +48,22 @@ Touch_StatusTypeDef Touch_Read(TouchTypedef *dst){
     uint8_t instx[3] = {0xd0,0x00,0x00};
     uint8_t insty[3] = {0x90,0x00,0x00};
 
-    uint8_t TxNum = 0, RxNum = 0;
-    while( TxNum < 3 ){
-        if( LL_SPI_IsActiveFlag_TXE(SPI3) ){
-            LL_SPI_TransmitData8(SPI3, instx[TxNum++]);
-        }
+    uint8_t XNum = 0,YNum = 0;
+    while(XNum<3){
+        while(LL_SPI_IsActiveFlag_TXE(SPI3)==0);
+        LL_SPI_TransmitData8(SPI3, instx[XNum++]);
+        while(LL_SPI_IsActiveFlag_BSY(SPI3));
+        while(LL_SPI_IsActiveFlag_RXNE(SPI3)==0);
+        xr[XNum++] = LL_SPI_ReceiveData8(SPI3);
     }
-    while (LL_SPI_IsActiveFlag_BSY(SPI3));
-    while( RxNum < 3 ){
-        if( LL_SPI_IsActiveFlag_RXNE(SPI3) ){
-            xr[RxNum++] = LL_SPI_ReceiveData8(SPI3);
-        }
-    }
-
     dst->Y=(((uint16_t)xr[1]<<8)|xr[2])>>4;
-
-    TxNum=0, RxNum=0;
-    while( TxNum < 3 ){
-        if( LL_SPI_IsActiveFlag_TXE(SPI3) ){
-            LL_SPI_TransmitData8(SPI3, insty[TxNum++]);
-        }
-    }
-    while (LL_SPI_IsActiveFlag_BSY(SPI3));
-    while( RxNum < 3 ){
-        if( LL_SPI_IsActiveFlag_RXNE(SPI3) ){
-            yr[RxNum++] = LL_SPI_ReceiveData8(SPI3);
-        }
+    YNum=0;
+    while(YNum<3) {
+        while(LL_SPI_IsActiveFlag_TXE(SPI3)==0);
+        LL_SPI_TransmitData8(SPI3, insty[YNum++]);
+        while(LL_SPI_IsActiveFlag_BSY(SPI3));
+        while(LL_SPI_IsActiveFlag_RXNE(SPI3)==0);
+        yr[YNum++]=LL_SPI_ReceiveData8(SPI3);
     }
     dst->X=(((uint16_t)yr[1]<<8)|yr[2])>>4;
     LL_GPIO_SetOutputPin(SPI3_CS_TOUCH_GPIO_Port,SPI3_CS_TOUCH_Pin);
