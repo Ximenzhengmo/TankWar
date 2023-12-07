@@ -64,6 +64,9 @@ void LCD_SetWindows(uint16_t xStar, uint16_t yStar, uint16_t xEnd, uint16_t yEnd
 
 void LCD_direction(uint8_t direction);
 
+void SPI_DMAInit();
+
 void SPI_DMAWrite(uint8_t *data, uint32_t length);
+
 
 #endif //CUBE_LCD_DRIVER_H

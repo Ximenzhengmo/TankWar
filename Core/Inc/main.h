@@ -87,8 +87,6 @@ extern ADC_HandleTypeDef hadc2;
 #define LPUART1_RX_GPIO_Port GPIOA
 #define PEN_IRQ_Pin GPIO_PIN_4
 #define PEN_IRQ_GPIO_Port GPIOA
-#define LD2_Pin GPIO_PIN_5
-#define LD2_GPIO_Port GPIOA
 #define SPI3_CS_SDCARD_Pin GPIO_PIN_6
 #define SPI3_CS_SDCARD_GPIO_Port GPIOA
 #define DCRS_Pin GPIO_PIN_11
@@ -103,6 +101,8 @@ extern ADC_HandleTypeDef hadc2;
 #define SPI3_CS_TOUCH_GPIO_Port GPIOD
 #define T_SWO_Pin GPIO_PIN_3
 #define T_SWO_GPIO_Port GPIOB
+#define LeftBTN_right_Pin GPIO_PIN_4
+#define LeftBTN_right_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

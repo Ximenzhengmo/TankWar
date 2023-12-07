@@ -1,10 +1,14 @@
 #include "bullet.h"
 
-Bullet_T bullet = {
+Bullet_T bullets[BulletNumMax];
+
+Bullet_T bullet_test = {
         .direction=6,
         .xPos=20,
         .yPos=20
 };
+
+uint8_t bulletNum = 0;
 
 const unsigned char gImage_bullet[] = {
         0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -16,21 +20,12 @@ const unsigned char gImage_bullet[] = {
         0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-//const uint8_t bullet_detection[20][2]={
-//        //每个二维数组存储对应方向运动的子弹检测碰撞面的先后，1、2、3、4依次表示上侧、左侧、下侧、右侧
-//        {1,0},{1,2},{1,2},{1,2},{1,2},
-//        {2,0},{2,3},{2,3},{2,3},{2,3},
-//        {3,0},{3,4},{3,4},{3,4},{3,4},
-//        {4,0},{4,1},{4,1},{4,1},{4,1}
-//};
-
-DirectionAdd_T getDirectionAdd_Bullet(uint8_t newDirection) {
+DirectionAdd_T getDirectionAdd_Bullet(uint8_t *subscript, uint8_t newDirection) {
     // 26 * 38   0 ->         y+=-1 ,       y+=-2
     // 32 * 40  18 ->         y+=-2 , x+=-1 y+=-1
     // 38 * 40  36 ->   x+=-1 y+=-1 , x+=-1 y+=-2 , x+=-1 y+=-1
     // 40 * 38  54 ->   x+=-1 y+=-1 , x+=-2 y+=-1 , x+=-1 y+=-1
     // 40 * 32  72 ->   x+=-1       , x+=-2 y+=-1
-#define DIRECTION_FIRST_DIM_LEN (5)
     static const DirectionAdd_T directionAdd[DIRECTION_FIRST_DIM_LEN][3] = {
             {{0,  -1}, {0,  -2}, {0,  0}},
             {{0,  -2}, {-1, -1}, {0,  0}},
@@ -38,7 +33,6 @@ DirectionAdd_T getDirectionAdd_Bullet(uint8_t newDirection) {
             {{-1, -1}, {-2, -1}, {-1, -1}},
             {{-1, 0},  {-2, -1}, {0,  0}},
     };
-    static uint8_t subscript[DIRECTION_FIRST_DIM_LEN] = {1, 1, 2, 1, 1};
     static uint8_t sub;
     uint8_t degreeMap = newDirection % DIRECTION_FIRST_DIM_LEN;
     if (degreeMap == 2 || degreeMap == 3) {
@@ -52,35 +46,34 @@ DirectionAdd_T getDirectionAdd_Bullet(uint8_t newDirection) {
                     .x_add =   directionAdd[degreeMap][sub].x_add,
                     .y_add =   directionAdd[degreeMap][sub].y_add,
             };
-            break;
         case 1: // [90, 180)
             return (DirectionAdd_T) {
                     .x_add =  directionAdd[degreeMap][sub].y_add,
                     .y_add = -directionAdd[degreeMap][sub].x_add,
             };
-            break;
         case 2: // [180, 270)
             return (DirectionAdd_T) {
                     .x_add = -directionAdd[degreeMap][sub].x_add,
                     .y_add = -directionAdd[degreeMap][sub].y_add,
             };
-            break;
         case 3: // [270, 360)
             return (DirectionAdd_T) {
                     .x_add = -directionAdd[degreeMap][sub].y_add,
                     .y_add =  directionAdd[degreeMap][sub].x_add,
             };
-            break;
+        default:
+            printf("newDirection = %d\n", newDirection);
+            perror("In bullet.c : getDirectionAdd(uint8_t newDirection) error");
+            return (DirectionAdd_T) {0, 0};
     }
 }
 
-Bullet_Touch_State isBulletTouchWall(Bullet_T *bullet, Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
-#define boolIsWall(x, y) (isWall(x, y)!=0?1:0)
-    if ((0 < p1.x && p1.x < ScreenXLen && 0 < p1.y && p1.y < ScreenYLen)
-        && (0 < p2.x && p2.x < ScreenXLen && 0 < p2.y && p2.y < ScreenYLen)
-        && (0 < p3.x && p3.x < ScreenXLen && 0 < p3.y && p3.y < ScreenYLen)
-        && (0 < p4.x && p4.x < ScreenXLen && 0 < p4.y && p4.y < ScreenYLen)) {
-        uint8_t direction = bullet->direction;
+Bullet_Touch_State getBulletTouchWallState(uint8_t direction, Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
+#define boolIsWall(x, y) (isWall(x, y)!=0) // 0 is not wall, 1 is wall
+    if ((0 <= p1.x && p1.x < ScreenXLen && 0 <= p1.y && p1.y < ScreenYLen)
+        && (0 <= p2.x && p2.x < ScreenXLen && 0 <= p2.y && p2.y < ScreenYLen)
+        && (0 <= p3.x && p3.x < ScreenXLen && 0 <= p3.y && p3.y < ScreenYLen)
+        && (0 <= p4.x && p4.x < ScreenXLen && 0 <= p4.y && p4.y < ScreenYLen)) {
         int16_t cent_x = (p1.x + p2.x) >> 1, cent_y = (p1.y + p3.y) >> 1;
         uint8_t num1 = 0, num2 = 0;
         switch (direction) {
@@ -120,7 +113,7 @@ Bullet_Touch_State isBulletTouchWall(Bullet_T *bullet, Point_T p1, Point_T p2, P
                         return left;
                     else if (num1 == 0 && num2 == 0)
                         return notouch;
-                    else if(num1==num2)
+                    else // if(num1==num2)
                         return rebound;
                 } else if (direction > 5 && direction < 10) {
                     num1 = boolIsWall(cent_x - 3, cent_y + 3) + boolIsWall(cent_x - 3, cent_y) +
@@ -133,9 +126,9 @@ Bullet_Touch_State isBulletTouchWall(Bullet_T *bullet, Point_T p1, Point_T p2, P
                         return down;
                     else if (num1 == 0 && num2 == 0)
                         return notouch;
-                    else if(num1==num2)
+                    else // if(num1==num2)
                         return rebound;
-                } else if (direction > 11 && direction < 15) {
+                } else if (direction > 10 && direction < 15) {
                     num1 = boolIsWall(cent_x - 3, cent_y + 3) + boolIsWall(cent_x, cent_y + 3) +
                            boolIsWall(cent_x + 3, cent_y + 3);
                     num2 = boolIsWall(cent_x + 3, cent_y + 3) + boolIsWall(cent_x + 3, cent_y) +
@@ -146,7 +139,7 @@ Bullet_Touch_State isBulletTouchWall(Bullet_T *bullet, Point_T p1, Point_T p2, P
                         return right;
                     else if (num1 == 0 && num2 == 0)
                         return notouch;
-                    else if(num1==num2)
+                    else // if(num1==num2)
                         return rebound;
                 } else {
                     num1 = boolIsWall(cent_x + 3, cent_y + 3) + boolIsWall(cent_x + 3, cent_y) +
@@ -159,7 +152,7 @@ Bullet_Touch_State isBulletTouchWall(Bullet_T *bullet, Point_T p1, Point_T p2, P
                         return up;
                     else if (num1 == 0 && num2 == 0)
                         return notouch;
-                    else if(num1==num2)
+                    else // if(num1==num2)
                         return rebound;
                 }
         }
@@ -175,25 +168,29 @@ Bullet_Touch_State isBulletTouchWall(Bullet_T *bullet, Point_T p1, Point_T p2, P
 }
 
 void BulletBound(Bullet_T *bullet, Bullet_Touch_State state) {
+    if( bullet->direction > 19 ){
+        printf("in BulletBound: bullet->direction: %d \n", bullet->direction);
+    }
     switch (state) {
         case up:
-            bullet->direction = bullet->direction >= 10 ? 30 - bullet->direction : 10 - bullet->direction;
-            break;
         case down:
-            bullet->direction = bullet->direction >= 10 ? 30 - bullet->direction : 10 - bullet->direction;
+            bullet->direction = bullet->direction > 10 ? 30 - bullet->direction : 10 - bullet->direction;
             break;
         case left:
-            bullet->direction = 20 - bullet->direction;
-            break;
         case right:
             bullet->direction = 20 - bullet->direction;
             break;
         case rebound:
-            bullet->direction = bullet->direction >= 10 ? 19-bullet->direction : 10+bullet->direction;
+            bullet->direction = (bullet->direction + 10) % 20;
+//            bullet->direction = bullet->direction >= 10 ? 19-bullet->direction : 10 + bullet->direction;
+            break;
+        default:
+            perror("notouch error");
+            break;
     }
 }
 
-uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd, uint8_t newDirection) {
+uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd) {
 #define InRange(pos, pos1, pos4) (((pos).x >= (pos1).x && (pos).x <= (pos4).x) && ((pos).y >= (pos1).y && (pos).y <= (pos4).y))
     static Point_T old1, old2, old3, old4;
     static Point_T new1, new2, new3, new4;
@@ -225,8 +222,9 @@ uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd, uint8_t 
     new4.x = newPos.x + (XLen >> 1);
     new4.y = newPos.y + (YLen >> 1);
     //反弹逻辑
-    if (isBulletTouchWall(bullet, new1, new2, new3, new4) != notouch) {
-        BulletBound(bullet, isBulletTouchWall(bullet, new1, new2, new3, new4));
+    Bullet_Touch_State state = getBulletTouchWallState(bullet->direction, new1, new2, new3, new4);
+    if (state != notouch) {
+        BulletBound(bullet, state);
         return 0;
     }
     isOld1InRange = InRange(old1, new1, new4);
@@ -311,13 +309,12 @@ uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd, uint8_t 
     }
     bullet->xPos = newPos.x;
     bullet->yPos = newPos.y;
-//    bullet->direction = newDirection;
     return 1;
 }
 
 void drawBullet(Bullet_T *bullet, uint8_t direction) {
-    DirectionAdd_T directionAdd = getDirectionAdd_Bullet(direction);
-    bulletMove_clear(bullet, directionAdd, direction);
+    DirectionAdd_T directionAdd = getDirectionAdd_Bullet(bullet->subscript, direction);
+    bulletMove_clear(bullet, directionAdd);
     LCD_Fill(bullet->xPos - (Bullet_Image_Length >> 1),
              bullet->yPos - (Bullet_Image_Length >> 1),
              Bullet_Image_Length, Bullet_Image_Length,
@@ -325,9 +322,35 @@ void drawBullet(Bullet_T *bullet, uint8_t direction) {
     );
 }
 
-void Bullet_Init(Bullet_T *bullet,int16_t x,int16_t y,uint8_t direction)
-{
-    bullet->xPos=x;
-    bullet->yPos=y;
-    bullet->direction=direction;
+void Bullet_Init(Bullet_T *bullet, Point_T pos, uint8_t direction, uint32_t CreateTime) {
+    memset(bullet->subscript, 0U, DIRECTION_FIRST_DIM_LEN);
+    bullet->xPos = pos.x;
+    bullet->yPos = pos.y;
+    bullet->direction = direction;
+    bullet->createTime = CreateTime;
+}
+
+void Bullet_Init_random(Bullet_T *bullet) {
+    memset(bullet->subscript, 0U, DIRECTION_FIRST_DIM_LEN);
+    uint32_t RNG_Value = 0;
+    if (HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value) != HAL_OK) {
+        RNG_Value = 0;
+    }
+    bullet->direction = RNG_Value % 20;
+    uint8_t HalfLenOfImage = Bullet_Image_Length >> 1;
+    do {
+        HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
+        bullet->xPos = RNG_Value % ScreenXLen;
+        HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
+        bullet->yPos = RNG_Value % ScreenYLen;
+    } while (notouch != getBulletTouchWallState(bullet->direction,
+                                                (Point_T) {bullet->xPos - HalfLenOfImage,
+                                                           bullet->yPos - HalfLenOfImage},
+                                                (Point_T) {bullet->xPos + HalfLenOfImage,
+                                                           bullet->yPos - HalfLenOfImage},
+                                                (Point_T) {bullet->xPos - HalfLenOfImage,
+                                                           bullet->yPos + HalfLenOfImage},
+                                                (Point_T) {bullet->xPos + HalfLenOfImage,
+                                                           bullet->yPos + HalfLenOfImage}));
+    bullet->createTime = 0xFFFFFFFF;
 }

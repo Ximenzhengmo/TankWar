@@ -102,6 +102,33 @@ void LCD_Clear(uint16_t Color) {
   }
 }
 
+void SPI_DMAInit() {
+    /* Configure the DMA1_Channel3 functional parameters */
+    LL_DMA_ConfigTransfer(DMA1,
+                          LL_DMA_CHANNEL_1,
+                          LL_DMA_DIRECTION_MEMORY_TO_PERIPH | LL_DMA_PRIORITY_HIGH | LL_DMA_MODE_NORMAL |
+                          LL_DMA_PERIPH_NOINCREMENT | LL_DMA_MEMORY_INCREMENT |
+                          LL_DMA_PDATAALIGN_BYTE | LL_DMA_MDATAALIGN_BYTE);
+
+    LL_DMA_SetPeriphRequest(DMA1, LL_DMA_CHANNEL_1, LL_DMAMUX_REQ_SPI3_TX);
+
+    LL_DMA_EnableIT_TC(DMA1, LL_DMA_CHANNEL_1);
+    LL_DMA_EnableIT_TE(DMA1, LL_DMA_CHANNEL_1);
+}
+
+void SPI_DMAWrite(uint8_t *data, uint32_t length) {
+    LL_DMA_ConfigAddresses(DMA1,
+                           LL_DMA_CHANNEL_1,
+                           (uint32_t) data, LL_SPI_DMA_GetRegAddr(SPI3),
+                           LL_DMA_GetDataTransferDirection(DMA1, LL_DMA_CHANNEL_1));
+    LL_DMA_SetDataLength(DMA1, LL_DMA_CHANNEL_1, length);
+
+    /* Configure SPI1 DMA transfer interrupts */
+    /* Enable DMA RX Interrupt */
+    LL_SPI_EnableDMAReq_TX(SPI3);
+    LL_DMA_EnableChannel(DMA1, LL_DMA_CHANNEL_1);
+}
+
 void LCD_Init(void) {
   LCD_WR_REG(0xF0);
   LCD_WR_DATA(0xC3);

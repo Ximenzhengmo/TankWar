@@ -53,7 +53,6 @@ DirectionAdd_T getDirectionAdd(uint8_t newDirection) {
     // 38 * 40  36 ->   x+=-1 y+=-1 , x+=-1 y+=-2 , x+=-1 y+=-1
     // 40 * 38  54 ->   x+=-1 y+=-1 , x+=-2 y+=-1 , x+=-1 y+=-1
     // 40 * 32  72 ->   x+=-1       , x+=-2 y+=-1
-#define DIRECTION_FIRST_DIM_LEN (5)
     static const DirectionAdd_T directionAdd[DIRECTION_FIRST_DIM_LEN][3] = {
             {{0,  -1}, {0,  -2}, {0,  0}},
             {{0, -2}, {-1, -1}, {0,  0}},
@@ -75,25 +74,25 @@ DirectionAdd_T getDirectionAdd(uint8_t newDirection) {
                     .x_add =   directionAdd[degreeMap][sub].x_add,
                     .y_add =   directionAdd[degreeMap][sub].y_add,
             };
-            break;
         case 1: // [90, 180)
             return (DirectionAdd_T) {
                     .x_add =   directionAdd[degreeMap][sub].y_add,
                     .y_add = - directionAdd[degreeMap][sub].x_add,
             };
-            break;
         case 2: // [180, 270)
             return (DirectionAdd_T) {
                     .x_add = -directionAdd[degreeMap][sub].x_add,
                     .y_add = -directionAdd[degreeMap][sub].y_add,
             };
-            break;
         case 3: // [270, 360)
             return (DirectionAdd_T) {
                     .x_add = -directionAdd[degreeMap][sub].y_add,
                     .y_add =  directionAdd[degreeMap][sub].x_add,
             };
-            break;
+        default:
+            printf("newDirection = %d\n", newDirection);
+            perror("In tank.c : getDirectionAdd(uint8_t newDirection) error");
+            return (DirectionAdd_T) {0, 0};
     }
 }
 
@@ -238,13 +237,14 @@ uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4){
 void drawTank(Tank_T *tank, uint8_t direction) {
     if ( direction < 20 ) {
         DirectionAdd_T directionAdd = getDirectionAdd(direction);
-        tankMove_clear(tank, directionAdd, direction);
+        if ( tankMove_clear(tank, directionAdd, direction) ){
+            LCD_Fill(tank->xPos - (tank->tankImage[tank->direction].xLen >> 1),
+                     tank->yPos - (tank->tankImage[tank->direction].yLen >> 1),
+                     tank->tankImage[tank->direction].xLen,
+                     tank->tankImage[tank->direction].yLen,
+                     (uint8_t *) tank->tankImage[tank->direction].image);
+        }
     }
-    LCD_Fill(tank->xPos - (tank->tankImage[tank->direction].xLen >> 1),
-             tank->yPos - (tank->tankImage[tank->direction].yLen >> 1),
-             tank->tankImage[tank->direction].xLen,
-             tank->tankImage[tank->direction].yLen,
-             (uint8_t *) tank->tankImage[tank->direction].image);
 }
 
 

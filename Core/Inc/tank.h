@@ -9,6 +9,8 @@
 #include "map.h"
 #include "main.h"
 
+#define DIRECTION_FIRST_DIM_LEN (5)
+
 typedef struct{
     int16_t x;
     int16_t y;

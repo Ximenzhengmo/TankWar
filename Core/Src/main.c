@@ -38,7 +38,11 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define PCA9554_ADDR (0b0111000 << 1)
+#define PCA9554_INPUT_PORT_REG 0
+#define PCA9554_OUTPUT_PORT_REG 1
+#define PCA9554_POL_INV_REG 2
+#define PCA9554_CONFIG_REG 3
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -50,10 +54,14 @@
 ADC_HandleTypeDef hadc1;
 ADC_HandleTypeDef hadc2;
 
+I2C_HandleTypeDef hi2c3;
+
 UART_HandleTypeDef hlpuart1;
 
 RNG_HandleTypeDef hrng;
 
+TIM_HandleTypeDef htim4;
+TIM_HandleTypeDef htim5;
 TIM_HandleTypeDef htim6;
 
 /* USER CODE BEGIN PV */
@@ -70,59 +78,11 @@ static void MX_TIM6_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_ADC2_Init(void);
 static void MX_RNG_Init(void);
+static void MX_TIM4_Init(void);
+static void MX_TIM5_Init(void);
+static void MX_I2C3_Init(void);
 /* USER CODE BEGIN PFP */
-uint8_t FPS = 0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
-void showTank() {
-    static uint8_t direction_r;
-    static uint8_t direction_l;
-    static uint8_t test = 1;
-    tank_Init(&redTank);
-    tank_Init(&greenTank);
-    direction_l = redTank.direction;
-    direction_r = greenTank.direction;
-
-    while (1) {
-        FPS++;
-        direction_l = get_l_state();
-        direction_r = get_r_state();
-        drawBullet(&bullet,bullet.direction);
-        if( test ) {
-            drawTank(&redTank, direction_l);
-            drawTank(&greenTank, direction_r);
-            test = 0;
-        }else{
-            drawTank(&greenTank, direction_r);
-            drawTank(&redTank, direction_l);
-            test = 1;
-        }
-    }
-}
-void SPI_DMAInit() {
-    /* Configure the DMA1_Channel3 functional parameters */
-    LL_DMA_ConfigTransfer(DMA1,
-                          LL_DMA_CHANNEL_1,
-                          LL_DMA_DIRECTION_MEMORY_TO_PERIPH | LL_DMA_PRIORITY_HIGH | LL_DMA_MODE_NORMAL |
-                          LL_DMA_PERIPH_NOINCREMENT | LL_DMA_MEMORY_INCREMENT |
-                          LL_DMA_PDATAALIGN_BYTE | LL_DMA_MDATAALIGN_BYTE);
-
-    LL_DMA_SetPeriphRequest(DMA1, LL_DMA_CHANNEL_1, LL_DMAMUX_REQ_SPI3_TX);
-
-    LL_DMA_EnableIT_TC(DMA1, LL_DMA_CHANNEL_1);
-    LL_DMA_EnableIT_TE(DMA1, LL_DMA_CHANNEL_1);
-}
-void SPI_DMAWrite(uint8_t *data, uint32_t length) {
-    LL_DMA_ConfigAddresses(DMA1,
-                           LL_DMA_CHANNEL_1,
-                           (uint32_t) data, LL_SPI_DMA_GetRegAddr(SPI3),
-                           LL_DMA_GetDataTransferDirection(DMA1, LL_DMA_CHANNEL_1));
-    LL_DMA_SetDataLength(DMA1, LL_DMA_CHANNEL_1, length);
-
-    /* Configure SPI1 DMA transfer interrupts */
-    /* Enable DMA RX Interrupt */
-    LL_SPI_EnableDMAReq_TX(SPI3);
-    LL_DMA_EnableChannel(DMA1, LL_DMA_CHANNEL_1);
-}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -137,6 +97,56 @@ PUTCHAR_PROTOTYPE
 {
     HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, 0xFFFF);
     return ch;
+}
+
+uint8_t FPS = 0;
+void gameBegin() {
+    static uint8_t direction_r;
+    static uint8_t direction_l;
+    static uint8_t test = 1;
+    tank_Init(&redTank);
+    tank_Init(&greenTank);
+    direction_l = redTank.direction;
+    direction_r = greenTank.direction;
+    for (int i = 0; i < BulletNumMax; ++i) {
+        Bullet_Init_random(&bullets[i]);
+    }
+    uint32_t loopTime = 0;
+    while (1) {
+        FPS++;
+       //if(HAL_GPIO_ReadPin(L_SHOOT_BTN_GPIO_Port,L_SHOOT_BTN_Pin)==SET)
+         //  printf("yes\n");
+        loopTime = HAL_GetTick();
+        direction_l = get_l_state();
+        direction_r = get_r_state();
+        for (int i = 0; i < BulletNumMax; ++i) {
+            drawBullet(&bullets[i],bullets[i].direction);
+        }
+        if( test ) {
+            drawTank(&redTank, direction_l);
+            drawTank(&greenTank, direction_r);
+            test = 0;
+        }else{
+            drawTank(&greenTank, direction_r);
+            drawTank(&redTank, direction_l);
+            test = 1;
+        }
+        loopTime = HAL_GetTick() - loopTime;
+        if( loopTime < 1000 / 60 ) {
+            HAL_Delay(1000 / 60 - loopTime);
+        }
+    }
+}
+
+uint8_t keyDownTest(){
+    static uint8_t dataBuffer[1] = {0};
+    HAL_I2C_Mem_Read(&hi2c3, PCA9554_ADDR, PCA9554_INPUT_PORT_REG, I2C_MEMADD_SIZE_8BIT, dataBuffer,1,0xff);
+    //if ((( ~dataBuffer[0]) & 1)>0)
+    if(dataBuffer[0]==253)
+        return 1;
+    else
+        return 0;
+
 }
 /* USER CODE END 0 */
 
@@ -174,6 +184,9 @@ int main(void)
   MX_ADC1_Init();
   MX_ADC2_Init();
   MX_RNG_Init();
+  MX_TIM4_Init();
+  MX_TIM5_Init();
+  MX_I2C3_Init();
   /* USER CODE BEGIN 2 */
     SPI_DMAInit();
   /* USER CODE END 2 */
@@ -186,10 +199,8 @@ int main(void)
     LCD_Clear(WHITE);	// 蓝色清屏
     LCD_Fill(30,20,420,280,gImage_MainMenu);
     drawMap();
-    //LCD_Fill(10,10,7,7,gImage_bullet);
-    //showTank();
-    //Touch();
-
+    gameBegin();
+    Touch();
   while (1)
   {
       uint32_t value[2];
@@ -283,13 +294,14 @@ static void MX_ADC1_Init(void)
   hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
   hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
-  hadc1.Init.ContinuousConvMode = ENABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.NbrOfConversion = 2;
-  hadc1.Init.DiscontinuousConvMode = DISABLE;
+  hadc1.Init.DiscontinuousConvMode = ENABLE;
+  hadc1.Init.NbrOfDiscConversion = 1;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.DMAContinuousRequests = DISABLE;
-  hadc1.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
+  hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
   hadc1.Init.OversamplingMode = DISABLE;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
   {
@@ -308,7 +320,7 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_8;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_6CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
@@ -359,13 +371,14 @@ static void MX_ADC2_Init(void)
   hadc2.Init.ScanConvMode = ADC_SCAN_ENABLE;
   hadc2.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc2.Init.LowPowerAutoWait = DISABLE;
-  hadc2.Init.ContinuousConvMode = ENABLE;
+  hadc2.Init.ContinuousConvMode = DISABLE;
   hadc2.Init.NbrOfConversion = 2;
-  hadc2.Init.DiscontinuousConvMode = DISABLE;
+  hadc2.Init.DiscontinuousConvMode = ENABLE;
+  hadc2.Init.NbrOfDiscConversion = 1;
   hadc2.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc2.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc2.Init.DMAContinuousRequests = DISABLE;
-  hadc2.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
+  hadc2.Init.Overrun = ADC_OVR_DATA_PRESERVED;
   hadc2.Init.OversamplingMode = DISABLE;
   if (HAL_ADC_Init(&hadc2) != HAL_OK)
   {
@@ -376,7 +389,7 @@ static void MX_ADC2_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_1;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_6CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
@@ -396,6 +409,54 @@ static void MX_ADC2_Init(void)
   /* USER CODE BEGIN ADC2_Init 2 */
 //    HAL_ADC_Start(&hadc2);
   /* USER CODE END ADC2_Init 2 */
+
+}
+
+/**
+  * @brief I2C3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C3_Init(void)
+{
+
+  /* USER CODE BEGIN I2C3_Init 0 */
+
+  /* USER CODE END I2C3_Init 0 */
+
+  /* USER CODE BEGIN I2C3_Init 1 */
+
+  /* USER CODE END I2C3_Init 1 */
+  hi2c3.Instance = I2C3;
+  hi2c3.Init.Timing = 0x307075B1;
+  hi2c3.Init.OwnAddress1 = 0;
+  hi2c3.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c3.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c3.Init.OwnAddress2 = 0;
+  hi2c3.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+  hi2c3.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c3.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Analogue filter
+  */
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c3, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Digital filter
+  */
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c3, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C3_Init 2 */
+
+  /* USER CODE END I2C3_Init 2 */
 
 }
 
@@ -565,6 +626,96 @@ static void MX_SPI3_Init(void)
 }
 
 /**
+  * @brief TIM4 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM4_Init(void)
+{
+
+  /* USER CODE BEGIN TIM4_Init 0 */
+
+  /* USER CODE END TIM4_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM4_Init 1 */
+
+  /* USER CODE END TIM4_Init 1 */
+  htim4.Instance = TIM4;
+  htim4.Init.Prescaler = 1200-1;
+  htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim4.Init.Period = 99;
+  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
+  if (HAL_TIM_Base_Init(&htim4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim4, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM4_Init 2 */
+    HAL_TIM_Base_Start_IT(&htim4);
+  /* USER CODE END TIM4_Init 2 */
+
+}
+
+/**
+  * @brief TIM5 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM5_Init(void)
+{
+
+  /* USER CODE BEGIN TIM5_Init 0 */
+
+  /* USER CODE END TIM5_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM5_Init 1 */
+
+  /* USER CODE END TIM5_Init 1 */
+  htim5.Instance = TIM5;
+  htim5.Init.Prescaler = 1200-1;
+  htim5.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim5.Init.Period = 999;
+  htim5.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim5.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
+  if (HAL_TIM_Base_Init(&htim5) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim5, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim5, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM5_Init 2 */
+    HAL_TIM_Base_Start_IT(&htim5);
+  /* USER CODE END TIM5_Init 2 */
+
+}
+
+/**
   * @brief TIM6 Initialization Function
   * @param None
   * @retval None
@@ -639,7 +790,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LD2_Pin|SPI3_CS_SDCARD_Pin|DCRS_Pin|SPI3_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, SPI3_CS_SDCARD_Pin|DCRS_Pin|SPI3_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(SPI3_CS_TOUCH_GPIO_Port, SPI3_CS_TOUCH_Pin, GPIO_PIN_RESET);
@@ -655,13 +806,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(PEN_IRQ_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : LD2_Pin */
-  GPIO_InitStruct.Pin = LD2_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : SPI3_CS_SDCARD_Pin SPI3_CS_Pin */
   GPIO_InitStruct.Pin = SPI3_CS_SDCARD_Pin|SPI3_CS_Pin;
@@ -684,6 +828,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(SPI3_CS_TOUCH_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : LeftBTN_right_Pin */
+  GPIO_InitStruct.Pin = LeftBTN_right_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(LeftBTN_right_GPIO_Port, &GPIO_InitStruct);
+
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
@@ -694,7 +844,63 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-    if( htim->Instance == TIM6 ) {
+typedef enum{
+    key_up,
+    key_upping,
+    key_downing,
+    key_down
+} KEY_STATE;
+    static KEY_STATE L_btn_state = key_up;
+    static KEY_STATE L_btn_state_last = key_up;
+    static KEY_STATE R_btn_state = key_up;
+    static KEY_STATE R_btn_state_last = key_up;
+    if( htim->Instance == TIM4) {
+        if( L_btn_state == key_down && L_btn_state_last != L_btn_state ) {
+            printf("left\n");
+        }
+        L_btn_state_last = L_btn_state;
+        if( R_btn_state == key_down && R_btn_state_last != R_btn_state ) {
+            printf("right\n");
+        }
+        R_btn_state_last = R_btn_state;
+    }else if ( htim->Instance == TIM5 ){
+        if( HAL_GPIO_ReadPin(LeftBTN_right_GPIO_Port, LeftBTN_right_Pin) == GPIO_PIN_RESET )
+        {
+            if (L_btn_state == key_up)
+                L_btn_state = key_downing;
+            else if (L_btn_state == key_downing)
+                L_btn_state = key_down;
+            else if (L_btn_state == key_upping)
+                L_btn_state = key_down;
+        }
+        if( HAL_GPIO_ReadPin(LeftBTN_right_GPIO_Port, LeftBTN_right_Pin) == GPIO_PIN_SET )
+        {
+            if (L_btn_state == key_down)
+                L_btn_state = key_upping;
+            else if (L_btn_state == key_upping)
+                L_btn_state = key_up;
+            else if (L_btn_state == key_downing)
+                L_btn_state = key_up;
+        }
+        if( keyDownTest() == 1 )
+        {
+            if (R_btn_state == key_up)
+                R_btn_state = key_downing;
+            else if (R_btn_state == key_downing)
+                R_btn_state = key_down;
+            else if (R_btn_state == key_upping)
+                R_btn_state = key_down;
+        }
+        if( keyDownTest() == 0)
+        {
+            if (R_btn_state == key_down)
+                R_btn_state = key_upping;
+            else if (R_btn_state == key_upping)
+                R_btn_state = key_up;
+            else if (R_btn_state == key_downing)
+                R_btn_state = key_up;
+        }
+    }else if( htim->Instance == TIM6 ) {
         printf("%d\n", FPS);
         FPS = 0;
     }
