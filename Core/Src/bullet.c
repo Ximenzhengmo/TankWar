@@ -62,8 +62,6 @@ DirectionAdd_T getDirectionAdd_Bullet(uint8_t *subscript, uint8_t newDirection) 
                     .y_add =  directionAdd[degreeMap][sub].x_add,
             };
         default:
-            printf("newDirection = %d\n", newDirection);
-            perror("In bullet.c : getDirectionAdd(uint8_t newDirection) error");
             return (DirectionAdd_T) {0, 0};
     }
 }
@@ -227,6 +225,11 @@ uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd) {
         BulletBound(bullet, state);
         return 0;
     }
+    bullet->xPos = newPos.x;
+    bullet->yPos = newPos.y;
+    if ( bullet->ifDraw == 0 ){
+        return 0;
+    }
     isOld1InRange = InRange(old1, new1, new4);
     isOld2InRange = InRange(old2, new1, new4);
     isOld3InRange = InRange(old3, new1, new4);
@@ -307,14 +310,13 @@ uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd) {
             }
             break;
     }
-    bullet->xPos = newPos.x;
-    bullet->yPos = newPos.y;
     return 1;
 }
 
 void drawBullet(Bullet_T *bullet, uint8_t direction) {
     DirectionAdd_T directionAdd = getDirectionAdd_Bullet(bullet->subscript, direction);
     bulletMove_clear(bullet, directionAdd);
+    if( bullet->ifDraw == 0 ) return;
     LCD_Fill(bullet->xPos - (Bullet_Image_Length >> 1),
              bullet->yPos - (Bullet_Image_Length >> 1),
              Bullet_Image_Length, Bullet_Image_Length,
@@ -322,12 +324,55 @@ void drawBullet(Bullet_T *bullet, uint8_t direction) {
     );
 }
 
-void Bullet_Init(Bullet_T *bullet, Point_T pos, uint8_t direction, uint32_t CreateTime) {
-    memset(bullet->subscript, 0U, DIRECTION_FIRST_DIM_LEN);
-    bullet->xPos = pos.x;
-    bullet->yPos = pos.y;
-    bullet->direction = direction;
+void Bullets_Init() {
+    for( uint8_t i = 0 ; i < BulletNumMax ; i++ ){
+        memset(bullets[i].subscript, 0U, DIRECTION_FIRST_DIM_LEN);
+        bullets[i].direction = 20;
+        bullets[i].xPos = -1;
+        bullets[i].yPos = -1;
+        bullets[i].createTime = 0xFFFFFFFF;
+        bullets[i].owner = NULL;
+        bullets[i].ifDraw = 1;
+    }
+}
+
+void BulletShoot(Tank_T* tank){
+    if(tank->bulletNum > 0){
+        for (uint8_t i = 0; i < BulletNumMax; ++i) {
+            if(bullets[i].owner == NULL){
+                Bullet_Create(&bullets[i], tank, HAL_GetTick());
+                bullets[i].ifDraw = 0;
+                for (int j = 0; j < Bullet_Create_Loop_Num; ++j) {
+                    drawBullet(&bullets[i], bullets[i].direction);
+                }
+                bullets[i].ifDraw = 1;
+                break;
+            }
+        }
+    }
+}
+
+void Bullet_Create(Bullet_T *bullet, Tank_T* owner, uint32_t CreateTime){
+    bullet->xPos = owner->xPos;
+    bullet->yPos = owner->yPos;
+    bullet->direction = owner->direction;
     bullet->createTime = CreateTime;
+    bullet->owner = owner;
+    owner->bulletNum--;
+    bulletNum++;
+}
+
+void Bullet_Destroy(Bullet_T *bullet) {
+    if( bullet->owner != NULL ){
+        bullet->owner->bulletNum++;
+        bullet->owner = NULL;
+    }
+    LCD_Fill(bullet->xPos - (Bullet_Image_Length >> 1),
+             bullet->yPos - (Bullet_Image_Length >> 1),
+             Bullet_Image_Length, Bullet_Image_Length,
+             whiteBackground
+    );
+    bulletNum--;
 }
 
 void Bullet_Init_random(Bullet_T *bullet) {

@@ -8,6 +8,7 @@
 #include "lcd_driver.h"
 #include "map.h"
 #include "main.h"
+//#include "bullet.h"
 
 #define DIRECTION_FIRST_DIM_LEN (5)
 

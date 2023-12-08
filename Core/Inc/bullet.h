@@ -6,14 +6,17 @@
 
 #define DIRECTION_FIRST_DIM_LEN (5)
 #define Bullet_Image_Length 7
-#define BulletNumMax 6
+#define BulletNumMax 10
 #define Bullet_Life_Time_ms 10000
+#define Bullet_Create_Loop_Num 11
 
 typedef enum Bullet_Touch_State{
     up,down,left,right,notouch,rebound
 }Bullet_Touch_State;
 
 typedef struct Bullet_T {
+    Tank_T* owner;
+    uint8_t ifDraw;
     uint8_t subscript[5];
     uint8_t direction;
     int16_t xPos;
@@ -37,7 +40,13 @@ uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd) ;
 
 void drawBullet(Bullet_T *bullet, uint8_t direction);
 
-void Bullet_Init(Bullet_T *bullet, Point_T pos, uint8_t direction, uint32_t CreateTime);
+void Bullets_Init();
+
+void BulletShoot(Tank_T* tank);
+
+void Bullet_Create(Bullet_T *bullet, Tank_T* owner, uint32_t CreateTime);
+
+void Bullet_Destroy(Bullet_T *bullet);
 
 void Bullet_Init_random(Bullet_T* bullet);
 #endif //TANKWAR_BULLET_H

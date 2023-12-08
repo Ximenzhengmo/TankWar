@@ -37,8 +37,13 @@ void SPI_WriteByte(uint8_t data) {
 
 void Lcd_WriteData_16Bit(uint16_t Data) {
   LCD_RS_SET();
+#ifdef USE_DMA
   SPI_WriteByte(Data >> 8);
   SPI_WriteByte(Data);
+#else
+    SPI_WriteByte(Data);
+    SPI_WriteByte(Data >> 8);
+#endif
 }
 
 void LCD_Fill(uint16_t xpos, uint16_t ypos, uint16_t xlen, uint16_t ylen, const uint8_t *src) {
@@ -53,9 +58,14 @@ void LCD_Fill(uint16_t xpos, uint16_t ypos, uint16_t xlen, uint16_t ylen, const 
     }
   }
 #else
-    uint8_t * srcPtr = src;
+    if( xpos >= LCD_H || ypos >= LCD_W || xpos + xlen >= LCD_H || ypos + ylen >= LCD_W ) {
+        printf("error in LCD_fill\n");
+        return;
+    }
+    const uint8_t * srcPtr = src;
     uint32_t len = (uint32_t)(xlen)*ylen*2;
-    uint32_t step = 50;
+
+    uint32_t step = 0xFFFF;
     LCD_SetWindows(xpos, ypos, xpos + xlen - 1, ypos + ylen - 1);
     while( len > step ) {
         LCD_RS_SET();

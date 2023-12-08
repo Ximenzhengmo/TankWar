@@ -39,7 +39,6 @@ Touch_StatusTypeDef Touch_Read(TouchTypedef *dst){
         dst->isPressed=0;
         return TOUCH_TIMEOUT;
     }
-    SPI_SwapBitMode(SPI3,NULL,LL_SPI_DATAWIDTH_8BIT);
     LL_GPIO_ResetOutputPin(SPI3_CS_TOUCH_GPIO_Port,SPI3_CS_TOUCH_Pin);
 
     uint8_t xr[3];
@@ -79,7 +78,7 @@ void Touch(void)
     for(;;){
         Touch_Read(&user_touch);
         if(user_touch.isPressed){
-            printf("%d %d\n",user_touch.X/10-2,user_touch.Y/10-2);
+            printf("%d %d\n",user_touch.X,user_touch.Y);
         }
     }
 }

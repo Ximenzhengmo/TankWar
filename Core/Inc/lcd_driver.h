@@ -2,7 +2,7 @@
 #define CUBE_LCD_DRIVER_H
 
 #include "main.h"
-#define USE_DMA
+//#define USE_DMA
 typedef struct {
     uint16_t width;     //LCD 宽度
     uint16_t height;    //LCD 高度

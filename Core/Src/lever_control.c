@@ -1,15 +1,15 @@
 #include "lever_control.h"
 #include "main.h"
 
-const float r_tang[5] = {0.32, 0.73, 1, 1.37, 3.07};
+const float r_tang[5] = {0.32F, 0.73F, 1, 1.37F, 3.07F};
 
-const float l_tang[5] = {0.32, 0.73, 1, 1.37, 3.07};
+const float l_tang[5] = {0.32F, 0.73F, 1, 1.37F, 3.07F};
 
 //coordinate adjust
-const float l_x_adjust = 0.87;
-const float l_y_adjust = 0.78;
-const float r_x_adjust = 0.89;
-const float r_y_adjust = 0.77;
+const float l_x_adjust = 0.87F;
+const float l_y_adjust = 0.78F;
+const float r_x_adjust = 0.89F;
+const float r_y_adjust = 0.77F;
 
 uint8_t get_l_state() {
     uint16_t value[2];

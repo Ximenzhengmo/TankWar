@@ -106,21 +106,19 @@ void gameBegin() {
     static uint8_t test = 1;
     tank_Init(&redTank);
     tank_Init(&greenTank);
+    Bullets_Init();
     direction_l = redTank.direction;
     direction_r = greenTank.direction;
-    for (int i = 0; i < BulletNumMax; ++i) {
-        Bullet_Init_random(&bullets[i]);
-    }
-    uint32_t loopTime = 0;
+    uint32_t loopStartTick = 0, loopEndTick = 0;
     while (1) {
         FPS++;
-       //if(HAL_GPIO_ReadPin(L_SHOOT_BTN_GPIO_Port,L_SHOOT_BTN_Pin)==SET)
-         //  printf("yes\n");
-        loopTime = HAL_GetTick();
+        loopStartTick = HAL_GetTick();
         direction_l = get_l_state();
         direction_r = get_r_state();
         for (int i = 0; i < BulletNumMax; ++i) {
-            drawBullet(&bullets[i],bullets[i].direction);
+            if( bullets[i].owner != NULL ) {
+                drawBullet(&bullets[i], bullets[i].direction);
+            }
         }
         if( test ) {
             drawTank(&redTank, direction_l);
@@ -131,9 +129,18 @@ void gameBegin() {
             drawTank(&redTank, direction_l);
             test = 1;
         }
-        loopTime = HAL_GetTick() - loopTime;
-        if( loopTime < 1000 / 60 ) {
-            HAL_Delay(1000 / 60 - loopTime);
+
+        loopEndTick = HAL_GetTick();
+        for (uint8_t i = 0; i < BulletNumMax; ++i) {
+            if( bullets[i].owner != NULL ){
+                if( loopEndTick - bullets[i].createTime > Bullet_Life_Time_ms ){
+
+                    Bullet_Destroy(&bullets[i]);
+                }
+            }
+        }
+        if(loopEndTick - loopStartTick < 1000 / 60 ) {
+            HAL_Delay(1000 / 60 - ( loopEndTick-  loopStartTick));
         }
     }
 }
@@ -612,7 +619,7 @@ static void MX_SPI3_Init(void)
   SPI_InitStruct.ClockPolarity = LL_SPI_POLARITY_LOW;
   SPI_InitStruct.ClockPhase = LL_SPI_PHASE_1EDGE;
   SPI_InitStruct.NSS = LL_SPI_NSS_SOFT;
-  SPI_InitStruct.BaudRate = LL_SPI_BAUDRATEPRESCALER_DIV32;
+  SPI_InitStruct.BaudRate = LL_SPI_BAUDRATEPRESCALER_DIV16;
   SPI_InitStruct.BitOrder = LL_SPI_MSB_FIRST;
   SPI_InitStruct.CRCCalculation = LL_SPI_CRCCALCULATION_DISABLE;
   SPI_InitStruct.CRCPoly = 7;
@@ -790,10 +797,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, SPI3_CS_SDCARD_Pin|DCRS_Pin|SPI3_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, SPI3_CS_SDCARD_Pin|SPI3_CS_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(SPI3_CS_TOUCH_GPIO_Port, SPI3_CS_TOUCH_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(DCRS_GPIO_Port, DCRS_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(SPI3_CS_TOUCH_GPIO_Port, SPI3_CS_TOUCH_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
@@ -856,11 +866,11 @@ typedef enum{
     static KEY_STATE R_btn_state_last = key_up;
     if( htim->Instance == TIM4) {
         if( L_btn_state == key_down && L_btn_state_last != L_btn_state ) {
-            printf("left\n");
+            BulletShoot(&redTank);
         }
         L_btn_state_last = L_btn_state;
         if( R_btn_state == key_down && R_btn_state_last != R_btn_state ) {
-            printf("right\n");
+            BulletShoot(&greenTank);
         }
         R_btn_state_last = R_btn_state;
     }else if ( htim->Instance == TIM5 ){

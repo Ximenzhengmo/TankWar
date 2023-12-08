@@ -20,25 +20,25 @@ Tank_T greenTank = {
 void tank_Init(Tank_T *tank) {
     static uint32_t RNG_Value;
     tank->bulletNum = 5;
-    if ( HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value) != HAL_OK) {
+    if (HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value) != HAL_OK) {
         RNG_Value = 0;
     }
     tank->direction = RNG_Value % 20;
     uint8_t xHalfLenOfImage = tank->tankImage[tank->direction].xLen >> 1;
     uint8_t yHalfLenOfImage = tank->tankImage[tank->direction].yLen >> 1;
-    do{
+    do {
         HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
         tank->xPos = RNG_Value % ScreenXLen;
         HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
         tank->yPos = RNG_Value % ScreenYLen;
-    }while( isTankTouchWall( (Point_T){tank->xPos - xHalfLenOfImage,
-                                       tank->yPos - yHalfLenOfImage},
-                             (Point_T){tank->xPos + xHalfLenOfImage - 1,
-                                       tank->yPos - yHalfLenOfImage},
-                             (Point_T){tank->xPos - xHalfLenOfImage,
-                                       tank->yPos + yHalfLenOfImage - 1},
-                             (Point_T){tank->xPos + xHalfLenOfImage - 1,
-                                       tank->yPos + yHalfLenOfImage - 1}) );
+    } while (isTankTouchWall((Point_T) {tank->xPos - xHalfLenOfImage,
+                                        tank->yPos - yHalfLenOfImage},
+                             (Point_T) {tank->xPos + xHalfLenOfImage - 1,
+                                        tank->yPos - yHalfLenOfImage},
+                             (Point_T) {tank->xPos - xHalfLenOfImage,
+                                        tank->yPos + yHalfLenOfImage - 1},
+                             (Point_T) {tank->xPos + xHalfLenOfImage - 1,
+                                        tank->yPos + yHalfLenOfImage - 1}));
 }
 
 void LCD_ClearToBackground(Point_T LeftUp, Point_T RightDown) {
@@ -55,10 +55,10 @@ DirectionAdd_T getDirectionAdd(uint8_t newDirection) {
     // 40 * 32  72 ->   x+=-1       , x+=-2 y+=-1
     static const DirectionAdd_T directionAdd[DIRECTION_FIRST_DIM_LEN][3] = {
             {{0,  -1}, {0,  -2}, {0,  0}},
-            {{0, -2}, {-1, -1}, {0,  0}},
+            {{0,  -2}, {-1, -1}, {0,  0}},
             {{-1, -1}, {-1, -2}, {-1, -1}},
             {{-1, -1}, {-2, -1}, {-1, -1}},
-            {{-1, 0},  {-2, -1}, {0, 0}},
+            {{-1, 0},  {-2, -1}, {0,  0}},
     };
     static uint8_t subscript[DIRECTION_FIRST_DIM_LEN] = {1, 1, 2, 1, 1};
     static uint8_t sub;
@@ -77,7 +77,7 @@ DirectionAdd_T getDirectionAdd(uint8_t newDirection) {
         case 1: // [90, 180)
             return (DirectionAdd_T) {
                     .x_add =   directionAdd[degreeMap][sub].y_add,
-                    .y_add = - directionAdd[degreeMap][sub].x_add,
+                    .y_add = -directionAdd[degreeMap][sub].x_add,
             };
         case 2: // [180, 270)
             return (DirectionAdd_T) {
@@ -128,7 +128,7 @@ uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDir
     new3.y = newPos.y + (NewYLen >> 1) - 1;
     new4.x = newPos.x + (NewXLen >> 1) - 1;
     new4.y = newPos.y + (NewYLen >> 1) - 1;
-    if( isTankTouchWall(new1, new2, new3, new4) ){
+    if (isTankTouchWall(new1, new2, new3, new4)) {
         return 0;
     }
     isOld1InRange = InRange(old1, new1, new4);
@@ -170,43 +170,43 @@ uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDir
                 LCD_ClearToBackground(new2, old4);
             } else {
                 LCD_ClearToBackground(old1, (Point_T) {new1.x, old3.y});
-                LCD_ClearToBackground( (Point_T){new1.x , old1.y}, (Point_T){old2.x, new2.y} );
+                LCD_ClearToBackground((Point_T) {new1.x, old1.y}, (Point_T) {old2.x, new2.y});
             }
             break;
         case 0:
 //            LCD_Fill(old1.x, old1.y, OldXLen, OldYLen, whiteBackground);
-            if ( old1.x <= new1.x && old1.y <= new1.y){
-                if( old4.x >= new4.x && (old4.y >= new2.y && old4.y <= new4.y) ){
-                    LCD_ClearToBackground(old1, (Point_T){old2.x, new2.y});
-                    LCD_ClearToBackground((Point_T){old1.x, new1.y}, (Point_T){new3.x, old3.y});
+            if (old1.x <= new1.x && old1.y <= new1.y) {
+                if (old4.x >= new4.x && (old4.y >= new2.y && old4.y <= new4.y)) {
+                    LCD_ClearToBackground(old1, (Point_T) {old2.x, new2.y});
+                    LCD_ClearToBackground((Point_T) {old1.x, new1.y}, (Point_T) {new3.x, old3.y});
                     LCD_ClearToBackground(new2, old4);
-                }else if( old4.y >= new4.y && old4.x >= new4.x){
-                    LCD_ClearToBackground(old1, (Point_T){new3.x, old3.y});
-                    LCD_ClearToBackground((Point_T){new1.x, old1.y}, (Point_T){old2.x, new2.y});
+                } else if (old4.y >= new4.y && old4.x >= new4.x) {
+                    LCD_ClearToBackground(old1, (Point_T) {new3.x, old3.y});
+                    LCD_ClearToBackground((Point_T) {new1.x, old1.y}, (Point_T) {old2.x, new2.y});
                     LCD_ClearToBackground(new3, old4);
-                    LCD_ClearToBackground(new2, (Point_T){old4.x, new4.y});
-                }else if( old4.y >= new4.y && (old4.x >= new3.x && old4.x <= new4.x) ){
-                    LCD_ClearToBackground(old1, (Point_T){new3.x, old3.y});
+                    LCD_ClearToBackground(new2, (Point_T) {old4.x, new4.y});
+                } else if (old4.y >= new4.y && (old4.x >= new3.x && old4.x <= new4.x)) {
+                    LCD_ClearToBackground(old1, (Point_T) {new3.x, old3.y});
                     LCD_ClearToBackground(new3, old4);
-                    LCD_ClearToBackground((Point_T){new1.x, old1.y}, (Point_T){old2.x, new2.y});
+                    LCD_ClearToBackground((Point_T) {new1.x, old1.y}, (Point_T) {old2.x, new2.y});
                 }
-            }else if( old1.x >= new1.x && old1.y <= new1.y ){
-                if( old4.y >= new4.y && old4.x >= new4.x){
+            } else if (old1.x >= new1.x && old1.y <= new1.y) {
+                if (old4.y >= new4.y && old4.x >= new4.x) {
                     LCD_ClearToBackground(old1, new2);
-                    LCD_ClearToBackground((Point_T){new2.x, old2.y}, old4);
-                    LCD_ClearToBackground((Point_T){old3.x, new3.y}, (Point_T){new4.x, old4.y});
-                }else if( old4.y >= new4.y && (old4.x >= new3.x && old4.x <= new4.x) ){
-                    LCD_ClearToBackground(old1, (Point_T){old2.x, new2.y});
-                    LCD_ClearToBackground((Point_T){old3.x, new3.y}, old4);
+                    LCD_ClearToBackground((Point_T) {new2.x, old2.y}, old4);
+                    LCD_ClearToBackground((Point_T) {old3.x, new3.y}, (Point_T) {new4.x, old4.y});
+                } else if (old4.y >= new4.y && (old4.x >= new3.x && old4.x <= new4.x)) {
+                    LCD_ClearToBackground(old1, (Point_T) {old2.x, new2.y});
+                    LCD_ClearToBackground((Point_T) {old3.x, new3.y}, old4);
                 }
-            }else if( old1.x <= new1.x && old1.y >= new1.y ){
-                if( old4.x >= new4.x && (old4.y >= new2.y && old4.y <= new4.y) ){
-                    LCD_ClearToBackground(old1, (Point_T){new3.x, old3.y});
-                    LCD_ClearToBackground((Point_T){new2.x, old2.y}, old4);
-                }else if( old4.y >= new4.y && old4.x >= new4.x){
-                    LCD_ClearToBackground(old1, (Point_T){new3.x, old3.y});
+            } else if (old1.x <= new1.x && old1.y >= new1.y) {
+                if (old4.x >= new4.x && (old4.y >= new2.y && old4.y <= new4.y)) {
+                    LCD_ClearToBackground(old1, (Point_T) {new3.x, old3.y});
+                    LCD_ClearToBackground((Point_T) {new2.x, old2.y}, old4);
+                } else if (old4.y >= new4.y && old4.x >= new4.x) {
+                    LCD_ClearToBackground(old1, (Point_T) {new3.x, old3.y});
                     LCD_ClearToBackground(new3, old4);
-                    LCD_ClearToBackground((Point_T){new2.x, old2.y}, (Point_T){old4.x, new4.y});
+                    LCD_ClearToBackground((Point_T) {new2.x, old2.y}, (Point_T) {old4.x, new4.y});
                 }
             }
             break;
@@ -217,36 +217,34 @@ uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDir
     return 1;
 }
 
-uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4){
-    if(     (0 < p1.x && p1.x < ScreenXLen && 0 < p1.y && p1.y < ScreenYLen)
-        &&  (0 < p2.x && p2.x < ScreenXLen && 0 < p2.y && p2.y < ScreenYLen)
-        &&  (0 < p3.x && p3.x < ScreenXLen && 0 < p3.y && p3.y < ScreenYLen)
-        &&  (0 < p4.x && p4.x < ScreenXLen && 0 < p4.y && p4.y < ScreenYLen) ){
+uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
+    if ((0 < p1.x && p1.x < ScreenXLen && 0 < p1.y && p1.y < ScreenYLen)
+        && (0 < p2.x && p2.x < ScreenXLen && 0 < p2.y && p2.y < ScreenYLen)
+        && (0 < p3.x && p3.x < ScreenXLen && 0 < p3.y && p3.y < ScreenYLen)
+        && (0 < p4.x && p4.x < ScreenXLen && 0 < p4.y && p4.y < ScreenYLen)) {
 
-        for (uint16_t i = p1.x; i < p2.x; i += wallWidth) if ( isWall(i, p1.y) ) return 1;
-        for (uint16_t i = p3.x; i < p4.x; i += wallWidth) if ( isWall(i, p3.y) ) return 1;
-        for (uint16_t i = p1.y; i < p3.y; i += wallWidth) if ( isWall(p1.x, i) ) return 1;
-        for (uint16_t i = p2.y; i < p4.y; i += wallWidth) if ( isWall(p2.x, i) ) return 1;
+        for (uint16_t i = p1.x; i < p2.x; i += wallWidth) if (isWall(i, p1.y)) return 1;
+        for (uint16_t i = p3.x; i < p4.x; i += wallWidth) if (isWall(i, p3.y)) return 1;
+        for (uint16_t i = p1.y; i < p3.y; i += wallWidth) if (isWall(p1.x, i)) return 1;
+        for (uint16_t i = p2.y; i < p4.y; i += wallWidth) if (isWall(p2.x, i)) return 1;
 
         return 0; // not touch wall
-    }else{
+    } else {
         return 1; // touch wall
     }
 }
 
 void drawTank(Tank_T *tank, uint8_t direction) {
-    if ( direction < 20 ) {
+    if (direction < 20) {
         DirectionAdd_T directionAdd = getDirectionAdd(direction);
-        if ( tankMove_clear(tank, directionAdd, direction) ){
-            LCD_Fill(tank->xPos - (tank->tankImage[tank->direction].xLen >> 1),
-                     tank->yPos - (tank->tankImage[tank->direction].yLen >> 1),
-                     tank->tankImage[tank->direction].xLen,
-                     tank->tankImage[tank->direction].yLen,
-                     (uint8_t *) tank->tankImage[tank->direction].image);
-        }
+        tankMove_clear(tank, directionAdd, direction);
     }
+    LCD_Fill(tank->xPos - (tank->tankImage[tank->direction].xLen >> 1),
+             tank->yPos - (tank->tankImage[tank->direction].yLen >> 1),
+             tank->tankImage[tank->direction].xLen,
+             tank->tankImage[tank->direction].yLen,
+             (uint8_t *) tank->tankImage[tank->direction].image);
 }
-
 
 const TankImage_T redTankImage[20] = {
         {.image=gImage_red0, .xLen=26, .yLen=38},
