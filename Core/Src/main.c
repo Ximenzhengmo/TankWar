@@ -29,6 +29,7 @@
 #include "Touch.h"
 #include "bullet.h"
 #include "lever_control.h"
+#include "showScore.h"
 #include "crash.h"
 /* USER CODE END Includes */
 
