@@ -8,19 +8,21 @@
 #include "lcd_driver.h"
 #include "map.h"
 #include "main.h"
-//#include "bullet.h"
+#include "global.h"
+#include "crash.h"
 
 #define DIRECTION_FIRST_DIM_LEN (5)
 
 typedef struct{
-    int16_t x;
-    int16_t y;
-}Point_T;
+    const Point_T *addpoint;
+    int number;
+}CrashTest_T;
 
 typedef struct TankImage_T{
     const unsigned char* image;
     uint8_t xLen;
     uint8_t yLen;
+    const CrashTest_T *crashTest;
 }TankImage_T;
 
 typedef struct DirectionAdd_T {
@@ -41,6 +43,7 @@ extern Tank_T greenTank;
 
 extern const TankImage_T redTankImage[20];
 extern const TankImage_T greenTankImage[20];
+extern const CrashTest_T crashTest[20];
 
 void tank_Init(Tank_T* tank);
 

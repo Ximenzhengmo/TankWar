@@ -9,6 +9,7 @@
 #define BulletNumMax 10
 #define Bullet_Life_Time_ms 10000
 #define Bullet_Create_Loop_Num 11
+#define half_bullet_image (Bullet_Image_Length >> 1)
 
 typedef enum Bullet_Touch_State{
     up,down,left,right,notouch,rebound
@@ -29,6 +30,7 @@ extern const unsigned char gImage_bullet[98];
 extern Bullet_T bullets[BulletNumMax];
 extern Bullet_T bullet_test;
 extern uint8_t bulletNum;
+extern const CrashTest_T crashTest[20];
 
 DirectionAdd_T getDirectionAdd_Bullet(uint8_t *subscript , uint8_t newDirection) ;
 
@@ -49,4 +51,6 @@ void Bullet_Create(Bullet_T *bullet, Tank_T* owner, uint32_t CreateTime);
 void Bullet_Destroy(Bullet_T *bullet);
 
 void Bullet_Init_random(Bullet_T* bullet);
+
+uint8_t IsCrash(Tank_T *tank, Bullet_T *bullet);
 #endif //TANKWAR_BULLET_H

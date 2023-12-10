@@ -20,6 +20,20 @@ const unsigned char gImage_bullet[] = {
         0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
+const CrashTest_T crashTest[20]={{.addpoint=AddPoint_0,.number=90},{.addpoint=AddPoint_18,.number=30},
+                                 {.addpoint=AddPoint_36,.number=27},{.addpoint=AddPoint_54,.number=29},
+                                 {.addpoint=AddPoint_72,.number=29},
+                                 {.addpoint=AddPoint_90,.number=90},{.addpoint=AddPoint_108,.number=30},
+                                 {.addpoint=AddPoint_126,.number=27},{.addpoint=AddPoint_144,.number=29},
+                                 {.addpoint=AddPoint_162,.number=29},
+                                 {.addpoint=AddPoint_180,.number=90},{.addpoint=AddPoint_198,.number=30},
+                                 {.addpoint=AddPoint_216,.number=27},{.addpoint=AddPoint_234,.number=29},
+                                 {.addpoint=AddPoint_252,.number=29},
+                                 {.addpoint=AddPoint_270,.number=90},{.addpoint=AddPoint_288,.number=30},
+                                 {.addpoint=AddPoint_306,.number=27},{.addpoint=AddPoint_324,.number=29},
+                                 {.addpoint=AddPoint_342,.number=29},
+};
+
 DirectionAdd_T getDirectionAdd_Bullet(uint8_t *subscript, uint8_t newDirection) {
     // 26 * 38   0 ->         y+=-1 ,       y+=-2
     // 32 * 40  18 ->         y+=-2 , x+=-1 y+=-1
@@ -398,4 +412,29 @@ void Bullet_Init_random(Bullet_T *bullet) {
                                                 (Point_T) {bullet->xPos + HalfLenOfImage,
                                                            bullet->yPos + HalfLenOfImage}));
     bullet->createTime = 0xFFFFFFFF;
+}
+
+uint8_t IsCrash(Tank_T *tank, Bullet_T *bullet)
+{
+#define abs(x) ((x)>0?(x):-(x))
+    uint16_t tank_center_x=tank->xPos, tank_center_y=tank->yPos;
+    uint16_t bullet_center_x=bullet->xPos, bullet_center_y=bullet->yPos;
+    int16_t distance_x = (int16_t)bullet_center_x - (int16_t)tank_center_x;
+    int16_t distance_y = (int16_t)bullet_center_y - (int16_t)tank_center_y;
+    int16_t distance = abs(distance_x) - abs(distance_y);
+    if( abs(distance) > 45 )
+    {
+        return 0;
+    }
+    else {
+        const CrashTest_T *crash = tank->tankImage[tank->direction].crashTest;
+        for (uint8_t i = 0; i < crash->number; i++) {
+            if ((tank_center_x + crash->addpoint[i].x > bullet_center_x - half_bullet_image &&
+                 tank_center_x + crash->addpoint[i].x < bullet_center_x + half_bullet_image) &&
+                (tank_center_y + crash->addpoint[i].y > bullet_center_y - half_bullet_image &&
+                 tank_center_y + crash->addpoint[i].y < bullet_center_y + half_bullet_image))
+                return 1;
+        }
+    }
+    return 0;
 }

@@ -29,6 +29,7 @@
 #include "Touch.h"
 #include "bullet.h"
 #include "lever_control.h"
+#include "crash.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -141,6 +142,13 @@ void gameBegin() {
         }
         if(loopEndTick - loopStartTick < 1000 / 60 ) {
             HAL_Delay(1000 / 60 - ( loopEndTick-  loopStartTick));
+        }
+
+        for(uint8_t i = 0; i <= bulletNum; i++) {
+            if (bullets[i].owner != NULL) {
+                if (IsCrash(&greenTank, &bullets[i]))
+                    printf("Crash\n");
+            }
         }
     }
 }

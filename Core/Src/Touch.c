@@ -47,7 +47,7 @@ Touch_StatusTypeDef Touch_Read(TouchTypedef *dst){
     uint8_t instx[3] = {0xd0,0x00,0x00};
     uint8_t insty[3] = {0x90,0x00,0x00};
 
-    uint8_t XNum = 0,YNum = 0;
+    uint8_t XNum = 0,YNum=0;
     while(XNum<3){
         while(LL_SPI_IsActiveFlag_TXE(SPI3)==0);
         LL_SPI_TransmitData8(SPI3, instx[XNum++]);
