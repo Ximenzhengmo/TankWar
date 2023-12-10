@@ -107,6 +107,12 @@ void LCD_Clear(uint16_t Color) {
     }
 }
 
+void LCD_ClearToBackground(Point_T LeftUp, Point_T RightDown) {
+    uint16_t xLen = RightDown.x - LeftUp.x + 1;
+    uint16_t yLen = RightDown.y - LeftUp.y + 1;
+    LCD_Fill(LeftUp.x, LeftUp.y, xLen, yLen, (uint8_t *) whiteBackground);
+}
+
 void SPI_DMAInit() {
     /* Configure the DMA1_Channel3 functional parameters */
     LL_DMA_ConfigTransfer(DMA1,

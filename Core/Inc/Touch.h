@@ -1,15 +1,9 @@
-//
-// Created by 86180 on 2023/12/4.
-//
-
 #ifndef TANKWAR_TOUCH_H
 #define TANKWAR_TOUCH_H
 
-//
-// Created by 86180 on 2023/12/4.
-//
 #include "main.h"
 #include "lcd_driver.h"
+#include "stdio.h"
 
 typedef struct touch {
     uint8_t isPressed;
@@ -23,8 +17,6 @@ typedef enum {
     TOUCH_BUSY = 0x02U,
     TOUCH_TIMEOUT = 0x03U
 } Touch_StatusTypeDef;
-
-uint16_t SPI_SwapBitMode(SPI_TypeDef *SPI,DMA_HandleTypeDef *DMA,uint16_t SPIDataSize);
 
 Touch_StatusTypeDef Touch_Read(TouchTypedef *dst);
 

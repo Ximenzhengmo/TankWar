@@ -18,7 +18,7 @@ void Print_number(uint16_t xpos, uint16_t ypos, uint16_t color, const uint8_t *s
 }
 
 
-void show_score(uint8_t score, uint16_t color)  //0代表red,1代表green
+void show_score(uint8_t score, uint16_t color)
 {
     score %= 100;
     uint8_t units_digit = score % 10;

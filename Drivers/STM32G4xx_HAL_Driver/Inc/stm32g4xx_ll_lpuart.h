@@ -1187,7 +1187,7 @@ __STATIC_INLINE uint32_t LL_LPUART_GetNodeAddress(USART_TypeDef *LPUARTx)
 }
 
 /**
-  * @brief  Return Length of Node Address used in Address Detection mode (7-bit or 4-bit)
+  * @brief  Return Length of Node_T Address used in Address Detection mode (7-bit or 4-bit)
   * @rmtoll CR2          ADDM7         LL_LPUART_GetNodeAddressLen
   * @param  LPUARTx LPUART Instance
   * @retval Returned value can be one of the following values:

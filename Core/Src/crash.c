@@ -1,5 +1,19 @@
 #include "bullet.h"
 
+const CrashTest_T crashTest[20]={{.addpoint=AddPoint_0,.number=90},{.addpoint=AddPoint_18,.number=30},
+                                 {.addpoint=AddPoint_36,.number=27},{.addpoint=AddPoint_54,.number=29},
+                                 {.addpoint=AddPoint_72,.number=29},
+                                 {.addpoint=AddPoint_90,.number=90},{.addpoint=AddPoint_108,.number=30},
+                                 {.addpoint=AddPoint_126,.number=27},{.addpoint=AddPoint_144,.number=29},
+                                 {.addpoint=AddPoint_162,.number=29},
+                                 {.addpoint=AddPoint_180,.number=90},{.addpoint=AddPoint_198,.number=30},
+                                 {.addpoint=AddPoint_216,.number=27},{.addpoint=AddPoint_234,.number=29},
+                                 {.addpoint=AddPoint_252,.number=29},
+                                 {.addpoint=AddPoint_270,.number=90},{.addpoint=AddPoint_288,.number=30},
+                                 {.addpoint=AddPoint_306,.number=27},{.addpoint=AddPoint_324,.number=29},
+                                 {.addpoint=AddPoint_342,.number=29},
+};
+
 const Point_T AddPoint_0[]= {
         {-9,-8},{-8,-8},{-7,-8},{-6,-8},{-5,-8},{-4,-8},
         {-3,-8},{-2,-8},{-1,-8},{0,-8},{1,-8},{2,-8},

@@ -32,9 +32,9 @@ void tank_Init(Tank_T *tank) {
     uint8_t yHalfLenOfImage = tank->tankImage[tank->direction].yLen >> 1;
     do {
         HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
-        tank->xPos = RNG_Value % ScreenXLen;
+        tank->xPos = RNG_Value % MapXLen;
         HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
-        tank->yPos = RNG_Value % ScreenYLen;
+        tank->yPos = RNG_Value % MapYLen;
     } while (isTankTouchWall((Point_T) {tank->xPos - xHalfLenOfImage,
                                         tank->yPos - yHalfLenOfImage},
                              (Point_T) {tank->xPos + xHalfLenOfImage - 1,
@@ -43,60 +43,6 @@ void tank_Init(Tank_T *tank) {
                                         tank->yPos + yHalfLenOfImage - 1},
                              (Point_T) {tank->xPos + xHalfLenOfImage - 1,
                                         tank->yPos + yHalfLenOfImage - 1}));
-}
-
-void LCD_ClearToBackground(Point_T LeftUp, Point_T RightDown) {
-    uint16_t xLen = RightDown.x - LeftUp.x + 1;
-    uint16_t yLen = RightDown.y - LeftUp.y + 1;
-    LCD_Fill(LeftUp.x, LeftUp.y, xLen, yLen, (uint8_t *) whiteBackground);
-}
-
-DirectionAdd_T getDirectionAdd(uint8_t *subscript ,uint8_t newDirection) {
-    // 26 * 38   0 ->         y+=-1 ,       y+=-2
-    // 32 * 40  18 ->         y+=-2 , x+=-1 y+=-1
-    // 38 * 40  36 ->   x+=-1 y+=-1 , x+=-1 y+=-2 , x+=-1 y+=-1
-    // 40 * 38  54 ->   x+=-1 y+=-1 , x+=-2 y+=-1 , x+=-1 y+=-1
-    // 40 * 32  72 ->   x+=-1       , x+=-2 y+=-1
-    static const DirectionAdd_T directionAdd[DIRECTION_FIRST_DIM_LEN][3] = {
-            {{0,  -1}, {0,  -2}, {0,  0}},
-            {{0,  -2}, {-1, -1}, {0,  0}},
-            {{-1, -1}, {-1, -2}, {-1, -1}},
-            {{-1, -1}, {-2, -1}, {-1, -1}},
-            {{-1, 0},  {-2, -1}, {0,  0}},
-    };
-    static uint8_t sub;
-    uint8_t degreeMap = newDirection % DIRECTION_FIRST_DIM_LEN;
-    if (degreeMap == 2 || degreeMap == 3) {
-        sub = (subscript[degreeMap] = (subscript[degreeMap] + 1) % 3);
-    } else {
-        sub = (subscript[degreeMap] = (subscript[degreeMap] + 1) % 2);
-    }
-    switch (newDirection / DIRECTION_FIRST_DIM_LEN) {
-        case 0: // [0 , 90)
-            return (DirectionAdd_T) {
-                    .x_add =   directionAdd[degreeMap][sub].x_add,
-                    .y_add =   directionAdd[degreeMap][sub].y_add,
-            };
-        case 1: // [90, 180)
-            return (DirectionAdd_T) {
-                    .x_add =   directionAdd[degreeMap][sub].y_add,
-                    .y_add = -directionAdd[degreeMap][sub].x_add,
-            };
-        case 2: // [180, 270)
-            return (DirectionAdd_T) {
-                    .x_add = -directionAdd[degreeMap][sub].x_add,
-                    .y_add = -directionAdd[degreeMap][sub].y_add,
-            };
-        case 3: // [270, 360)
-            return (DirectionAdd_T) {
-                    .x_add = -directionAdd[degreeMap][sub].y_add,
-                    .y_add =  directionAdd[degreeMap][sub].x_add,
-            };
-        default:
-            printf("newDirection = %d\n", newDirection);
-            perror("In tank.c : getDirectionAdd(uint8_t newDirection) error");
-            return (DirectionAdd_T) {0, 0};
-    }
 }
 
 uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDirection) {
@@ -221,10 +167,10 @@ uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDir
 }
 
 uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
-    if ((0 < p1.x && p1.x < ScreenXLen && 0 < p1.y && p1.y < ScreenYLen)
-        && (0 < p2.x && p2.x < ScreenXLen && 0 < p2.y && p2.y < ScreenYLen)
-        && (0 < p3.x && p3.x < ScreenXLen && 0 < p3.y && p3.y < ScreenYLen)
-        && (0 < p4.x && p4.x < ScreenXLen && 0 < p4.y && p4.y < ScreenYLen)) {
+    if ((0 < p1.x && p1.x < MapXLen && 0 < p1.y && p1.y < MapYLen)
+        && (0 < p2.x && p2.x < MapXLen && 0 < p2.y && p2.y < MapYLen)
+        && (0 < p3.x && p3.x < MapXLen && 0 < p3.y && p3.y < MapYLen)
+        && (0 < p4.x && p4.x < MapXLen && 0 < p4.y && p4.y < MapYLen)) {
 
         for (uint16_t i = p1.x; i < p2.x; i += wallWidth) if (isWall(i, p1.y)) return 1;
         for (uint16_t i = p3.x; i < p4.x; i += wallWidth) if (isWall(i, p3.y)) return 1;

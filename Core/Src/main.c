@@ -85,8 +85,7 @@ static void MX_TIM5_Init(void);
 static void MX_I2C3_Init(void);
 /* USER CODE BEGIN PFP */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
-uint8_t scoreRed = 0;
-uint8_t scoreGreen = 0;
+uint8_t FPS = 0;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -103,11 +102,12 @@ PUTCHAR_PROTOTYPE
     return ch;
 }
 
-uint8_t FPS = 0;
 void gameBegin() {
-    drawMap();
     static uint8_t direction_r;
     static uint8_t direction_l;
+    static uint8_t scoreRed = 0;
+    static uint8_t scoreGreen = 0;
+    drawMap();
     tank_Init(&redTank);
     tank_Init(&greenTank);
     Bullets_Init();
@@ -125,7 +125,7 @@ void gameBegin() {
         drawTank(&redTank, direction_l);
         drawTank(&greenTank, direction_r);
 
-        Bullet_TimeOutTest();
+        Bullet_TimeOutClear();
 
         for(uint8_t i = 0; i <= bulletNum; i++) {
             if (bullets[i].owner != NULL) {

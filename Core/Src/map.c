@@ -3,10 +3,10 @@
 #define MALLOC(X) (X*)malloc(sizeof(X))
 
 static uint64_t bool_is_in_tree = 0;
-static Box box[XMAX][YMAX];
-static Node *head = NULL;
-uint16_t ScreenXLen = XMAX * boxSideLen;
-uint16_t ScreenYLen = YMAX * boxSideLen;
+static Box_T box[XMAX][YMAX];
+static Node_T *head = NULL;
+uint16_t MapXLen = XMAX * boxSideLen;
+uint16_t MapYLen = YMAX * boxSideLen;
 
 void setVisited(uint8_t id) {
     bool_is_in_tree |= (1ULL << id);
@@ -16,8 +16,8 @@ uint8_t isVisited(uint8_t id) {
     return (((1ULL << id) & bool_is_in_tree) != 0ULL);
 }
 
-void insertWallToList(Node *headList, Wall wall) {
-    Node *node = MALLOC(Node);
+void insertWallToList(Node_T *headList, Wall_T wall) {
+    Node_T *node = MALLOC(Node_T);
     if (node == NULL) {
         printf("malloc error\n");
         exit(1);
@@ -28,28 +28,28 @@ void insertWallToList(Node *headList, Wall wall) {
     headList->property.num++;
 }
 
-uint8_t isWallListEmpty(Node *headList) {
+uint8_t isWallListEmpty(Node_T *headList) {
     return headList->next == NULL;
 }
 
-void insertAllWall(Node *headList, const Box *boxInMap) {
+void insertAllWall(Node_T *headList, const Box_T *boxInMap) {
     if (boxInMap->up == 0 && !isVisited(boxInMap->id - XMAX)) {
-        insertWallToList(headList, (Wall) {boxInMap->id, boxInMap->id - XMAX});
+        insertWallToList(headList, (Wall_T) {boxInMap->id, boxInMap->id - XMAX});
     }
     if (boxInMap->down == 0 && !isVisited(boxInMap->id + XMAX)) {
-        insertWallToList(headList, (Wall) {boxInMap->id, boxInMap->id + XMAX});
+        insertWallToList(headList, (Wall_T) {boxInMap->id, boxInMap->id + XMAX});
     }
     if (boxInMap->left == 0 && !isVisited(boxInMap->id - 1)) {
-        insertWallToList(headList, (Wall) {boxInMap->id, boxInMap->id - 1});
+        insertWallToList(headList, (Wall_T) {boxInMap->id, boxInMap->id - 1});
     }
     if (boxInMap->right == 0 && !isVisited(boxInMap->id + 1)) {
-        insertWallToList(headList, (Wall) {boxInMap->id, boxInMap->id + 1});
+        insertWallToList(headList, (Wall_T) {boxInMap->id, boxInMap->id + 1});
     }
 }
 
-Wall popWallFromList(Node *headList) {
-    Node *node = headList;
-    Wall wall;
+Wall_T popWallFromList(Node_T *headList) {
+    Node_T *node = headList;
+    Wall_T wall;
     if (node->next == NULL) {
         printf("list is empty\n");
         exit(1);
@@ -64,7 +64,7 @@ Wall popWallFromList(Node *headList) {
         node = node->next;
     }
     wall = node->next->property.wall;
-    Node *temp = node->next;
+    Node_T *temp = node->next;
     node->next = node->next->next;
     free(temp);
     headList->property.num--;
@@ -77,7 +77,7 @@ HAL_StatusTypeDef createMap() {
     head = NULL;
     for (uint8_t i = 0; i < XMAX; ++i) {
         for (uint8_t j = 0; j < YMAX; ++j) {
-            memset(&box[i][j], 0, sizeof(Box));
+            memset(&box[i][j], 0, sizeof(Box_T));
         }
     }
     srand(HAL_GetTick());
@@ -97,18 +97,18 @@ HAL_StatusTypeDef createMap() {
             box[i][j].y = j;
         }
     }
-    head = MALLOC(Node);
+    head = MALLOC(Node_T);
     head->next = NULL;
     head->property.num = 0;
     // 生成迷宫
     insertAllWall(head, &box[0][0]);
     while (!isWallListEmpty(head)) {
-        Wall wall = popWallFromList(head);
+        Wall_T wall = popWallFromList(head);
         if (isVisited(wall.outBox_id)) {
             continue;
         }
-        Box *boxOutMap = &box[wall.outBox_id % XMAX][wall.outBox_id / XMAX];
-        Box *boxInMap = &box[wall.inBox_id % XMAX][wall.inBox_id / XMAX];
+        Box_T *boxOutMap = &box[wall.outBox_id % XMAX][wall.outBox_id / XMAX];
+        Box_T *boxInMap = &box[wall.inBox_id % XMAX][wall.inBox_id / XMAX];
         if (wall.outBox_id == wall.inBox_id - XMAX) {
             boxOutMap->down = 1;
             boxInMap->up = 1;
@@ -185,10 +185,10 @@ uint8_t isWall(uint16_t x, uint16_t y) {
 
 void drawMap(){
     if ( createMap() == HAL_OK ) {
-        LCD_SetWindows(0, 0, ScreenXLen - 1, ScreenYLen - 1);
+        LCD_SetWindows(0, 0, MapXLen - 1, MapYLen - 1);
         LCD_RS_SET();
-        for (uint16_t j = 0; j < ScreenYLen; ++j) {
-            for (uint16_t i = 0; i < ScreenXLen; ++i) {
+        for (uint16_t j = 0; j < MapYLen; ++j) {
+            for (uint16_t i = 0; i < MapXLen; ++i) {
                 if (isWall(i, j)) {
                     Lcd_WriteData_16Bit(BLACK);
                 } else {

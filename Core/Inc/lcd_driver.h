@@ -2,6 +2,7 @@
 #define CUBE_LCD_DRIVER_H
 
 #include "main.h"
+#include "global.h"
 //#define USE_DMA
 typedef struct {
     uint16_t width;     //LCD 宽度
@@ -46,8 +47,6 @@ extern _lcd_dev lcddev;
 
 void LCD_Init(void);
 
-void LCD_Clear(uint16_t Color);
-
 void LCD_RS_SET();
 
 void LCD_RS_CLR();
@@ -55,6 +54,10 @@ void LCD_RS_CLR();
 void LCD_CS_SET();
 
 void LCD_CS_CLR();
+
+void LCD_Clear(uint16_t Color);
+
+void LCD_ClearToBackground(Point_T LeftUp, Point_T RightDown);
 
 void Lcd_WriteData_16Bit(uint16_t Data);
 

@@ -4,7 +4,6 @@
 #include "main.h"
 #include "stdio.h"
 #include "stdlib.h"
-#include "time.h"
 #include "string.h"
 #include "lcd_driver.h"
 
@@ -14,8 +13,8 @@
 #define boxSideLen 64
 #define wallWidth (4>>1)
 
-extern uint16_t ScreenXLen;
-extern uint16_t ScreenYLen;
+extern uint16_t MapXLen;
+extern uint16_t MapYLen;
 
 typedef struct {
     uint8_t up: 1;
@@ -26,20 +25,20 @@ typedef struct {
     uint8_t id;
     uint8_t x: 4;
     uint8_t y: 4;
-} Box;
+} Box_T;
 
 typedef struct {
     uint8_t inBox_id;
     uint8_t outBox_id;
-} Wall;
+} Wall_T;
 
-typedef struct Node {
+typedef struct Node_T {
     union {
-        Wall wall;
+        Wall_T wall;
         uint8_t num;
     } property;
-    struct Node *next;
-} Node;
+    struct Node_T *next;
+} Node_T;
 
 HAL_StatusTypeDef createMap();
 void drawMap();

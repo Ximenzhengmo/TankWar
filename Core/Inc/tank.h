@@ -11,24 +11,12 @@
 #include "global.h"
 #include "crash.h"
 
-#define DIRECTION_FIRST_DIM_LEN (5)
-
-typedef struct{
-    const Point_T *addpoint;
-    int number;
-}CrashTest_T;
-
 typedef struct TankImage_T{
     const unsigned char* image;
     uint8_t xLen;
     uint8_t yLen;
     const CrashTest_T *crashTest;
 }TankImage_T;
-
-typedef struct DirectionAdd_T {
-    int8_t x_add;
-    int8_t y_add;
-}DirectionAdd_T;
 
 typedef struct Tank_T{
     uint8_t isAlive;
@@ -45,15 +33,11 @@ extern Tank_T greenTank;
 
 extern const TankImage_T redTankImage[20];
 extern const TankImage_T greenTankImage[20];
-extern const CrashTest_T crashTest[20];
+
 
 void tank_Init(Tank_T* tank);
 
-void LCD_ClearToBackground(Point_T LeftUp, Point_T RightDown);
-
 uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4);
-
-DirectionAdd_T getDirectionAdd(uint8_t *subscript, uint8_t newDirection);
 
 uint8_t tankMove_clear(Tank_T* tank, DirectionAdd_T directionAdd, uint8_t newDirection);
 
@@ -102,7 +86,5 @@ extern const unsigned char gImage_green288[];
 extern const unsigned char gImage_green306[];
 extern const unsigned char gImage_green324[];
 extern const unsigned char gImage_green342[];
-
-extern const uint8_t whiteBackground[3040];
 
 #endif //TANKWAR_TACK_H

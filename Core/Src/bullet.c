@@ -20,72 +20,13 @@ const unsigned char gImage_bullet[] = {
         0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-const CrashTest_T crashTest[20]={{.addpoint=AddPoint_0,.number=90},{.addpoint=AddPoint_18,.number=30},
-                                 {.addpoint=AddPoint_36,.number=27},{.addpoint=AddPoint_54,.number=29},
-                                 {.addpoint=AddPoint_72,.number=29},
-                                 {.addpoint=AddPoint_90,.number=90},{.addpoint=AddPoint_108,.number=30},
-                                 {.addpoint=AddPoint_126,.number=27},{.addpoint=AddPoint_144,.number=29},
-                                 {.addpoint=AddPoint_162,.number=29},
-                                 {.addpoint=AddPoint_180,.number=90},{.addpoint=AddPoint_198,.number=30},
-                                 {.addpoint=AddPoint_216,.number=27},{.addpoint=AddPoint_234,.number=29},
-                                 {.addpoint=AddPoint_252,.number=29},
-                                 {.addpoint=AddPoint_270,.number=90},{.addpoint=AddPoint_288,.number=30},
-                                 {.addpoint=AddPoint_306,.number=27},{.addpoint=AddPoint_324,.number=29},
-                                 {.addpoint=AddPoint_342,.number=29},
-};
-
-DirectionAdd_T getDirectionAdd_Bullet(uint8_t *subscript, uint8_t newDirection) {
-    // 26 * 38   0 ->         y+=-1 ,       y+=-2
-    // 32 * 40  18 ->         y+=-2 , x+=-1 y+=-1
-    // 38 * 40  36 ->   x+=-1 y+=-1 , x+=-1 y+=-2 , x+=-1 y+=-1
-    // 40 * 38  54 ->   x+=-1 y+=-1 , x+=-2 y+=-1 , x+=-1 y+=-1
-    // 40 * 32  72 ->   x+=-1       , x+=-2 y+=-1
-    static const DirectionAdd_T directionAdd[DIRECTION_FIRST_DIM_LEN][3] = {
-            {{0,  -1}, {0,  -2}, {0,  0}},
-            {{0,  -2}, {-1, -1}, {0,  0}},
-            {{-1, -1}, {-1, -2}, {-1, -1}},
-            {{-1, -1}, {-2, -1}, {-1, -1}},
-            {{-1, 0},  {-2, -1}, {0,  0}},
-    };
-    static uint8_t sub;
-    uint8_t degreeMap = newDirection % DIRECTION_FIRST_DIM_LEN;
-    if (degreeMap == 2 || degreeMap == 3) {
-        sub = (subscript[degreeMap] = (subscript[degreeMap] + 1) % 3);
-    } else {
-        sub = (subscript[degreeMap] = (subscript[degreeMap] + 1) % 2);
-    }
-    switch (newDirection / DIRECTION_FIRST_DIM_LEN) {
-        case 0: // [0 , 90)
-            return (DirectionAdd_T) {
-                    .x_add =   directionAdd[degreeMap][sub].x_add,
-                    .y_add =   directionAdd[degreeMap][sub].y_add,
-            };
-        case 1: // [90, 180)
-            return (DirectionAdd_T) {
-                    .x_add =  directionAdd[degreeMap][sub].y_add,
-                    .y_add = -directionAdd[degreeMap][sub].x_add,
-            };
-        case 2: // [180, 270)
-            return (DirectionAdd_T) {
-                    .x_add = -directionAdd[degreeMap][sub].x_add,
-                    .y_add = -directionAdd[degreeMap][sub].y_add,
-            };
-        case 3: // [270, 360)
-            return (DirectionAdd_T) {
-                    .x_add = -directionAdd[degreeMap][sub].y_add,
-                    .y_add =  directionAdd[degreeMap][sub].x_add,
-            };
-        default:
-            return (DirectionAdd_T) {0, 0};
-    }
-}
 
 Bullet_Touch_State getBulletTouchWallState(uint8_t direction, Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
 #define boolIsWall(x, y) (isWall(x, y)!=0) // 0 is not wall, 1 is wall
-    if ((0 <= p1.x && p1.x < ScreenXLen && 0 <= p1.y && p1.y < ScreenYLen)
-        && (0 <= p2.x && p2.x < ScreenXLen && 0 <= p2.y && p2.y < ScreenYLen)
-        && (0 <= p3.x && p3.x < ScreenXLen && 0 <= p3.y && p3.y < ScreenYLen)
-        && (0 <= p4.x && p4.x < ScreenXLen && 0 <= p4.y && p4.y < ScreenYLen)) {
+    if ((0 <= p1.x && p1.x < MapXLen && 0 <= p1.y && p1.y < MapYLen)
+        && (0 <= p2.x && p2.x < MapXLen && 0 <= p2.y && p2.y < MapYLen)
+        && (0 <= p3.x && p3.x < MapXLen && 0 <= p3.y && p3.y < MapYLen)
+        && (0 <= p4.x && p4.x < MapXLen && 0 <= p4.y && p4.y < MapYLen)) {
         int16_t cent_x = (p1.x + p2.x) >> 1, cent_y = (p1.y + p3.y) >> 1;
         uint8_t num1 = 0, num2 = 0;
         switch (direction) {
@@ -173,7 +114,7 @@ Bullet_Touch_State getBulletTouchWallState(uint8_t direction, Point_T p1, Point_
             return left;
         else if (p1.y <= 0)
             return up;
-        else if (p4.x >= ScreenXLen)
+        else if (p4.x >= MapXLen)
             return right;
         else return down; // touch wall
     }
@@ -328,7 +269,7 @@ uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd) {
 }
 
 void drawBullet(Bullet_T *bullet, uint8_t direction) {
-    DirectionAdd_T directionAdd = getDirectionAdd_Bullet(bullet->subscript, direction);
+    DirectionAdd_T directionAdd = getDirectionAdd(bullet->subscript, direction);
     bulletMove_clear(bullet, directionAdd);
     if( bullet->ifDraw == 0 ) return;
     LCD_Fill(bullet->xPos - (Bullet_Image_Length >> 1),
@@ -346,7 +287,7 @@ void drawBullets(){
     }
 }
 
-void Bullet_TimeOutTest(){
+void Bullet_TimeOutClear(){
     uint32_t loopNowTick = HAL_GetTick();
     for (uint8_t i = 0; i < BulletNumMax; ++i) {
         if( bullets[i].owner != NULL ){
@@ -385,13 +326,13 @@ void BulletShoot(Tank_T* tank){
     }
 }
 
-void Bullet_Create(Bullet_T *bullet, Tank_T* owner, uint32_t CreateTime){
-    bullet->xPos = owner->xPos;
-    bullet->yPos = owner->yPos;
-    bullet->direction = owner->direction;
+void Bullet_Create(Bullet_T *bullet, Tank_T* tank, uint32_t CreateTime){
+    bullet->xPos = tank->xPos;
+    bullet->yPos = tank->yPos;
+    bullet->direction = tank->direction;
     bullet->createTime = CreateTime;
-    bullet->owner = owner;
-    owner->bulletNum--;
+    bullet->owner = tank;
+    tank->bulletNum--;
     bulletNum++;
 }
 
@@ -418,9 +359,9 @@ void Bullet_Init_random(Bullet_T *bullet) {
     uint8_t HalfLenOfImage = Bullet_Image_Length >> 1;
     do {
         HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
-        bullet->xPos = RNG_Value % ScreenXLen;
+        bullet->xPos = RNG_Value % MapXLen;
         HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
-        bullet->yPos = RNG_Value % ScreenYLen;
+        bullet->yPos = RNG_Value % MapYLen;
     } while (notouch != getBulletTouchWallState(bullet->direction,
                                                 (Point_T) {bullet->xPos - HalfLenOfImage,
                                                            bullet->yPos - HalfLenOfImage},

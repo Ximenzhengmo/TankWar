@@ -7,6 +7,13 @@
 
 #include "global.h"
 
+typedef struct{
+    const Point_T *addpoint;
+    int number;
+}CrashTest_T;
+
+extern const CrashTest_T crashTest[20];
+
 extern const Point_T AddPoint_0[];
 extern const Point_T AddPoint_18[];
 extern const Point_T AddPoint_36[];
@@ -27,9 +34,6 @@ extern const Point_T AddPoint_288[];
 extern const Point_T AddPoint_306[];
 extern const Point_T AddPoint_324[];
 extern const Point_T AddPoint_342[];
-
-
-
 
 
 #endif //TANKWAR_CRASH_H

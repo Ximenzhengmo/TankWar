@@ -1643,7 +1643,7 @@ __STATIC_INLINE uint32_t LL_USART_GetNodeAddress(USART_TypeDef *USARTx)
 }
 
 /**
-  * @brief  Return Length of Node Address used in Address Detection mode (7-bit or 4-bit)
+  * @brief  Return Length of Node_T Address used in Address Detection mode (7-bit or 4-bit)
   * @rmtoll CR2          ADDM7         LL_USART_GetNodeAddressLen
   * @param  USARTx USART Instance
   * @retval Returned value can be one of the following values:
@@ -2895,7 +2895,7 @@ __STATIC_INLINE void LL_USART_ConfigIrdaMode(USART_TypeDef *USARTx)
   *         - Clear IREN in CR3 using @ref LL_USART_DisableIrda() function
   *         - Clear HDSEL in CR3 using @ref LL_USART_DisableHalfDuplex() function
   * @note   Other remaining configurations items related to Multi processor Mode
-  *         (as Baud Rate, Wake Up Method, Node address, ...) should be set using
+  *         (as Baud Rate, Wake Up Method, Node_T address, ...) should be set using
   *         dedicated functions
   * @rmtoll CR2          LINEN         LL_USART_ConfigMultiProcessMode\n
   *         CR2          CLKEN         LL_USART_ConfigMultiProcessMode\n
