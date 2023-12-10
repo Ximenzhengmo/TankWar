@@ -338,9 +338,28 @@ void drawBullet(Bullet_T *bullet, uint8_t direction) {
     );
 }
 
+void drawBullets(){
+    for (int i = 0; i < BulletNumMax; ++i) {
+        if( bullets[i].owner != NULL ) {
+            drawBullet(&bullets[i], bullets[i].direction);
+        }
+    }
+}
+
+void Bullet_TimeOutTest(){
+    uint32_t loopNowTick = HAL_GetTick();
+    for (uint8_t i = 0; i < BulletNumMax; ++i) {
+        if( bullets[i].owner != NULL ){
+            if(loopNowTick - bullets[i].createTime > Bullet_Life_Time_ms ){
+                Bullet_Destroy(&bullets[i]);
+            }
+        }
+    }
+}
+
 void Bullets_Init() {
     for( uint8_t i = 0 ; i < BulletNumMax ; i++ ){
-        memset(bullets[i].subscript, 0U, DIRECTION_FIRST_DIM_LEN);
+        memset(bullets[i].subscript, 0U, sizeof(bullets[i].subscript));
         bullets[i].direction = 20;
         bullets[i].xPos = -1;
         bullets[i].yPos = -1;

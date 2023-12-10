@@ -3,6 +3,7 @@
 #include "stdio.h"
 
 Tank_T redTank = {
+        .isAlive = 1,
         .bulletNum =  5,
         .tankImage =  redTankImage,
         .direction = 0,
@@ -10,6 +11,7 @@ Tank_T redTank = {
         .yPos =  0,
 };
 Tank_T greenTank = {
+        .isAlive = 1,
         .bulletNum =  5,
         .tankImage =  greenTankImage,
         .direction = 0,
@@ -18,6 +20,8 @@ Tank_T greenTank = {
 };
 
 void tank_Init(Tank_T *tank) {
+    memset(tank->subscript, 0U, sizeof(tank->subscript));
+    tank->isAlive = 1;
     static uint32_t RNG_Value;
     tank->bulletNum = 5;
     if (HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value) != HAL_OK) {
@@ -47,7 +51,7 @@ void LCD_ClearToBackground(Point_T LeftUp, Point_T RightDown) {
     LCD_Fill(LeftUp.x, LeftUp.y, xLen, yLen, (uint8_t *) whiteBackground);
 }
 
-DirectionAdd_T getDirectionAdd(uint8_t newDirection) {
+DirectionAdd_T getDirectionAdd(uint8_t *subscript ,uint8_t newDirection) {
     // 26 * 38   0 ->         y+=-1 ,       y+=-2
     // 32 * 40  18 ->         y+=-2 , x+=-1 y+=-1
     // 38 * 40  36 ->   x+=-1 y+=-1 , x+=-1 y+=-2 , x+=-1 y+=-1
@@ -60,7 +64,6 @@ DirectionAdd_T getDirectionAdd(uint8_t newDirection) {
             {{-1, -1}, {-2, -1}, {-1, -1}},
             {{-1, 0},  {-2, -1}, {0,  0}},
     };
-    static uint8_t subscript[DIRECTION_FIRST_DIM_LEN] = {1, 1, 2, 1, 1};
     static uint8_t sub;
     uint8_t degreeMap = newDirection % DIRECTION_FIRST_DIM_LEN;
     if (degreeMap == 2 || degreeMap == 3) {
@@ -235,8 +238,9 @@ uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
 }
 
 void drawTank(Tank_T *tank, uint8_t direction) {
+    if ( ! tank->isAlive ) return;
     if (direction < 20) {
-        DirectionAdd_T directionAdd = getDirectionAdd(direction);
+        DirectionAdd_T directionAdd = getDirectionAdd(tank->subscript ,direction);
         tankMove_clear(tank, directionAdd, direction);
     }
     LCD_Fill(tank->xPos - (tank->tankImage[tank->direction].xLen >> 1),
@@ -244,6 +248,17 @@ void drawTank(Tank_T *tank, uint8_t direction) {
              tank->tankImage[tank->direction].xLen,
              tank->tankImage[tank->direction].yLen,
              (uint8_t *) tank->tankImage[tank->direction].image);
+}
+
+
+void tank_Destroy(Tank_T* tank){
+    tank->isAlive = 0;
+    tank->bulletNum = 0;
+    LCD_Fill(tank->xPos - (tank->tankImage[tank->direction].xLen >> 1),
+             tank->yPos - (tank->tankImage[tank->direction].yLen >> 1),
+             tank->tankImage[tank->direction].xLen,
+             tank->tankImage[tank->direction].yLen,
+             (uint8_t *) whiteBackground);
 }
 
 const TankImage_T redTankImage[20] = {

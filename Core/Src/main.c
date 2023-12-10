@@ -85,6 +85,8 @@ static void MX_TIM5_Init(void);
 static void MX_I2C3_Init(void);
 /* USER CODE BEGIN PFP */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
+uint8_t scoreRed = 0;
+uint8_t scoreGreen = 0;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -103,54 +105,55 @@ PUTCHAR_PROTOTYPE
 
 uint8_t FPS = 0;
 void gameBegin() {
+    drawMap();
     static uint8_t direction_r;
     static uint8_t direction_l;
-    static uint8_t test = 1;
     tank_Init(&redTank);
     tank_Init(&greenTank);
     Bullets_Init();
     direction_l = redTank.direction;
     direction_r = greenTank.direction;
-    uint32_t loopStartTick = 0, loopEndTick = 0;
-    while (1) {
+    uint32_t loopStartTick = 0, loopNowTick = 0, tankDiedTick = 0x3F3F3F3F;
+    while ( 1 ) {
         FPS++;
         loopStartTick = HAL_GetTick();
+
         direction_l = get_l_state();
         direction_r = get_r_state();
-        for (int i = 0; i < BulletNumMax; ++i) {
-            if( bullets[i].owner != NULL ) {
-                drawBullet(&bullets[i], bullets[i].direction);
-            }
-        }
-        if( test ) {
-            drawTank(&redTank, direction_l);
-            drawTank(&greenTank, direction_r);
-            test = 0;
-        }else{
-            drawTank(&greenTank, direction_r);
-            drawTank(&redTank, direction_l);
-            test = 1;
-        }
+        drawBullets();
 
-        loopEndTick = HAL_GetTick();
-        for (uint8_t i = 0; i < BulletNumMax; ++i) {
-            if( bullets[i].owner != NULL ){
-                if( loopEndTick - bullets[i].createTime > Bullet_Life_Time_ms ){
+        drawTank(&redTank, direction_l);
+        drawTank(&greenTank, direction_r);
 
-                    Bullet_Destroy(&bullets[i]);
-                }
-            }
-        }
-        if(loopEndTick - loopStartTick < 1000 / 60 ) {
-            HAL_Delay(1000 / 60 - ( loopEndTick-  loopStartTick));
-        }
+        Bullet_TimeOutTest();
 
         for(uint8_t i = 0; i <= bulletNum; i++) {
             if (bullets[i].owner != NULL) {
-                if (IsCrash(&greenTank, &bullets[i]))
-                    printf("Crash\n");
+                if ( greenTank.isAlive && IsCrash(&greenTank, &bullets[i])) {
+                    tankDiedTick = HAL_GetTick();
+                    Bullet_Destroy(&bullets[i]);
+                    tank_Destroy(&greenTank);
+                }else if ( redTank.isAlive && IsCrash(&redTank,&bullets[i])){
+                    tankDiedTick = HAL_GetTick();
+                    Bullet_Destroy(&bullets[i]);
+                    tank_Destroy(&redTank);
+                }
             }
         }
+
+        loopNowTick = HAL_GetTick();
+        if( loopNowTick > tankDiedTick + tankDiedTimeDelay_ms ) {
+            break;
+        }
+        if(loopNowTick - loopStartTick < 1000 / 60 ) {
+            HAL_Delay(1000 / 60 - (loopNowTick - loopStartTick));
+        }
+    }
+
+    if( greenTank.isAlive ) {
+        show_score(++scoreGreen, GREEN);
+    }else if( redTank.isAlive ) {
+        show_score(++scoreRed, RED);
     }
 }
 
@@ -158,11 +161,11 @@ uint8_t keyDownTest(){
     static uint8_t dataBuffer[1] = {0};
     HAL_I2C_Mem_Read(&hi2c3, PCA9554_ADDR, PCA9554_INPUT_PORT_REG, I2C_MEMADD_SIZE_8BIT, dataBuffer,1,0xff);
     //if ((( ~dataBuffer[0]) & 1)>0)
-    if(dataBuffer[0]==253)
+    if(dataBuffer[0]==253) {
         return 1;
-    else
+    }else {
         return 0;
-
+    }
 }
 /* USER CODE END 0 */
 
@@ -211,24 +214,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
     LL_mDelay(200);	// 等待200ms以让LCD稳定
     LCD_Init();		// 初始化LCD
-    LL_mDelay(100);	// 等待100ms
-    LCD_Clear(WHITE);	// 蓝色清屏
+    LL_mDelay(100);	// 等待100ms以让LCD稳定
     LCD_Fill(30,20,420,280,gImage_MainMenu);
-    drawMap();
-    gameBegin();
-    Touch();
+
+    show_score(0, RED);
+    show_score(0, GREEN);
   while (1)
   {
-      uint32_t value[2];
-      HAL_ADC_Start(&hadc2);
-//      HAL_ADC_PollForConversion(&hadc1,10);
-      value[0] = HAL_ADC_GetValue(&hadc2);
-//      HAL_ADC_PollForConversion(&hadc1,10);
-      value[1] = HAL_ADC_GetValue(&hadc2);
-      HAL_ADC_Stop(&hadc2);
-      printf("%d %d\n", value[0] - 2048, value[1] - 2048);
     /* USER CODE END WHILE */
-
+      gameBegin();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

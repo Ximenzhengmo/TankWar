@@ -14,10 +14,9 @@
 #define show_red_ypos 90
 #define show_green_ypos 210
 
-void Print_number(uint16_t xpos, uint16_t ypos, uint8_t color, const uint8_t *src);
+void Print_number(uint16_t xpos, uint16_t ypos, uint16_t color, const uint8_t *src);
 
-void show_score(uint8_t score, uint8_t color);
-
+void show_score(uint8_t score, uint16_t color);
 
 extern const unsigned char numImage[10][704];
 

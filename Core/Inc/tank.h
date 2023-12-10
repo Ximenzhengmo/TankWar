@@ -31,7 +31,9 @@ typedef struct DirectionAdd_T {
 }DirectionAdd_T;
 
 typedef struct Tank_T{
+    uint8_t isAlive;
     uint8_t bulletNum;
+    uint8_t subscript[5];
     const TankImage_T* const tankImage;
     uint8_t direction;
     int16_t xPos;
@@ -51,11 +53,13 @@ void LCD_ClearToBackground(Point_T LeftUp, Point_T RightDown);
 
 uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4);
 
-DirectionAdd_T getDirectionAdd(uint8_t newDirection);
+DirectionAdd_T getDirectionAdd(uint8_t *subscript, uint8_t newDirection);
 
 uint8_t tankMove_clear(Tank_T* tank, DirectionAdd_T directionAdd, uint8_t newDirection);
 
 void drawTank(Tank_T* tank ,uint8_t direction);
+
+void tank_Destroy(Tank_T* tank);
 
 extern const unsigned char gImage_red0[];
 extern const unsigned char gImage_red18[];

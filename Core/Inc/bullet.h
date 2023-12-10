@@ -7,9 +7,10 @@
 #define DIRECTION_FIRST_DIM_LEN (5)
 #define Bullet_Image_Length 7
 #define BulletNumMax 10
-#define Bullet_Life_Time_ms 10000
+#define Bullet_Life_Time_ms (10*1000)
 #define Bullet_Create_Loop_Num 11
 #define half_bullet_image (Bullet_Image_Length >> 1)
+#define tankDiedTimeDelay_ms (3*1000)
 
 typedef enum Bullet_Touch_State{
     up,down,left,right,notouch,rebound
@@ -41,6 +42,10 @@ void BulletBound(Bullet_T *bullet,Bullet_Touch_State state);
 uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd) ;
 
 void drawBullet(Bullet_T *bullet, uint8_t direction);
+
+void drawBullets();
+
+void Bullet_TimeOutTest();
 
 void Bullets_Init();
 
