@@ -217,12 +217,18 @@ int main(void)
     LL_mDelay(100);	// 等待100ms以让LCD稳定
     LCD_Fill(30,20,420,280,gImage_MainMenu);
 
-    show_score(0, RED);
-    show_score(0, GREEN);
+
   while (1)
   {
     /* USER CODE END WHILE */
-      gameBegin();
+    while( Touch() == 0) ;
+    if(Touch() == 2)
+    {
+        show_score(0, RED);
+        show_score(0, GREEN);
+        while(1)
+        gameBegin();
+    }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

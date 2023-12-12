@@ -20,6 +20,6 @@ typedef enum {
 
 Touch_StatusTypeDef Touch_Read(TouchTypedef *dst);
 
-void Touch(void);
+uint8_t Touch(void);
 
 #endif //TANKWAR_TOUCH_H

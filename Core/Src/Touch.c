@@ -39,16 +39,24 @@ Touch_StatusTypeDef Touch_Read(TouchTypedef *dst){
     return TOUCH_SUCCESS;
 }
 
-void Touch(void)
+uint8_t Touch(void)
 {
     LL_GPIO_SetOutputPin(SPI3_CS_SDCARD_GPIO_Port,SPI3_CS_SDCARD_Pin);
     LL_GPIO_SetOutputPin(SPI3_CS_TOUCH_GPIO_Port,SPI3_CS_TOUCH_Pin);
 
     TouchTypedef user_touch;
-    for(;;){
+    for(;;) {
         Touch_Read(&user_touch);
-        if(user_touch.isPressed){
-            printf("%d %d\n",user_touch.X,user_touch.Y);
+        if (user_touch.isPressed) {
+            if(user_touch.X<1200 && user_touch.Y >= 860 && user_touch.Y <=870) {
+                printf("2\n");
+                return 2;
+            }else if(user_touch.X>1200 && user_touch.Y >= 860 && user_touch.Y <=870)
+            {
+                printf("1\n");
+                return 1;
+            }
         }
+        return 0;
     }
 }
