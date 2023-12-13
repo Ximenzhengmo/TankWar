@@ -28,7 +28,6 @@ typedef struct Bullet_T {
 extern const unsigned char gImage_bullet[98];
 
 extern Bullet_T bullets[BulletNumMax];
-extern Bullet_T bullet_test;
 extern uint8_t bulletNum;
 
 Bullet_Touch_State getBulletTouchWallState(uint8_t direction, Point_T p1, Point_T p2, Point_T p3, Point_T p4);
@@ -53,8 +52,7 @@ void Bullet_Destroy(Bullet_T *bullet);
 
 void Bullet_Init_random(Bullet_T* bullet);
 
-uint8_t IsCrash(Tank_T *tank, Bullet_T *bullet);
+uint8_t IsBulletCrashTank(Tank_T *tank, Bullet_T *bullet);
 
-uint8_t IsTankCrashTank(Tank_T *tank,Tank_T random_tank[],uint8_t number);
 
 #endif //TANKWAR_BULLET_H

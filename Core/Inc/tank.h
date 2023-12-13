@@ -30,15 +30,11 @@ typedef struct Tank_T{
 
 extern Tank_T redTank;
 extern Tank_T greenTank;
-extern Tank_T random_tank[5];
 
 extern const TankImage_T redTankImage[20];
 extern const TankImage_T greenTankImage[20];
 
-extern const TankImage_T tankTargetImage;
-
 void tank_Init(Tank_T* tank);
-void tank_Init_1player(Tank_T *tank,uint8_t number);
 
 uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4);
 
@@ -89,7 +85,5 @@ extern const unsigned char gImage_green288[];
 extern const unsigned char gImage_green306[];
 extern const unsigned char gImage_green324[];
 extern const unsigned char gImage_green342[];
-
-extern const unsigned char gImage_target[];
 
 #endif //TANKWAR_TACK_H

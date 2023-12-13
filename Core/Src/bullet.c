@@ -2,12 +2,6 @@
 
 Bullet_T bullets[BulletNumMax];
 
-Bullet_T bullet_test = {
-        .direction=6,
-        .xPos=20,
-        .yPos=20
-};
-
 uint8_t bulletNum = 0;
 
 const unsigned char gImage_bullet[] = {
@@ -374,15 +368,14 @@ void Bullet_Init_random(Bullet_T *bullet) {
     bullet->createTime = 0xFFFFFFFF;
 }
 
-uint8_t IsCrash(Tank_T *tank, Bullet_T *bullet)
+uint8_t IsBulletCrashTank(Tank_T *tank, Bullet_T *bullet)
 {
-#define abs(x) ((x)>0?(x):-(x))
     uint16_t tank_center_x=tank->xPos, tank_center_y=tank->yPos;
     uint16_t bullet_center_x=bullet->xPos, bullet_center_y=bullet->yPos;
     int16_t distance_x = (int16_t)bullet_center_x - (int16_t)tank_center_x;
     int16_t distance_y = (int16_t)bullet_center_y - (int16_t)tank_center_y;
-    int16_t distance = abs(distance_x) - abs(distance_y);
-    if( abs(distance) > 45 )
+    int16_t distance = ABS(distance_x) - ABS(distance_y);
+    if(ABS(distance) > 45 )
     {
         return 0;
     }
@@ -395,44 +388,6 @@ uint8_t IsCrash(Tank_T *tank, Bullet_T *bullet)
                  tank_center_y + crash->addpoint[i].y < bullet_center_y + half_bullet_image))
                 return 1;
         }
-    }
-    return 0;
-}
-
-uint8_t IsTankCrashTank(Tank_T *tank,Tank_T randomtank[],uint8_t number)
-{
-    uint16_t tank_1_center_x = tank->xPos, tank_1_center_y = tank->yPos;
-    uint16_t tank_2_center_x = 0, tank_2_center_y = 0;
-    int16_t distance_x=0, distance_y=0;
-    int16_t distance;
-    for(uint8_t i = 0; i < 5 && i!=number; i++)
-    {
-        if( randomtank[i].isAlive == 1 )
-        {
-            tank_2_center_x = randomtank[i].xPos;
-            tank_2_center_y = randomtank[i].yPos;
-            distance_x = (int16_t)tank_2_center_x - (int16_t)tank_1_center_x;
-            distance_y = (int16_t)tank_2_center_y - (int16_t)tank_1_center_y;
-            distance = abs (distance_x) - abs(distance_y);
-            if(abs(distance) > 60)
-                continue;
-            else{
-                const CrashTest_T *crash = tank->tankImage[tank->direction].crashTest;
-                for(uint8_t j = 0; j < crash->number ; j++) {
-                    if ((tank_1_center_x + crash->addpoint[j].x >
-                         tank_2_center_x - (randomtank[i].tankImage->xLen >> 1)) &&
-                        (tank_1_center_x + crash->addpoint[j].x <
-                         tank_2_center_x + (randomtank[i].tankImage->xLen >> 1)) &&
-                        (tank_1_center_y + crash->addpoint[j].y >
-                         tank_2_center_y - (randomtank[i].tankImage->yLen >> 1)) &&
-                        (tank_1_center_y + crash->addpoint[j].y <
-                         tank_2_center_y + (randomtank[i].tankImage->yLen >> 1))) {
-                        return 1;
-                    }
-                }
-            }
-        }else
-            continue;
     }
     return 0;
 }

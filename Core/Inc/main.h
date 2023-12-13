@@ -67,6 +67,7 @@ void Error_Handler(void);
 extern RNG_HandleTypeDef hrng;
 extern ADC_HandleTypeDef hadc1;
 extern ADC_HandleTypeDef hadc2;
+extern I2C_HandleTypeDef hi2c3;
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

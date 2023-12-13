@@ -20,34 +20,6 @@ Tank_T greenTank = {
         .yPos =  0,
 };
 
-Tank_T random_tank[5]={
-        {
-                .tankImage =  &tankTargetImage,
-                .isAlive = 0,
-                .direction=0
-        },
-        {
-                .tankImage =  &tankTargetImage,
-                .isAlive = 0,
-                .direction=0
-        },
-        {
-                .tankImage =  &tankTargetImage,
-                .isAlive = 0,
-                .direction = 0
-        },
-        {
-                .tankImage =  &tankTargetImage,
-                .isAlive = 0,
-                .direction = 0
-        },
-        {
-                .tankImage =  &tankTargetImage,
-                .isAlive = 0,
-                .direction = 0
-        }
-};
-
 void tank_Init(Tank_T *tank) {
     memset(tank->subscript, 0U, sizeof(tank->subscript));
     tank->isAlive = 1;
@@ -73,35 +45,6 @@ void tank_Init(Tank_T *tank) {
                              (Point_T) {tank->xPos + xHalfLenOfImage - 1,
                                         tank->yPos + yHalfLenOfImage - 1}));
 }
-
-void tank_Init_1player(Tank_T *tank,uint8_t number){
-    uint8_t crash_flag = 0;
-    memset(tank->subscript, 0U, sizeof(tank->subscript));
-    tank->isAlive = 1;
-    static uint32_t RNG_Value;
-    //tank->bulletNum = 5;
-    if (HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value) != HAL_OK) {
-        RNG_Value = 0;
-    }
-    //tank->direction = RNG_Value % 20;
-    uint8_t xHalfLenOfImage = (tank->tankImage->xLen) >> 1;
-    uint8_t yHalfLenOfImage = (tank->tankImage->yLen) >> 1;
-    do {
-        HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
-        tank->xPos = RNG_Value % MapXLen;
-        HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
-        tank->yPos = RNG_Value % MapYLen;
-        crash_flag=IsTankCrashTank(tank,random_tank,number);
-    } while (isTankTouchWall((Point_T) {tank->xPos - xHalfLenOfImage,
-                                              tank->yPos - yHalfLenOfImage},
-                                   (Point_T) {tank->xPos + xHalfLenOfImage - 1,
-                                              tank->yPos - yHalfLenOfImage},
-                                   (Point_T) {tank->xPos - xHalfLenOfImage,
-                                              tank->yPos + yHalfLenOfImage - 1},
-                                   (Point_T) {tank->xPos + xHalfLenOfImage - 1,
-                                              tank->yPos + yHalfLenOfImage - 1}) || crash_flag);
-}
-
 
 uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDirection) {
 #define InRange(pos, pos1, pos4) (((pos).x >= (pos1).x && (pos).x <= (pos4).x) && ((pos).y >= (pos1).y && (pos).y <= (pos4).y))
@@ -242,7 +185,7 @@ uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
 }
 
 void drawTank(Tank_T *tank, uint8_t direction) {
-    if ( ! tank->isAlive ) return;
+    if ( !tank->isAlive ) return;
     if (direction < 20) {
         DirectionAdd_T directionAdd = getDirectionAdd(tank->subscript ,direction);
         tankMove_clear(tank, directionAdd, direction);
@@ -266,61 +209,54 @@ void tank_Destroy(Tank_T* tank){
 }
 
 const TankImage_T redTankImage[20] = {
-        {.image=gImage_red0, .xLen=26, .yLen=38,  .crashTest=&crashTest[0]},
-        {.image=gImage_red18, .xLen=32, .yLen=40, .crashTest=&crashTest[1]},
-        {.image=gImage_red36, .xLen=38, .yLen=40, .crashTest=&crashTest[2]},
-        {.image=gImage_red54, .xLen=40, .yLen=38, .crashTest=&crashTest[3]},
-        {.image=gImage_red72, .xLen=40, .yLen=32, .crashTest=&crashTest[4]},
+        {.image=gImage_red0, .xLen=26, .yLen=38,  .crashTest=&crashTest_bullet[0]},
+        {.image=gImage_red18, .xLen=32, .yLen=40, .crashTest=&crashTest_bullet[1]},
+        {.image=gImage_red36, .xLen=38, .yLen=40, .crashTest=&crashTest_bullet[2]},
+        {.image=gImage_red54, .xLen=40, .yLen=38, .crashTest=&crashTest_bullet[3]},
+        {.image=gImage_red72, .xLen=40, .yLen=32, .crashTest=&crashTest_bullet[4]},
 
-        {.image=gImage_red90, .xLen=38, .yLen=26,  .crashTest=&crashTest[5]},
-        {.image=gImage_red108, .xLen=40, .yLen=32, .crashTest=&crashTest[6]},
-        {.image=gImage_red126, .xLen=40, .yLen=38, .crashTest=&crashTest[7]},
-        {.image=gImage_red144, .xLen=38, .yLen=40, .crashTest=&crashTest[8]},
-        {.image=gImage_red162, .xLen=32, .yLen=40, .crashTest=&crashTest[9]},
+        {.image=gImage_red90, .xLen=38, .yLen=26,  .crashTest=&crashTest_bullet[5]},
+        {.image=gImage_red108, .xLen=40, .yLen=32, .crashTest=&crashTest_bullet[6]},
+        {.image=gImage_red126, .xLen=40, .yLen=38, .crashTest=&crashTest_bullet[7]},
+        {.image=gImage_red144, .xLen=38, .yLen=40, .crashTest=&crashTest_bullet[8]},
+        {.image=gImage_red162, .xLen=32, .yLen=40, .crashTest=&crashTest_bullet[9]},
 
-        {.image=gImage_red180, .xLen=26, .yLen=38,.crashTest=&crashTest[10]},
-        {.image=gImage_red198, .xLen=32, .yLen=40,.crashTest=&crashTest[11]},
-        {.image=gImage_red216, .xLen=38, .yLen=40,.crashTest=&crashTest[12]},
-        {.image=gImage_red234, .xLen=40, .yLen=38,.crashTest=&crashTest[13]},
-        {.image=gImage_red252, .xLen=40, .yLen=32,.crashTest=&crashTest[14]},
+        {.image=gImage_red180, .xLen=26, .yLen=38,.crashTest=&crashTest_bullet[10]},
+        {.image=gImage_red198, .xLen=32, .yLen=40,.crashTest=&crashTest_bullet[11]},
+        {.image=gImage_red216, .xLen=38, .yLen=40,.crashTest=&crashTest_bullet[12]},
+        {.image=gImage_red234, .xLen=40, .yLen=38,.crashTest=&crashTest_bullet[13]},
+        {.image=gImage_red252, .xLen=40, .yLen=32,.crashTest=&crashTest_bullet[14]},
 
-        {.image=gImage_red270, .xLen=38, .yLen=26,.crashTest=&crashTest[15]},
-        {.image=gImage_red288, .xLen=40, .yLen=32,.crashTest=&crashTest[16]},
-        {.image=gImage_red306, .xLen=40, .yLen=38,.crashTest=&crashTest[17]},
-        {.image=gImage_red324, .xLen=38, .yLen=40,.crashTest=&crashTest[18]},
-        {.image=gImage_red342, .xLen=32, .yLen=40,.crashTest=&crashTest[19]},
+        {.image=gImage_red270, .xLen=38, .yLen=26,.crashTest=&crashTest_bullet[15]},
+        {.image=gImage_red288, .xLen=40, .yLen=32,.crashTest=&crashTest_bullet[16]},
+        {.image=gImage_red306, .xLen=40, .yLen=38,.crashTest=&crashTest_bullet[17]},
+        {.image=gImage_red324, .xLen=38, .yLen=40,.crashTest=&crashTest_bullet[18]},
+        {.image=gImage_red342, .xLen=32, .yLen=40,.crashTest=&crashTest_bullet[19]},
 };
 
 const TankImage_T greenTankImage[20] = {
-        {.image=gImage_green0, .xLen=26, .yLen=38, .crashTest=&crashTest[0]},
-        {.image=gImage_green18, .xLen=32, .yLen=40,.crashTest=&crashTest[1]},
-        {.image=gImage_green36, .xLen=38, .yLen=40,.crashTest=&crashTest[2]},
-        {.image=gImage_green54, .xLen=40, .yLen=38,.crashTest=&crashTest[3]},
-        {.image=gImage_green72, .xLen=40, .yLen=32,.crashTest=&crashTest[4]},
+        {.image=gImage_green0, .xLen=26, .yLen=38, .crashTest=&crashTest_bullet[0]},
+        {.image=gImage_green18, .xLen=32, .yLen=40,.crashTest=&crashTest_bullet[1]},
+        {.image=gImage_green36, .xLen=38, .yLen=40,.crashTest=&crashTest_bullet[2]},
+        {.image=gImage_green54, .xLen=40, .yLen=38,.crashTest=&crashTest_bullet[3]},
+        {.image=gImage_green72, .xLen=40, .yLen=32,.crashTest=&crashTest_bullet[4]},
 
-        {.image=gImage_green90, .xLen=38, .yLen=26, .crashTest=&crashTest[5]},
-        {.image=gImage_green108, .xLen=40, .yLen=32,.crashTest=&crashTest[6]},
-        {.image=gImage_green126, .xLen=40, .yLen=38,.crashTest=&crashTest[7]},
-        {.image=gImage_green144, .xLen=38, .yLen=40,.crashTest=&crashTest[8]},
-        {.image=gImage_green162, .xLen=32, .yLen=40,.crashTest=&crashTest[9]},
+        {.image=gImage_green90, .xLen=38, .yLen=26, .crashTest=&crashTest_bullet[5]},
+        {.image=gImage_green108, .xLen=40, .yLen=32,.crashTest=&crashTest_bullet[6]},
+        {.image=gImage_green126, .xLen=40, .yLen=38,.crashTest=&crashTest_bullet[7]},
+        {.image=gImage_green144, .xLen=38, .yLen=40,.crashTest=&crashTest_bullet[8]},
+        {.image=gImage_green162, .xLen=32, .yLen=40,.crashTest=&crashTest_bullet[9]},
 
-        {.image=gImage_green180, .xLen=26, .yLen=38,.crashTest=&crashTest[10]},
-        {.image=gImage_green198, .xLen=32, .yLen=40,.crashTest=&crashTest[11]},
-        {.image=gImage_green216, .xLen=38, .yLen=40,.crashTest=&crashTest[12]},
-        {.image=gImage_green234, .xLen=40, .yLen=38,.crashTest=&crashTest[13]},
-        {.image=gImage_green252, .xLen=40, .yLen=32,.crashTest=&crashTest[14]},
+        {.image=gImage_green180, .xLen=26, .yLen=38,.crashTest=&crashTest_bullet[10]},
+        {.image=gImage_green198, .xLen=32, .yLen=40,.crashTest=&crashTest_bullet[11]},
+        {.image=gImage_green216, .xLen=38, .yLen=40,.crashTest=&crashTest_bullet[12]},
+        {.image=gImage_green234, .xLen=40, .yLen=38,.crashTest=&crashTest_bullet[13]},
+        {.image=gImage_green252, .xLen=40, .yLen=32,.crashTest=&crashTest_bullet[14]},
 
-        {.image=gImage_green270, .xLen=38, .yLen=26,.crashTest=&crashTest[15]},
-        {.image=gImage_green288, .xLen=40, .yLen=32,.crashTest=&crashTest[16]},
-        {.image=gImage_green306, .xLen=40, .yLen=38,.crashTest=&crashTest[17]},
-        {.image=gImage_green324, .xLen=38, .yLen=40,.crashTest=&crashTest[18]},
-        {.image=gImage_green342, .xLen=32, .yLen=40,.crashTest=&crashTest[19]},
-};
-
-const TankImage_T tankTargetImage = {
-        .image = gImage_target,
-        .xLen = 17,
-        .yLen = 17,
-        .crashTest = &crashTest[20]
+        {.image=gImage_green270, .xLen=38, .yLen=26,.crashTest=&crashTest_bullet[15]},
+        {.image=gImage_green288, .xLen=40, .yLen=32,.crashTest=&crashTest_bullet[16]},
+        {.image=gImage_green306, .xLen=40, .yLen=38,.crashTest=&crashTest_bullet[17]},
+        {.image=gImage_green324, .xLen=38, .yLen=40,.crashTest=&crashTest_bullet[18]},
+        {.image=gImage_green342, .xLen=32, .yLen=40,.crashTest=&crashTest_bullet[19]},
 };
 

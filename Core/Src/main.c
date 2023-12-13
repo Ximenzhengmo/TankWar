@@ -21,16 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "lcd_driver.h"
-#include "stdio.h"
-#include "string.h"
-#include "tank.h"
-#include "map.h"
-#include "Touch.h"
-#include "bullet.h"
-#include "lever_control.h"
-#include "showScore.h"
-#include "crash.h"
+#include "mainMenu.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -40,13 +31,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define PCA9554_ADDR (0b0111000 << 1)
-#define PCA9554_INPUT_PORT_REG 0
-#define PCA9554_OUTPUT_PORT_REG 1
-#define PCA9554_POL_INV_REG 2
-#define PCA9554_CONFIG_REG 3
 
-uint8_t type;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -69,7 +54,6 @@ TIM_HandleTypeDef htim5;
 TIM_HandleTypeDef htim6;
 
 /* USER CODE BEGIN PV */
-extern const unsigned char gImage_MainMenu[235200];
 
 /* USER CODE END PV */
 
@@ -88,7 +72,6 @@ static void MX_TIM5_Init(void);
 static void MX_I2C3_Init(void);
 /* USER CODE BEGIN PFP */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
-uint8_t FPS = 0;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -103,153 +86,6 @@ PUTCHAR_PROTOTYPE
 {
     HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, 0xFFFF);
     return ch;
-}
-
-void gameBegin_2players() {
-    type = 2;
-    static uint8_t direction_r;
-    static uint8_t direction_l;
-    static uint8_t scoreRed = 0;
-    static uint8_t scoreGreen = 0;
-    drawMap();
-    tank_Init(&redTank);
-    tank_Init(&greenTank);
-    Bullets_Init();
-    direction_l = redTank.direction;
-    direction_r = greenTank.direction;
-    uint32_t loopStartTick = 0, loopNowTick = 0, tankDiedTick = 0x3F114514;
-    while ( 1 ) {
-        FPS++;
-        loopStartTick = HAL_GetTick();
-
-        direction_l = get_l_state();
-        direction_r = get_r_state();
-        drawBullets();
-
-        drawTank(&redTank, direction_l);
-        drawTank(&greenTank, direction_r);
-
-        Bullet_TimeOutClear();
-
-        for(uint8_t i = 0; i <= bulletNum; i++) {
-            if (bullets[i].owner != NULL) {
-                if ( greenTank.isAlive && IsCrash(&greenTank, &bullets[i])) {
-                    tankDiedTick = HAL_GetTick();
-                    Bullet_Destroy(&bullets[i]);
-                    tank_Destroy(&greenTank);
-                }else if ( redTank.isAlive && IsCrash(&redTank,&bullets[i])){
-                    tankDiedTick = HAL_GetTick();
-                    Bullet_Destroy(&bullets[i]);
-                    tank_Destroy(&redTank);
-                }
-            }
-        }
-
-        loopNowTick = HAL_GetTick();
-        if( loopNowTick > tankDiedTick + tankDiedTimeDelay_ms ) {
-            break;
-        }
-        if(loopNowTick - loopStartTick < 1000 / 60 ) {
-            HAL_Delay(1000 / 60 - (loopNowTick - loopStartTick));
-        }
-    }
-
-    if( greenTank.isAlive ) {
-        show_score(++scoreGreen, GREEN);
-    }else if( redTank.isAlive ) {
-        show_score(++scoreRed, RED);
-    }
-}
-
-void gameBegin_1player() {
-    type = 1;
-    static uint8_t direction_r;
-    static uint8_t scoreGreen = 0;
-    uint8_t gameover=0;
-    drawMap();
-    show_score(scoreGreen, GREEN);
-    tank_Init(&greenTank);
-
-    for (uint8_t i = 0; i < 5; i++) {
-        tank_Init_1player(&random_tank[i],i);
-        drawTank(&random_tank[i], random_tank[i].direction);
-    }
-
-    Bullets_Init();
-    direction_r = greenTank.direction;
-    uint32_t loopStartTick = 0, loopNowTick = 0, tankDiedTick = 0x3F3F3F3F;
-    uint32_t countStart = 0, countNow = 0;
-    uint8_t Time=90,seconds=0;
-    countStart = HAL_GetTick();
-    while (1) {
-        FPS++;
-        loopStartTick = HAL_GetTick();
-
-        direction_r = get_r_state();
-        drawBullets();
-
-        drawTank(&greenTank, direction_r);
-        for (uint8_t j = 0; j < 5; j++) {
-            if (random_tank[j].isAlive == 0) {
-                tank_Init_1player(&random_tank[j],j);
-                drawTank(&random_tank[j], random_tank[j].direction);
-            }else if(random_tank[j].isAlive == 1)
-            {
-                LCD_Fill(random_tank[j].xPos-8,random_tank[j].yPos-8,17,17,gImage_target);
-            }
-        }
-
-        Bullet_TimeOutClear();
-
-        for (uint8_t i = 0; i <= bulletNum; i++) {
-            if (bullets[i].owner != NULL) {
-                if (greenTank.isAlive && IsCrash(&greenTank, &bullets[i])) {
-                    Bullet_Destroy(&bullets[i]);
-                    tank_Destroy(&greenTank);
-                    gameover = 1;
-                    scoreGreen = 0;
-                }
-            }
-            if(bullets[i].owner != NULL) {
-                for (uint8_t j = 0; j < 5; j++) {
-                    if (random_tank[j].isAlive && IsCrash(&random_tank[j], &bullets[i])) {
-                        show_score(++scoreGreen, GREEN);
-                        Bullet_Destroy(&bullets[i]);
-                        tank_Destroy(&random_tank[j]);
-                        }
-                    }
-                }
-            countNow = HAL_GetTick();
-            if (countNow - countStart > 1000 * seconds)
-            {
-                seconds++;
-                show_score(--Time, RED);
-            }
-            }
-        loopNowTick = HAL_GetTick();
-
-//        if (loopNowTick > tankDiedTick + tankDiedTimeDelay_ms) {
-//            break;
-//            }
-        if(gameover)
-            break;
-        if(Time == 0)
-            break;
-        if (loopNowTick - loopStartTick < 1000 / 60) {
-            HAL_Delay(1000 / 60 - (loopNowTick - loopStartTick));
-            }
-    }
-}
-
-uint8_t keyDownTest(){
-    static uint8_t dataBuffer[1] = {0};
-    HAL_I2C_Mem_Read(&hi2c3, PCA9554_ADDR, PCA9554_INPUT_PORT_REG, I2C_MEMADD_SIZE_8BIT, dataBuffer,1,0xff);
-    //if ((( ~dataBuffer[0]) & 1)>0)
-    if(dataBuffer[0]==253) {
-        return 1;
-    }else {
-        return 0;
-    }
 }
 /* USER CODE END 0 */
 
@@ -300,22 +136,10 @@ int main(void)
     LCD_Init();		// 初始化LCD
     LL_mDelay(100);	// 等待100ms以让LCD稳定
     LCD_Fill(30,20,420,280,gImage_MainMenu);
-
   while (1)
   {
+      gameBegin();
     /* USER CODE END WHILE */
-    while( Touch() == 0) ;
-    if(Touch() == 2)
-    {
-        show_score(0, RED);
-        show_score(0, GREEN);
-        while(1)
-            gameBegin_2players();
-    }else if(Touch() == 1)
-    {
-        while(1)
-            gameBegin_1player();
-    }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

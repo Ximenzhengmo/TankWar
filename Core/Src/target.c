@@ -1,38 +1,118 @@
-const unsigned char gImage_target[578] = { /* 0X00,0X10,0X11,0X00,0X11,0X00,0X01,0X1B, */
-0XFF,0XFF,0XFF,0XFF,0XDF,0XFF,0X9E,0XFF,0XDB,0XFE,0X51,0XFC,0X8A,0XF2,0X65,0XE1,
-0X04,0XD9,0X65,0XE1,0X8A,0XF2,0X51,0XFC,0XFB,0XFE,0X9E,0XFF,0XDF,0XFF,0XFF,0XFF,
-0XFF,0XFF,0XFF,0XFF,0XDF,0XFF,0X9E,0XFF,0X34,0XF5,0X08,0XB2,0X65,0XB9,0X45,0XC9,
-0X24,0XD1,0X24,0XD1,0X24,0XC9,0X45,0XC9,0X65,0XB9,0X08,0XB2,0X34,0XF5,0X9E,0XFF,
-0XDF,0XFF,0XFF,0XFF,0XDF,0XFF,0X9E,0XFF,0X51,0XF4,0X65,0XB9,0X45,0XC9,0X24,0XC9,
-0X45,0XC1,0X65,0XB9,0X86,0XB9,0X65,0XB9,0X45,0XC9,0X24,0XD1,0X45,0XC9,0X66,0XB9,
-0X72,0XEC,0X7E,0XFF,0XDF,0XFF,0X9E,0XFF,0X34,0XF5,0X65,0XB9,0X24,0XD1,0X45,0XC9,
-0X65,0XB9,0X8E,0XF3,0XB2,0XFC,0X18,0XFE,0X92,0XFC,0XEB,0XDA,0X65,0XC1,0X24,0XD1,
-0X45,0XC9,0X86,0XB1,0X14,0XFD,0X9E,0XFF,0XDB,0XFE,0X08,0XB2,0X45,0XC9,0X45,0XC9,
-0X28,0XB2,0X59,0XFE,0X59,0XFE,0X59,0XFE,0X39,0XFE,0X59,0XFE,0X79,0XFE,0X59,0XFE,
-0XE7,0XC1,0X45,0XC1,0X45,0XC9,0XE7,0XC1,0X1C,0XFF,0X51,0XFC,0X65,0XB9,0X24,0XC9,
-0X65,0XC1,0X59,0XFE,0X99,0XFE,0X54,0XF5,0X2B,0XB3,0X06,0X92,0X2B,0XB3,0X51,0XCC,
-0X79,0XFE,0X18,0XFE,0X86,0XB1,0X24,0XD1,0X45,0XC9,0X92,0XFC,0X8A,0XF2,0X45,0XC9,
-0X45,0XC9,0XCB,0XE2,0X59,0XFE,0X50,0XD4,0XC5,0XA9,0XC4,0XB1,0XE3,0XA9,0XE3,0XA9,
-0XC5,0XA1,0X14,0XFD,0X59,0XFE,0XCF,0XDB,0X45,0XC9,0X24,0XD1,0XAA,0XEA,0X65,0XE1,
-0X24,0XC9,0X65,0XC1,0X92,0XFC,0X59,0XFE,0X0B,0XBB,0XA4,0XB1,0X0F,0XFD,0X10,0XFE,
-0X2E,0XFD,0X84,0XB9,0XAA,0XD2,0X79,0XFE,0XF4,0XEC,0X45,0XC1,0X04,0XD9,0X86,0XD9,
-0X04,0XD9,0X24,0XC9,0X86,0XB9,0X18,0XFE,0X38,0XFE,0XE6,0X99,0XC3,0XA9,0X11,0XFE,
-0X6F,0XFE,0X50,0XFE,0X83,0XB9,0X86,0XB1,0X79,0XFE,0X79,0XFE,0X65,0XC1,0X04,0XD9,
-0X04,0XD9,0X65,0XE1,0X24,0XC9,0X65,0XB9,0XB2,0XFC,0X59,0XFE,0X2B,0XB3,0XE3,0XA9,
-0X4E,0XFD,0X50,0XFE,0X6D,0XFD,0X83,0XB9,0XAA,0XD2,0X79,0XFE,0XF4,0XE4,0X45,0XC1,
-0X04,0XD9,0X86,0XD9,0X8A,0XF2,0X45,0XC9,0X45,0XC9,0X8E,0XEB,0X79,0XFE,0X75,0XED,
-0XA5,0XA9,0X83,0XC1,0X83,0XC1,0X83,0XB9,0XA6,0XA9,0X10,0XE4,0X59,0XFE,0X2C,0XCB,
-0X45,0XC9,0X24,0XD1,0XAA,0XEA,0X51,0XFC,0X65,0XB9,0X45,0XC9,0X65,0XB9,0X59,0XFE,
-0X79,0XFE,0XEF,0XEB,0X8A,0XDA,0X86,0XB9,0XAA,0XD2,0X14,0XFD,0X38,0XFE,0X18,0XFE,
-0X86,0XB1,0X24,0XC9,0X45,0XC9,0X92,0XFC,0XDB,0XFE,0X08,0XB2,0X45,0XC9,0X24,0XC9,
-0XE7,0XB9,0X18,0XFE,0X59,0XFE,0X59,0XFE,0X79,0XFE,0X79,0XFE,0X79,0XFE,0X38,0XFE,
-0XC7,0XC1,0X44,0XC9,0X24,0XC9,0XE7,0XC1,0X1C,0XFF,0X7E,0XFF,0X34,0XF5,0X65,0XB9,
-0X45,0XC9,0X45,0XC1,0X86,0XB9,0X2C,0XCB,0XF3,0XEC,0X79,0XFE,0X14,0XE5,0XEF,0XDB,
-0XA6,0XA9,0X45,0XC9,0X24,0XC9,0X65,0XB9,0X14,0XFD,0XBE,0XFF,0XDF,0XFF,0X9E,0XFF,
-0X71,0XEC,0X86,0XB1,0X45,0XC9,0X24,0XD1,0X45,0XC9,0X45,0XC1,0X65,0XC1,0X45,0XC1,
-0X45,0XC9,0X45,0XC9,0X24,0XC9,0X65,0XB9,0X92,0XE4,0X9E,0XFF,0XDF,0XFF,0XFF,0XFF,
-0XDF,0XFF,0X7E,0XFF,0X14,0XFD,0XE7,0XC1,0X45,0XC9,0X04,0XD1,0X04,0XD9,0X04,0XD9,
-0X04,0XD9,0X04,0XD1,0X45,0XC9,0XE7,0XC1,0X14,0XFD,0X9E,0XFF,0XDF,0XFF,0XFF,0XFF,
-0XFF,0XFF,0XFF,0XFF,0XDF,0XFF,0XBE,0XFF,0X1C,0XFF,0XB2,0XFC,0XAA,0XEA,0X86,0XD9,
-0X04,0XD9,0X86,0XD9,0XAA,0XEA,0X92,0XFC,0X1C,0XFF,0XBE,0XFF,0XDF,0XFF,0XFF,0XFF,
-0XFF,0XFF,};
+#include "target.h"
+
+const TargetImage_T tankTargetImage = {
+        .xLen = Target_Image_Len,
+        .yLen = Target_Image_Len,
+        .image = gImage_target,
+        .crashTest = &crashTest_target,
+};
+
+Target_T randomTarget[TargetNumMax] = {
+        {.targetImage = &tankTargetImage},
+        {.targetImage = &tankTargetImage},
+        {.targetImage = &tankTargetImage},
+        {.targetImage = &tankTargetImage},
+        {.targetImage = &tankTargetImage},
+};
+
+void targetInit(Target_T *target) {
+    uint8_t crash_flag = 0;
+    target->isAlive = 1;
+    static uint32_t RNG_Value;
+    if (HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value) != HAL_OK) {
+        RNG_Value = 0;
+    }
+    uint8_t xHalfLenOfImage = (target->targetImage->xLen) >> 1;
+    uint8_t yHalfLenOfImage = (target->targetImage->yLen) >> 1;
+    do {
+        while (HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value) != HAL_OK);
+        target->xPos = RNG_Value % MapXLen;
+        while (HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value) != HAL_OK);
+        target->yPos = RNG_Value % MapYLen;
+        crash_flag = IsTargetCrashTargets(target);
+    } while (isTankTouchWall((Point_T) {target->xPos - xHalfLenOfImage,
+                                        target->yPos - yHalfLenOfImage},
+                             (Point_T) {target->xPos + xHalfLenOfImage,
+                                        target->yPos - yHalfLenOfImage},
+                             (Point_T) {target->xPos - xHalfLenOfImage,
+                                        target->yPos + yHalfLenOfImage},
+                             (Point_T) {target->xPos + xHalfLenOfImage,
+                                        target->yPos + yHalfLenOfImage}) || crash_flag);
+}
+
+uint8_t IsTargetCrashTargets(Target_T *target) {
+    uint16_t target_1_center_x = target->xPos, target_1_center_y = target->yPos;
+    uint16_t target_2_center_x = 0, target_2_center_y = 0;
+    int16_t distance_x = 0, distance_y = 0;
+    int16_t distance;
+    for (uint8_t i = 0; i < TargetNumMax; i++) {
+        if (&randomTarget[i] == target) continue;
+        if (randomTarget[i].isAlive == 1) {
+            target_2_center_x = randomTarget[i].xPos;
+            target_2_center_y = randomTarget[i].yPos;
+            distance_x = (int16_t) target_2_center_x - (int16_t) target_1_center_x;
+            distance_y = (int16_t) target_2_center_y - (int16_t) target_1_center_y;
+            distance = ABS (distance_x) - ABS(distance_y);
+            if (ABS(distance) > 60)
+                continue;
+            else {
+                const CrashTest_T *crash = target->targetImage->crashTest;
+                const uint8_t xHalfLenOfImage = (randomTarget[i].targetImage->xLen >> 1);
+                const uint8_t yHalfLenOfImage = (randomTarget[i].targetImage->yLen >> 1);
+                for (uint8_t j = 0; j < crash->number; j++) {
+                    if ((target_1_center_x + crash->addpoint[j].x >
+                         target_2_center_x - xHalfLenOfImage) &&
+                        (target_1_center_x + crash->addpoint[j].x <
+                         target_2_center_x + xHalfLenOfImage) &&
+                        (target_1_center_y + crash->addpoint[j].y >
+                         target_2_center_y - yHalfLenOfImage) &&
+                        (target_1_center_y + crash->addpoint[j].y <
+                         target_2_center_y + yHalfLenOfImage)) {
+                        return 1;
+                    }
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+void drawTarget(Target_T *target) {
+    LCD_Fill(target->xPos - (target->targetImage->xLen >> 1),
+             target->yPos - (target->targetImage->yLen >> 1),
+             target->targetImage->xLen,
+             target->targetImage->yLen,
+             gImage_target
+    );
+}
+
+void target_Destroy(Target_T *target) {
+    target->isAlive = 0;
+    LCD_Fill(target->xPos - (target->targetImage->xLen >> 1),
+             target->yPos - (target->targetImage->yLen >> 1),
+             target->targetImage->xLen,
+             target->targetImage->yLen,
+             whiteBackground
+    );
+}
+
+uint8_t IsBulletCrashTarget(Target_T *target, Bullet_T *bullet) {
+    uint16_t tank_center_x = target->xPos, tank_center_y = target->yPos;
+    uint16_t bullet_center_x = bullet->xPos, bullet_center_y = bullet->yPos;
+    int16_t distance_x = (int16_t) bullet_center_x - (int16_t) tank_center_x;
+    int16_t distance_y = (int16_t) bullet_center_y - (int16_t) tank_center_y;
+    int16_t distance = ABS(distance_x) - ABS(distance_y);
+    if (ABS(distance) > 30) {
+        return 0;
+    } else {
+        const CrashTest_T *crash = target->targetImage->crashTest;
+        for (uint8_t i = 0; i < crash->number; i++) {
+            if ((tank_center_x + crash->addpoint[i].x > bullet_center_x - half_bullet_image &&
+                 tank_center_x + crash->addpoint[i].x < bullet_center_x + half_bullet_image) &&
+                (tank_center_y + crash->addpoint[i].y > bullet_center_y - half_bullet_image &&
+                 tank_center_y + crash->addpoint[i].y < bullet_center_y + half_bullet_image))
+                return 1;
+        }
+    }
+    return 0;
+}

@@ -18,6 +18,7 @@ typedef struct DirectionAdd_T {
 }DirectionAdd_T;
 
 #define DIRECTION_FIRST_DIM_LEN (5)
+#define ABS(x) ((x)>(0)?(x):-(x))
 
 extern const uint8_t whiteBackground[3040];
 

@@ -12,7 +12,8 @@ typedef struct{
     int number;
 }CrashTest_T;
 
-extern const CrashTest_T crashTest[21];
+extern const CrashTest_T crashTest_bullet[20];
+extern const CrashTest_T crashTest_target;
 
 extern const Point_T AddPoint_0[];
 extern const Point_T AddPoint_18[];
