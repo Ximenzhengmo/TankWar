@@ -1,6 +1,7 @@
 #include "tank.h"
 #include "lcd_driver.h"
 #include "stdio.h"
+#include "bullet.h"
 
 Tank_T redTank = {
         .isAlive = 1,
@@ -17,6 +18,34 @@ Tank_T greenTank = {
         .direction = 0,
         .xPos =  0,
         .yPos =  0,
+};
+
+Tank_T random_tank[5]={
+        {
+                .tankImage =  &tankTargetImage,
+                .isAlive = 0,
+                .direction=0
+        },
+        {
+                .tankImage =  &tankTargetImage,
+                .isAlive = 0,
+                .direction=0
+        },
+        {
+                .tankImage =  &tankTargetImage,
+                .isAlive = 0,
+                .direction = 0
+        },
+        {
+                .tankImage =  &tankTargetImage,
+                .isAlive = 0,
+                .direction = 0
+        },
+        {
+                .tankImage =  &tankTargetImage,
+                .isAlive = 0,
+                .direction = 0
+        }
 };
 
 void tank_Init(Tank_T *tank) {
@@ -44,6 +73,35 @@ void tank_Init(Tank_T *tank) {
                              (Point_T) {tank->xPos + xHalfLenOfImage - 1,
                                         tank->yPos + yHalfLenOfImage - 1}));
 }
+
+void tank_Init_1player(Tank_T *tank,uint8_t number){
+    uint8_t crash_flag = 0;
+    memset(tank->subscript, 0U, sizeof(tank->subscript));
+    tank->isAlive = 1;
+    static uint32_t RNG_Value;
+    //tank->bulletNum = 5;
+    if (HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value) != HAL_OK) {
+        RNG_Value = 0;
+    }
+    //tank->direction = RNG_Value % 20;
+    uint8_t xHalfLenOfImage = (tank->tankImage->xLen) >> 1;
+    uint8_t yHalfLenOfImage = (tank->tankImage->yLen) >> 1;
+    do {
+        HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
+        tank->xPos = RNG_Value % MapXLen;
+        HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
+        tank->yPos = RNG_Value % MapYLen;
+        crash_flag=IsTankCrashTank(tank,random_tank,number);
+    } while (isTankTouchWall((Point_T) {tank->xPos - xHalfLenOfImage,
+                                              tank->yPos - yHalfLenOfImage},
+                                   (Point_T) {tank->xPos + xHalfLenOfImage - 1,
+                                              tank->yPos - yHalfLenOfImage},
+                                   (Point_T) {tank->xPos - xHalfLenOfImage,
+                                              tank->yPos + yHalfLenOfImage - 1},
+                                   (Point_T) {tank->xPos + xHalfLenOfImage - 1,
+                                              tank->yPos + yHalfLenOfImage - 1}) || crash_flag);
+}
+
 
 uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDirection) {
 #define InRange(pos, pos1, pos4) (((pos).x >= (pos1).x && (pos).x <= (pos4).x) && ((pos).y >= (pos1).y && (pos).y <= (pos4).y))
@@ -259,4 +317,10 @@ const TankImage_T greenTankImage[20] = {
         {.image=gImage_green342, .xLen=32, .yLen=40,.crashTest=&crashTest[19]},
 };
 
+const TankImage_T tankTargetImage = {
+        .image = gImage_target,
+        .xLen = 17,
+        .yLen = 17,
+        .crashTest = &crashTest[20]
+};
 
