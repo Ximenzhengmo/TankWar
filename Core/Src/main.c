@@ -45,6 +45,8 @@
 #define PCA9554_OUTPUT_PORT_REG 1
 #define PCA9554_POL_INV_REG 2
 #define PCA9554_CONFIG_REG 3
+
+uint8_t type;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -68,6 +70,7 @@ TIM_HandleTypeDef htim6;
 
 /* USER CODE BEGIN PV */
 extern const unsigned char gImage_MainMenu[235200];
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -102,7 +105,8 @@ PUTCHAR_PROTOTYPE
     return ch;
 }
 
-void gameBegin() {
+void gameBegin_2players() {
+    type = 2;
     static uint8_t direction_r;
     static uint8_t direction_l;
     static uint8_t scoreRed = 0;
@@ -113,7 +117,7 @@ void gameBegin() {
     Bullets_Init();
     direction_l = redTank.direction;
     direction_r = greenTank.direction;
-    uint32_t loopStartTick = 0, loopNowTick = 0, tankDiedTick = 0x3F3F3F3F;
+    uint32_t loopStartTick = 0, loopNowTick = 0, tankDiedTick = 0x3F114514;
     while ( 1 ) {
         FPS++;
         loopStartTick = HAL_GetTick();
@@ -154,6 +158,86 @@ void gameBegin() {
         show_score(++scoreGreen, GREEN);
     }else if( redTank.isAlive ) {
         show_score(++scoreRed, RED);
+    }
+}
+
+void gameBegin_1player() {
+    type = 1;
+    static uint8_t direction_r;
+    static uint8_t scoreGreen = 0;
+    uint8_t gameover=0;
+    drawMap();
+    show_score(scoreGreen, GREEN);
+    tank_Init(&greenTank);
+
+    for (uint8_t i = 0; i < 5; i++) {
+        tank_Init_1player(&random_tank[i],i);
+        drawTank(&random_tank[i], random_tank[i].direction);
+    }
+
+    Bullets_Init();
+    direction_r = greenTank.direction;
+    uint32_t loopStartTick = 0, loopNowTick = 0, tankDiedTick = 0x3F3F3F3F;
+    uint32_t countStart = 0, countNow = 0;
+    uint8_t Time=90,seconds=0;
+    countStart = HAL_GetTick();
+    while (1) {
+        FPS++;
+        loopStartTick = HAL_GetTick();
+
+        direction_r = get_r_state();
+        drawBullets();
+
+        drawTank(&greenTank, direction_r);
+        for (uint8_t j = 0; j < 5; j++) {
+            if (random_tank[j].isAlive == 0) {
+                tank_Init_1player(&random_tank[j],j);
+                drawTank(&random_tank[j], random_tank[j].direction);
+            }else if(random_tank[j].isAlive == 1)
+            {
+                LCD_Fill(random_tank[j].xPos-8,random_tank[j].yPos-8,17,17,gImage_target);
+            }
+        }
+
+        Bullet_TimeOutClear();
+
+        for (uint8_t i = 0; i <= bulletNum; i++) {
+            if (bullets[i].owner != NULL) {
+                if (greenTank.isAlive && IsCrash(&greenTank, &bullets[i])) {
+                    Bullet_Destroy(&bullets[i]);
+                    tank_Destroy(&greenTank);
+                    gameover = 1;
+                    scoreGreen = 0;
+                }
+            }
+            if(bullets[i].owner != NULL) {
+                for (uint8_t j = 0; j < 5; j++) {
+                    if (random_tank[j].isAlive && IsCrash(&random_tank[j], &bullets[i])) {
+                        show_score(++scoreGreen, GREEN);
+                        Bullet_Destroy(&bullets[i]);
+                        tank_Destroy(&random_tank[j]);
+                        }
+                    }
+                }
+            countNow = HAL_GetTick();
+            if (countNow - countStart > 1000 * seconds)
+            {
+                seconds++;
+                show_score(--Time, RED);
+            }
+            }
+        loopNowTick = HAL_GetTick();
+
+//        if (loopNowTick > tankDiedTick + tankDiedTimeDelay_ms) {
+//            break;
+//            }
+        if(gameover)
+            break;
+        if(Time == 0)
+            break;
+        if (loopNowTick - loopStartTick < 1000 / 60) {
+            HAL_Delay(1000 / 60 - (loopNowTick - loopStartTick));
+            }
     }
 }
 
@@ -217,7 +301,6 @@ int main(void)
     LL_mDelay(100);	// 等待100ms以让LCD稳定
     LCD_Fill(30,20,420,280,gImage_MainMenu);
 
-
   while (1)
   {
     /* USER CODE END WHILE */
@@ -227,7 +310,11 @@ int main(void)
         show_score(0, RED);
         show_score(0, GREEN);
         while(1)
-        gameBegin();
+            gameBegin_2players();
+    }else if(Touch() == 1)
+    {
+        while(1)
+            gameBegin_1player();
     }
     /* USER CODE BEGIN 3 */
   }
@@ -874,14 +961,21 @@ typedef enum{
     static KEY_STATE R_btn_state = key_up;
     static KEY_STATE R_btn_state_last = key_up;
     if( htim->Instance == TIM4) {
-        if( L_btn_state == key_down && L_btn_state_last != L_btn_state ) {
-            BulletShoot(&redTank);
+        if(type == 2) {
+            if (L_btn_state == key_down && L_btn_state_last != L_btn_state) {
+                BulletShoot(&redTank);
+            }
+            L_btn_state_last = L_btn_state;
+            if (R_btn_state == key_down && R_btn_state_last != R_btn_state) {
+                BulletShoot(&greenTank);
+            }
+            R_btn_state_last = R_btn_state;
+        }else if (type == 1){
+            if (L_btn_state == key_down && L_btn_state_last != L_btn_state) {
+                BulletShoot(&greenTank);
+            }
+            L_btn_state_last = L_btn_state;
         }
-        L_btn_state_last = L_btn_state;
-        if( R_btn_state == key_down && R_btn_state_last != R_btn_state ) {
-            BulletShoot(&greenTank);
-        }
-        R_btn_state_last = R_btn_state;
     }else if ( htim->Instance == TIM5 ){
         if( HAL_GPIO_ReadPin(LeftBTN_right_GPIO_Port, LeftBTN_right_Pin) == GPIO_PIN_RESET )
         {

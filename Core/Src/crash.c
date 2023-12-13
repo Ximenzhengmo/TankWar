@@ -1,6 +1,6 @@
 #include "bullet.h"
 
-const CrashTest_T crashTest[20]={{.addpoint=AddPoint_0,.number=90},{.addpoint=AddPoint_18,.number=30},
+const CrashTest_T crashTest[21]={{.addpoint=AddPoint_0,.number=90},{.addpoint=AddPoint_18,.number=30},
                                  {.addpoint=AddPoint_36,.number=27},{.addpoint=AddPoint_54,.number=29},
                                  {.addpoint=AddPoint_72,.number=29},
                                  {.addpoint=AddPoint_90,.number=90},{.addpoint=AddPoint_108,.number=30},
@@ -12,6 +12,8 @@ const CrashTest_T crashTest[20]={{.addpoint=AddPoint_0,.number=90},{.addpoint=Ad
                                  {.addpoint=AddPoint_270,.number=90},{.addpoint=AddPoint_288,.number=30},
                                  {.addpoint=AddPoint_306,.number=27},{.addpoint=AddPoint_324,.number=29},
                                  {.addpoint=AddPoint_342,.number=29},
+
+                                 {.addpoint=AddPoint_target,.number=20}
 };
 
 const Point_T AddPoint_0[]= {
@@ -216,4 +218,11 @@ const Point_T AddPoint_342[]={
         {7,14},{6,17},{4,19},{1,18},{-2,17},{-5,16},
         {-8,15},{-11,14},{-14,13},{-14,9},{-13,6},{-12,3},
         {-11,0},{-10,-3},{-9,-6},{-8,-9},{-7,-12},
+};
+
+const Point_T AddPoint_target[]={
+        {0,8},{3,7},{5,6},{7,4},{8,2},
+        {8,0},{3,-7},{5,-6},{7,-4},{8,-2},
+        {0,-8},{-3,-7},{-5,-6},{-7,-4},{-8,-2},
+        {-8,0},{-3,7},{-5,6},{-7,4},{-8,2},
 };

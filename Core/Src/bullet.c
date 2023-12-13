@@ -398,3 +398,41 @@ uint8_t IsCrash(Tank_T *tank, Bullet_T *bullet)
     }
     return 0;
 }
+
+uint8_t IsTankCrashTank(Tank_T *tank,Tank_T randomtank[],uint8_t number)
+{
+    uint16_t tank_1_center_x = tank->xPos, tank_1_center_y = tank->yPos;
+    uint16_t tank_2_center_x = 0, tank_2_center_y = 0;
+    int16_t distance_x=0, distance_y=0;
+    int16_t distance;
+    for(uint8_t i = 0; i < 5 && i!=number; i++)
+    {
+        if( randomtank[i].isAlive == 1 )
+        {
+            tank_2_center_x = randomtank[i].xPos;
+            tank_2_center_y = randomtank[i].yPos;
+            distance_x = (int16_t)tank_2_center_x - (int16_t)tank_1_center_x;
+            distance_y = (int16_t)tank_2_center_y - (int16_t)tank_1_center_y;
+            distance = abs (distance_x) - abs(distance_y);
+            if(abs(distance) > 60)
+                continue;
+            else{
+                const CrashTest_T *crash = tank->tankImage[tank->direction].crashTest;
+                for(uint8_t j = 0; j < crash->number ; j++) {
+                    if ((tank_1_center_x + crash->addpoint[j].x >
+                         tank_2_center_x - (randomtank[i].tankImage->xLen >> 1)) &&
+                        (tank_1_center_x + crash->addpoint[j].x <
+                         tank_2_center_x + (randomtank[i].tankImage->xLen >> 1)) &&
+                        (tank_1_center_y + crash->addpoint[j].y >
+                         tank_2_center_y - (randomtank[i].tankImage->yLen >> 1)) &&
+                        (tank_1_center_y + crash->addpoint[j].y <
+                         tank_2_center_y + (randomtank[i].tankImage->yLen >> 1))) {
+                        return 1;
+                    }
+                }
+            }
+        }else
+            continue;
+    }
+    return 0;
+}

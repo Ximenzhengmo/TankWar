@@ -54,4 +54,7 @@ void Bullet_Destroy(Bullet_T *bullet);
 void Bullet_Init_random(Bullet_T* bullet);
 
 uint8_t IsCrash(Tank_T *tank, Bullet_T *bullet);
+
+uint8_t IsTankCrashTank(Tank_T *tank,Tank_T random_tank[],uint8_t number);
+
 #endif //TANKWAR_BULLET_H

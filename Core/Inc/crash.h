@@ -12,7 +12,7 @@ typedef struct{
     int number;
 }CrashTest_T;
 
-extern const CrashTest_T crashTest[20];
+extern const CrashTest_T crashTest[21];
 
 extern const Point_T AddPoint_0[];
 extern const Point_T AddPoint_18[];
@@ -34,6 +34,8 @@ extern const Point_T AddPoint_288[];
 extern const Point_T AddPoint_306[];
 extern const Point_T AddPoint_324[];
 extern const Point_T AddPoint_342[];
+
+extern const Point_T AddPoint_target[];
 
 
 #endif //TANKWAR_CRASH_H
