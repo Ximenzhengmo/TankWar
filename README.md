@@ -12,5 +12,8 @@ BUAA 22级单片机大作业
 * 王博冉
 * 曾楚翔
 * copilot
-* zyy, ywth
+* zyy 
+* ywth
+
+## 文件结构
 
