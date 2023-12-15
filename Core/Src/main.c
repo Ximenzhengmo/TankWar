@@ -92,8 +92,6 @@ PUTCHAR_PROTOTYPE
     HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, 0xFFFF);
     return ch;
 }
-
-volatile int8_t saicplt = 1;
 /* USER CODE END 0 */
 
 /**

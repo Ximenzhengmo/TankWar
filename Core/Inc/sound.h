@@ -23,7 +23,7 @@ extern SAI_HandleTypeDef hsai_BlockA1;
 extern SAI_HandleTypeDef hsai_BlockB1;
 extern DMA_HandleTypeDef hdma_sai1_a;
 
-extern const uint8_t audioFile_break[];
-extern const uint8_t audioFile_shoot[];
+extern const unsigned char audioFile_break[];
+extern const unsigned char audioFile_shoot[];
 
 #endif //TANKWAR_SOUND_H

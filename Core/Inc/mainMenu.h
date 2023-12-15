@@ -12,7 +12,7 @@
 #include "showScore.h"
 #include "target.h"
 #include "audio.h"
-#include "Sound.h"
+#include "sound.h"
 
 
 #define PCA9554_ADDR (0b0111000 << 1)
