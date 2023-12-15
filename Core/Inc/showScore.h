@@ -13,6 +13,7 @@
 #define show_xpos 448
 #define show_red_ypos 90
 #define show_green_ypos 210
+#define show_black_ypos 150
 
 void Print_number(uint16_t xpos, uint16_t ypos, uint16_t color, const uint8_t *src);
 

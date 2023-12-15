@@ -77,7 +77,11 @@ void gameBegin_1player() {
     static uint8_t direction_r;
     uint8_t scoreGreen = 0;
     uint8_t gameOver = 0;
+    uint8_t highest_record;
+    get_record(&highest_record);
     drawMap();
+
+    show_score(highest_record, BLACK);
     show_score(scoreGreen, GREEN);
     tank_Init(&greenTank);
     Bullets_Init();
@@ -118,6 +122,13 @@ void gameBegin_1player() {
                     for (uint8_t j = 0; j < TargetNumMax; j++) {
                         if (randomTarget[j].isAlive && IsBulletCrashTarget(&randomTarget[j], &bullets[i])) {
                             show_score(++scoreGreen, GREEN);
+
+                            if(scoreGreen > highest_record){
+                                highest_record = scoreGreen;
+                                update_record(highest_record);
+                                show_score(highest_record, BLACK);
+                            }
+
                             Bullet_Destroy(&bullets[i]);
                             target_Destroy(&randomTarget[j]);
                         }

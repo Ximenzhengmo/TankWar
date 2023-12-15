@@ -32,4 +32,9 @@ void show_score(uint8_t score, uint16_t color)
         Print_number(show_xpos, show_green_ypos, color, (uint8_t *) numImage[tens_digit]);
         Print_number(show_xpos + number_xlen, show_green_ypos, color, (uint8_t *) numImage[units_digit]);
     }
+
+    if(color == BLACK){
+        Print_number(show_xpos, show_black_ypos, color, (uint8_t *) numImage[tens_digit]);
+        Print_number(show_xpos + number_xlen, show_black_ypos, color, (uint8_t *) numImage[units_digit]);
+    }
 }

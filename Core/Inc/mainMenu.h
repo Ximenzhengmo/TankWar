@@ -13,7 +13,7 @@
 #include "target.h"
 #include "audio.h"
 #include "sound.h"
-
+#include "record.h"
 
 #define PCA9554_ADDR (0b0111000 << 1)
 #define PCA9554_INPUT_PORT_REG 0

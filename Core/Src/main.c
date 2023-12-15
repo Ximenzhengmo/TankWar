@@ -92,6 +92,7 @@ PUTCHAR_PROTOTYPE
     HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, 0xFFFF);
     return ch;
 }
+
 /* USER CODE END 0 */
 
 /**
@@ -146,6 +147,7 @@ int main(void)
     LCD_Fill(30,20,420,280,gImage_MainMenu);
   while (1)
   {
+
       gameBegin();
     /* USER CODE END WHILE */
 
