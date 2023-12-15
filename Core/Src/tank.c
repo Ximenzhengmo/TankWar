@@ -206,6 +206,7 @@ void tank_Destroy(Tank_T* tank){
              tank->tankImage[tank->direction].xLen,
              tank->tankImage[tank->direction].yLen,
              (uint8_t *) whiteBackground);
+    play_sound(Sound_break_len, (uint16_t *) audioFile_break);
 }
 
 const TankImage_T redTankImage[20] = {

@@ -313,6 +313,7 @@ void BulletShoot(Tank_T* tank){
                 for (int j = 0; j < Bullet_Create_Loop_Num; ++j) {
                     drawBullet(&bullets[i], bullets[i].direction);
                 }
+                play_sound(Sound_shoot_len, (uint16_t *)audioFile_shoot);
                 bullets[i].ifDraw = 1;
                 break;
             }

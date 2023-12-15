@@ -3,6 +3,7 @@
 
 #include "main.h"
 #include "tank.h"
+#include "Sound.h"
 
 #define Bullet_Image_Length 7
 #define BulletNumMax 10

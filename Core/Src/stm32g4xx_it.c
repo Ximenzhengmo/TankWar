@@ -57,6 +57,7 @@ void LCD_CS_SET();
 
 /* External variables --------------------------------------------------------*/
 extern RNG_HandleTypeDef hrng;
+extern DMA_HandleTypeDef hdma_sai1_a;
 extern TIM_HandleTypeDef htim4;
 extern TIM_HandleTypeDef htim5;
 extern TIM_HandleTypeDef htim6;
@@ -203,25 +204,17 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles DMA1 channel1 global interrupt.
+  * @brief This function handles DMA1 channel3 global interrupt.
   */
-void DMA1_Channel1_IRQHandler(void)
+void DMA1_Channel3_IRQHandler(void)
 {
-  /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
+  /* USER CODE BEGIN DMA1_Channel3_IRQn 0 */
 
-  /* USER CODE END DMA1_Channel1_IRQn 0 */
+  /* USER CODE END DMA1_Channel3_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_sai1_a);
+  /* USER CODE BEGIN DMA1_Channel3_IRQn 1 */
 
-  /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
-    if (LL_DMA_IsActiveFlag_TC1(DMA1)) {
-        LL_DMA_ClearFlag_TC1(DMA1);
-        __NOP();
-        LL_DMA_DisableChannel(DMA1, LL_DMA_CHANNEL_1);
-        LCD_CS_SET();
-    } else if (LL_DMA_IsActiveFlag_TE1(DMA1)) {
-        /* Call Error function */
-        Error_Handler();
-    }
-  /* USER CODE END DMA1_Channel1_IRQn 1 */
+  /* USER CODE END DMA1_Channel3_IRQn 1 */
 }
 
 /**

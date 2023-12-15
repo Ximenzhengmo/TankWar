@@ -10,6 +10,7 @@
 #include "main.h"
 #include "global.h"
 #include "crash.h"
+#include "Sound.h"
 
 typedef struct TankImage_T{
     const unsigned char* image;

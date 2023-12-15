@@ -11,6 +11,9 @@
 #include "lever_control.h"
 #include "showScore.h"
 #include "target.h"
+#include "audio.h"
+#include "Sound.h"
+
 
 #define PCA9554_ADDR (0b0111000 << 1)
 #define PCA9554_INPUT_PORT_REG 0
