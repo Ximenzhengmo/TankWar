@@ -7,27 +7,22 @@
 
 #include "lcd_driver.h"
 #include "map.h"
-#include "main.h"
-#include "global.h"
 #include "crash.h"
 #include "sound.h"
 
-typedef struct TankImage_T{
-    const unsigned char* image;
-    uint8_t xLen;
-    uint8_t yLen;
-    const CrashTest_T *crashTest;
-}TankImage_T;
+typedef Image_T TankImage_T;
 
 typedef struct Tank_T{
     uint8_t isAlive;
     uint8_t bulletNum;
-    uint8_t subscript[5];
+    uint8_t subscript[DIRECTION_FIRST_DIM_LEN];
     const TankImage_T* const tankImage;
     uint8_t direction;
     int16_t xPos;
     int16_t yPos;
 }Tank_T;
+
+#define tankDiedTimeDelay_ms (3*1000)
 
 extern Tank_T redTank;
 extern Tank_T greenTank;
@@ -36,8 +31,6 @@ extern const TankImage_T redTankImage[20];
 extern const TankImage_T greenTankImage[20];
 
 void tank_Init(Tank_T* tank);
-
-uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4);
 
 uint8_t tankMove_clear(Tank_T* tank, DirectionAdd_T directionAdd, uint8_t newDirection);
 

@@ -30,14 +30,14 @@ void targetInit(Target_T *target) {
         while (HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value) != HAL_OK);
         target->yPos = RNG_Value % MapYLen;
         crash_flag = IsTargetCrashTargets(target);
-    } while (isTankTouchWall((Point_T) {target->xPos - xHalfLenOfImage,
-                                        target->yPos - yHalfLenOfImage},
-                             (Point_T) {target->xPos + xHalfLenOfImage,
-                                        target->yPos - yHalfLenOfImage},
-                             (Point_T) {target->xPos - xHalfLenOfImage,
-                                        target->yPos + yHalfLenOfImage},
-                             (Point_T) {target->xPos + xHalfLenOfImage,
-                                        target->yPos + yHalfLenOfImage}) || crash_flag);
+    } while (isTouchWall((Point_T) {target->xPos - xHalfLenOfImage,
+                                    target->yPos - yHalfLenOfImage},
+                         (Point_T) {target->xPos + xHalfLenOfImage,
+                                    target->yPos - yHalfLenOfImage},
+                         (Point_T) {target->xPos - xHalfLenOfImage,
+                                    target->yPos + yHalfLenOfImage},
+                         (Point_T) {target->xPos + xHalfLenOfImage,
+                                    target->yPos + yHalfLenOfImage}) || crash_flag);
 }
 
 uint8_t IsTargetCrashTargets(Target_T *target) {

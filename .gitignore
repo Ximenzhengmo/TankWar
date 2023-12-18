@@ -8,6 +8,6 @@ st_nucleo_g4.cfg
 /Core/Startup
 /cmake-build-debug/
 /blueTank/
-/greenTank/
-/redTank/
+/Images/greenTank/
+/Images/redTank/
 /.idea/

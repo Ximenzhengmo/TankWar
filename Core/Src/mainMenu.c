@@ -2,15 +2,34 @@
 
 uint8_t type;
 uint8_t FPS = 0;
-
+void SPI3_ReInit(void){
+    LL_SPI_InitTypeDef SPI_InitStruct = {0};
+    SPI_InitStruct.TransferDirection = LL_SPI_FULL_DUPLEX;
+    SPI_InitStruct.Mode = LL_SPI_MODE_MASTER;
+    SPI_InitStruct.DataWidth = LL_SPI_DATAWIDTH_8BIT;
+    SPI_InitStruct.ClockPolarity = LL_SPI_POLARITY_LOW;
+    SPI_InitStruct.ClockPhase = LL_SPI_PHASE_1EDGE;
+    SPI_InitStruct.NSS = LL_SPI_NSS_SOFT;
+    SPI_InitStruct.BaudRate = LL_SPI_BAUDRATEPRESCALER_DIV8;
+    SPI_InitStruct.BitOrder = LL_SPI_MSB_FIRST;
+    SPI_InitStruct.CRCCalculation = LL_SPI_CRCCALCULATION_DISABLE;
+    SPI_InitStruct.CRCPoly = 7;
+    LL_SPI_Init(SPI3, &SPI_InitStruct);
+    LL_SPI_SetStandard(SPI3, LL_SPI_PROTOCOL_MOTOROLA);
+    LL_SPI_EnableNSSPulseMgt(SPI3);
+    LL_SPI_Enable(SPI3);
+}
 void gameBegin(){
-    while( Touch() == 0 ) ;
-    if(Touch() == 2)
+    uint8_t getTouch;
+    while( (getTouch = Touch()) == 0 );
+    LL_SPI_Disable(SPI3);
+    SPI3_ReInit();
+    if(getTouch == 2)
     {
         show_score(0, RED);
         show_score(0, GREEN);
         while(1) gameBegin_2players();
-    }else if(Touch() == 1)
+    }else if(getTouch == 1)
     {
         while(1) gameBegin_1player();
     }
@@ -26,6 +45,7 @@ void gameBegin_2players() {
     tank_Init(&redTank);
     tank_Init(&greenTank);
     Bullets_Init();
+    Laser_Init(&laserBuff);
     direction_l = redTank.direction;
     direction_r = greenTank.direction;
     uint32_t loopStartTick = 0, loopNowTick = 0, tankDiedTick = 0x3F114514;
@@ -42,15 +62,34 @@ void gameBegin_2players() {
 
         Bullet_TimeOutClear();
 
+        Laser_Create(&laserBuff);
+        drawLaserIcon(&laserBuff);
+        Laser_tankGet(&laserBuff, &redTank);
+        Laser_tankGet(&laserBuff, &greenTank);
+        Laser_Renew(&laserBuff);
+        Laser_Show(&laserBuff);
+        Tank_T *laserShootTank = Laser_Shoot(&laserBuff);
+        if ( laserShootTank != NULL ){
+            tankDiedTick = HAL_GetTick();
+            Laser_Destroy(&laserBuff);
+            tank_Destroy(laserShootTank);
+        }
+
         for(uint8_t i = 0; i < BulletNumMax; i++) {
             if (bullets[i].owner != NULL) {
                 if (greenTank.isAlive && IsBulletCrashTank(&greenTank, &bullets[i])) {
                     tankDiedTick = HAL_GetTick();
                     Bullet_Destroy(&bullets[i]);
+                    if ( laserBuff.owner == &greenTank ){
+                        Laser_Destroy(&laserBuff);
+                    }
                     tank_Destroy(&greenTank);
                 }else if (redTank.isAlive && IsBulletCrashTank(&redTank, &bullets[i])){
                     tankDiedTick = HAL_GetTick();
                     Bullet_Destroy(&bullets[i]);
+                    if ( laserBuff.owner == &redTank ){
+                        Laser_Destroy(&laserBuff);
+                    }
                     tank_Destroy(&redTank);
                 }
             }
@@ -152,13 +191,14 @@ void gameBegin_1player() {
     }
 }
 
-uint8_t keyDownTest(){
+KeyState_T keyDownTest(){
     static uint8_t dataBuffer[1] = {0};
     HAL_I2C_Mem_Read(&hi2c3, PCA9554_ADDR, PCA9554_INPUT_PORT_REG, I2C_MEMADD_SIZE_8BIT, dataBuffer,1,0xff);
-    //if ((( ~dataBuffer[0]) & 1)>0)
     if(dataBuffer[0]==253) {
-        return 1;
+        return Key_Shoot; // shoot
+    }else if (dataBuffer[0]==254){
+        return Key_Reset; // reset
     }else {
-        return 0;
+        return Key_NoPressed; // no pressed
     }
 }

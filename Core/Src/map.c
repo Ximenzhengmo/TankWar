@@ -183,6 +183,24 @@ uint8_t isWall(uint16_t x, uint16_t y) {
     }
 }
 
+
+uint8_t isTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
+    if ((0 < p1.x && p1.x < MapXLen && 0 < p1.y && p1.y < MapYLen)
+        && (0 < p2.x && p2.x < MapXLen && 0 < p2.y && p2.y < MapYLen)
+        && (0 < p3.x && p3.x < MapXLen && 0 < p3.y && p3.y < MapYLen)
+        && (0 < p4.x && p4.x < MapXLen && 0 < p4.y && p4.y < MapYLen)) {
+
+        for (uint16_t i = p1.x; i < p2.x; i += wallWidth) if (isWall(i, p1.y)) return 1;
+        for (uint16_t i = p3.x; i < p4.x; i += wallWidth) if (isWall(i, p3.y)) return 1;
+        for (uint16_t i = p1.y; i < p3.y; i += wallWidth) if (isWall(p1.x, i)) return 1;
+        for (uint16_t i = p2.y; i < p4.y; i += wallWidth) if (isWall(p2.x, i)) return 1;
+
+        return 0; // not touch wall
+    } else {
+        return 1; // touch wall
+    }
+}
+
 void drawMap(){
     if ( createMap() == HAL_OK ) {
         LCD_SetWindows(0, 0, MapXLen - 1, MapYLen - 1);

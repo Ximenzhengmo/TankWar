@@ -1,11 +1,9 @@
 #ifndef TANKWAR_TARGET_H
 #define TANKWAR_TARGET_H
 
-#include "global.h"
-#include "crash.h"
 #include "bullet.h"
 
-typedef TankImage_T TargetImage_T;
+typedef Image_T TargetImage_T;
 
 typedef struct Target_T {
     uint8_t isAlive;

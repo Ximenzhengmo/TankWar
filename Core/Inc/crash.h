@@ -1,7 +1,3 @@
-//
-// Created by 86180 on 2023/12/10.
-//
-
 #ifndef TANKWAR_CRASH_H
 #define TANKWAR_CRASH_H
 
@@ -12,8 +8,16 @@ typedef struct{
     int number;
 }CrashTest_T;
 
+typedef struct Image_T{
+    const unsigned char* image;
+    uint8_t xLen;
+    uint8_t yLen;
+    const CrashTest_T *crashTest;
+}Image_T;
+
 extern const CrashTest_T crashTest_bullet[20];
 extern const CrashTest_T crashTest_target;
+extern const CrashTest_T crashTest_laserIcon;
 
 extern const Point_T AddPoint_0[];
 extern const Point_T AddPoint_18[];

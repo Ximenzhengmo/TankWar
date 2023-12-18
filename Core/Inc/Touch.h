@@ -2,7 +2,6 @@
 #define TANKWAR_TOUCH_H
 
 #include "main.h"
-#include "lcd_driver.h"
 #include "stdio.h"
 
 typedef struct touch {

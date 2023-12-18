@@ -1,5 +1,3 @@
-#include "main.h"
-#include "lcd_driver.h"
 #include "touch.h"
 
 Touch_StatusTypeDef Touch_Read(TouchTypedef *dst){
@@ -48,11 +46,11 @@ uint8_t Touch(void) {
         Touch_Read(&user_touch);
         if (user_touch.isPressed) {
             if(user_touch.X<1200 && user_touch.Y >= 860 && user_touch.Y <=870) {
-            printf("2\n");
+                printf("to 2\n");
                 return 2;
             }else if(user_touch.X>1200 && user_touch.Y >= 860 && user_touch.Y <=870)
             {
-                printf("1\n");
+                printf("to 1\n");
                 return 1;
             }
             return 0;

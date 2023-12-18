@@ -136,7 +136,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
     SPI_DMAInit();
     ES8388_init();
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -147,8 +146,8 @@ int main(void)
     LCD_Fill(30,20,420,280,gImage_MainMenu);
   while (1)
   {
-
       gameBegin();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -786,6 +785,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : LeftBTN_down_Pin */
+  GPIO_InitStruct.Pin = LeftBTN_down_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(LeftBTN_down_GPIO_Port, &GPIO_InitStruct);
+
   /*Configure GPIO pin : DCRS_Pin */
   GPIO_InitStruct.Pin = DCRS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -829,11 +834,17 @@ typedef enum{
     if( htim->Instance == TIM4) {
         if(type == 2) {
             if (L_btn_state == key_down && L_btn_state_last != L_btn_state) {
-                BulletShoot(&redTank);
+                if( laserBuff.state == LaserShow && laserBuff.owner == &redTank ) {
+                    laserBuff.state = LaserShoot;
+                    play_sound(Sound_shoot_len, (uint16_t *)audioFile_shoot);
+                }else BulletShoot(&redTank);
             }
             L_btn_state_last = L_btn_state;
             if (R_btn_state == key_down && R_btn_state_last != R_btn_state) {
-                BulletShoot(&greenTank);
+                if( laserBuff.state == LaserShow && laserBuff.owner == &greenTank ) {
+                    laserBuff.state = LaserShoot;
+                    play_sound(Sound_shoot_len, (uint16_t *)audioFile_shoot);
+                }else BulletShoot(&greenTank);
             }
             R_btn_state_last = R_btn_state;
         }else if (type == 1){
@@ -861,7 +872,7 @@ typedef enum{
             else if (L_btn_state == key_downing)
                 L_btn_state = key_up;
         }
-        if( keyDownTest() == 1 )
+        if( keyDownTest() == Key_Shoot )
         {
             if (R_btn_state == key_up)
                 R_btn_state = key_downing;
@@ -870,14 +881,17 @@ typedef enum{
             else if (R_btn_state == key_upping)
                 R_btn_state = key_down;
         }
-        if( keyDownTest() == 0)
-        {
+        if( keyDownTest() == Key_NoPressed) {
             if (R_btn_state == key_down)
                 R_btn_state = key_upping;
             else if (R_btn_state == key_upping)
                 R_btn_state = key_up;
             else if (R_btn_state == key_downing)
                 R_btn_state = key_up;
+        }
+        if( keyDownTest() == Key_Reset && HAL_GPIO_ReadPin(LeftBTN_down_GPIO_Port, LeftBTN_down_Pin) == GPIO_PIN_RESET )
+        {
+            HAL_NVIC_SystemReset();
         }
     }else if( htim->Instance == TIM6 ) {
         printf("%d\n", FPS);

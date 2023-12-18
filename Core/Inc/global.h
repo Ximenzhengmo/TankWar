@@ -17,6 +17,10 @@ typedef struct DirectionAdd_T {
     int8_t y_add;
 }DirectionAdd_T;
 
+typedef enum TouchState_T{
+    up,down,left,right,notouch,rebound
+}TouchState_T;
+
 #define DIRECTION_FIRST_DIM_LEN (5)
 #define ABS(x) ((x)>(0)?(x):-(x))
 

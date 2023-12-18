@@ -1,7 +1,6 @@
 #include "tank.h"
 #include "lcd_driver.h"
 #include "stdio.h"
-#include "bullet.h"
 
 Tank_T redTank = {
         .isAlive = 1,
@@ -36,14 +35,14 @@ void tank_Init(Tank_T *tank) {
         tank->xPos = RNG_Value % MapXLen;
         HAL_RNG_GenerateRandomNumber(&hrng, &RNG_Value);
         tank->yPos = RNG_Value % MapYLen;
-    } while (isTankTouchWall((Point_T) {tank->xPos - xHalfLenOfImage,
-                                        tank->yPos - yHalfLenOfImage},
-                             (Point_T) {tank->xPos + xHalfLenOfImage - 1,
-                                        tank->yPos - yHalfLenOfImage},
-                             (Point_T) {tank->xPos - xHalfLenOfImage,
-                                        tank->yPos + yHalfLenOfImage - 1},
-                             (Point_T) {tank->xPos + xHalfLenOfImage - 1,
-                                        tank->yPos + yHalfLenOfImage - 1}));
+    } while (isTouchWall((Point_T) {tank->xPos - xHalfLenOfImage,
+                                    tank->yPos - yHalfLenOfImage},
+                         (Point_T) {tank->xPos + xHalfLenOfImage - 1,
+                                    tank->yPos - yHalfLenOfImage},
+                         (Point_T) {tank->xPos - xHalfLenOfImage,
+                                    tank->yPos + yHalfLenOfImage - 1},
+                         (Point_T) {tank->xPos + xHalfLenOfImage - 1,
+                                    tank->yPos + yHalfLenOfImage - 1}));
 }
 
 uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDirection) {
@@ -78,7 +77,7 @@ uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDir
     new3.y = newPos.y + (NewYLen >> 1) - 1;
     new4.x = newPos.x + (NewXLen >> 1) - 1;
     new4.y = newPos.y + (NewYLen >> 1) - 1;
-    if (isTankTouchWall(new1, new2, new3, new4)) {
+    if (isTouchWall(new1, new2, new3, new4)) {
         return 0;
     }
     isOld1InRange = InRange(old1, new1, new4);
@@ -167,22 +166,6 @@ uint8_t tankMove_clear(Tank_T *tank, DirectionAdd_T directionAdd, uint8_t newDir
     return 1;
 }
 
-uint8_t isTankTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
-    if ((0 < p1.x && p1.x < MapXLen && 0 < p1.y && p1.y < MapYLen)
-        && (0 < p2.x && p2.x < MapXLen && 0 < p2.y && p2.y < MapYLen)
-        && (0 < p3.x && p3.x < MapXLen && 0 < p3.y && p3.y < MapYLen)
-        && (0 < p4.x && p4.x < MapXLen && 0 < p4.y && p4.y < MapYLen)) {
-
-        for (uint16_t i = p1.x; i < p2.x; i += wallWidth) if (isWall(i, p1.y)) return 1;
-        for (uint16_t i = p3.x; i < p4.x; i += wallWidth) if (isWall(i, p3.y)) return 1;
-        for (uint16_t i = p1.y; i < p3.y; i += wallWidth) if (isWall(p1.x, i)) return 1;
-        for (uint16_t i = p2.y; i < p4.y; i += wallWidth) if (isWall(p2.x, i)) return 1;
-
-        return 0; // not touch wall
-    } else {
-        return 1; // touch wall
-    }
-}
 
 void drawTank(Tank_T *tank, uint8_t direction) {
     if ( !tank->isAlive ) return;

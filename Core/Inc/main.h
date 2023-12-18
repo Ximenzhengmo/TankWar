@@ -90,6 +90,8 @@ extern I2C_HandleTypeDef hi2c3;
 #define PEN_IRQ_GPIO_Port GPIOA
 #define SPI3_CS_SDCARD_Pin GPIO_PIN_6
 #define SPI3_CS_SDCARD_GPIO_Port GPIOA
+#define LeftBTN_down_Pin GPIO_PIN_7
+#define LeftBTN_down_GPIO_Port GPIOA
 #define DCRS_Pin GPIO_PIN_11
 #define DCRS_GPIO_Port GPIOA
 #define T_SWDIO_Pin GPIO_PIN_13

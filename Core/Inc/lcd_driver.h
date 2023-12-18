@@ -1,7 +1,6 @@
 #ifndef CUBE_LCD_DRIVER_H
 #define CUBE_LCD_DRIVER_H
 
-#include "main.h"
 #include "global.h"
 //#define USE_DMA
 typedef struct {

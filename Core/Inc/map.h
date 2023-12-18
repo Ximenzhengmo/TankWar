@@ -17,7 +17,7 @@ extern uint16_t MapXLen;
 extern uint16_t MapYLen;
 
 typedef struct {
-    uint8_t up: 1;
+    uint8_t up: 1; // wall: 0, no wall: 1
     uint8_t down: 1;
     uint8_t left: 1;
     uint8_t right: 1;
@@ -43,6 +43,6 @@ typedef struct Node_T {
 HAL_StatusTypeDef createMap();
 void drawMap();
 uint8_t isWall(uint16_t x, uint16_t y);
-
+uint8_t isTouchWall(Point_T p1, Point_T p2, Point_T p3, Point_T p4);
 
 #endif //TANKWAR_MAP_H

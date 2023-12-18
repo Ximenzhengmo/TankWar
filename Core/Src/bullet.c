@@ -15,7 +15,7 @@ const unsigned char gImage_bullet[] = {
 };
 
 
-Bullet_Touch_State getBulletTouchWallState(uint8_t direction, Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
+TouchState_T getBulletTouchWallState(uint8_t direction, Point_T p1, Point_T p2, Point_T p3, Point_T p4) {
 #define boolIsWall(x, y) (isWall(x, y)!=0) // 0 is not wall, 1 is wall
     if ((0 <= p1.x && p1.x < MapXLen && 0 <= p1.y && p1.y < MapYLen)
         && (0 <= p2.x && p2.x < MapXLen && 0 <= p2.y && p2.y < MapYLen)
@@ -114,7 +114,7 @@ Bullet_Touch_State getBulletTouchWallState(uint8_t direction, Point_T p1, Point_
     }
 }
 
-void BulletBound(Bullet_T *bullet, Bullet_Touch_State state) {
+void BulletBound(Bullet_T *bullet, TouchState_T state) {
     if( bullet->direction > 19 ){
         printf("in BulletBound: bullet->direction: %d \n", bullet->direction);
     }
@@ -137,7 +137,7 @@ void BulletBound(Bullet_T *bullet, Bullet_Touch_State state) {
     }
 }
 
-uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd) {
+void bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd) {
 #define InRange(pos, pos1, pos4) (((pos).x >= (pos1).x && (pos).x <= (pos4).x) && ((pos).y >= (pos1).y && (pos).y <= (pos4).y))
     static Point_T old1, old2, old3, old4;
     static Point_T new1, new2, new3, new4;
@@ -169,15 +169,15 @@ uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd) {
     new4.x = newPos.x + (XLen >> 1);
     new4.y = newPos.y + (YLen >> 1);
     //反弹逻辑
-    Bullet_Touch_State state = getBulletTouchWallState(bullet->direction, new1, new2, new3, new4);
+    TouchState_T state = getBulletTouchWallState(bullet->direction, new1, new2, new3, new4);
     if (state != notouch) {
         BulletBound(bullet, state);
-        return 0;
+        return;
     }
     bullet->xPos = newPos.x;
     bullet->yPos = newPos.y;
     if ( bullet->ifDraw == 0 ){
-        return 0;
+        return;
     }
     isOld1InRange = InRange(old1, new1, new4);
     isOld2InRange = InRange(old2, new1, new4);
@@ -259,7 +259,6 @@ uint8_t bulletMove_clear(Bullet_T *bullet, DirectionAdd_T directionAdd) {
             }
             break;
     }
-    return 1;
 }
 
 void drawBullet(Bullet_T *bullet, uint8_t direction) {
@@ -310,7 +309,7 @@ void BulletShoot(Tank_T* tank){
             if(bullets[i].owner == NULL){
                 Bullet_Create(&bullets[i], tank, HAL_GetTick());
                 bullets[i].ifDraw = 0;
-                for (int j = 0; j < Bullet_Create_Loop_Num; ++j) {
+                for (int j = 0; j < BulletCreateSkipNum; ++j) {
                     drawBullet(&bullets[i], bullets[i].direction);
                 }
                 play_sound(Sound_shoot_len, (uint16_t *)audioFile_shoot);
@@ -376,7 +375,7 @@ uint8_t IsBulletCrashTank(Tank_T *tank, Bullet_T *bullet)
     int16_t distance_x = (int16_t)bullet_center_x - (int16_t)tank_center_x;
     int16_t distance_y = (int16_t)bullet_center_y - (int16_t)tank_center_y;
     int16_t distance = ABS(distance_x) - ABS(distance_y);
-    if(ABS(distance) > 45 )
+    if( ABS(distance) > 45 )
     {
         return 0;
     }

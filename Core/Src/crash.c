@@ -19,6 +19,11 @@ const CrashTest_T crashTest_target = {
         .number=20,
         };
 
+const CrashTest_T crashTest_laserIcon = {
+        .addpoint=AddPoint_target,
+        .number=20,
+};
+
 const Point_T AddPoint_0[]= {
         {-9,-8},{-8,-8},{-7,-8},{-6,-8},{-5,-8},{-4,-8},
         {-3,-8},{-2,-8},{-1,-8},{0,-8},{1,-8},{2,-8},
