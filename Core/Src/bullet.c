@@ -44,7 +44,7 @@ TouchState_T getBulletTouchWallState(uint8_t direction, Point_T p1, Point_T p2, 
                     return notouch;
             case 15:
                 if (boolIsWall(cent_x + 3, cent_y - 3) || boolIsWall(cent_x + 3, cent_y) ||
-                    boolIsWall(cent_x + 3, cent_y - 3))
+                    boolIsWall(cent_x + 3, cent_y + 3))
                     return right;
                 else
                     return notouch;
