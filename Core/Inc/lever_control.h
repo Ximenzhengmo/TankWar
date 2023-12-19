@@ -4,7 +4,7 @@
 #include "main.h"
 #include "stdio.h"
 
-#define start_edge (300)
+#define start_edge (400)
 
 uint8_t get_l_state();
 uint8_t get_r_state();

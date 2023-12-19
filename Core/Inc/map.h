@@ -17,14 +17,14 @@ extern uint16_t MapXLen;
 extern uint16_t MapYLen;
 
 typedef struct {
-    uint8_t up: 1; // wall: 0, no wall: 1
-    uint8_t down: 1;
-    uint8_t left: 1;
-    uint8_t right: 1;
-    uint8_t : 4;
-    uint8_t id;
-    uint8_t x: 4;
-    uint8_t y: 4;
+    uint8_t up: 1; // if box up is wall ? 0 : 1
+    uint8_t down: 1; // if box down is wall ? 0 : 1
+    uint8_t left: 1; // if box left is wall ? 0 : 1
+    uint8_t right: 1; // if box right is wall ? 0 : 1
+    uint8_t : 4; // preserved for memory alignment
+    uint8_t id; // box id
+    uint8_t x: 4; // box x (top left corner)
+    uint8_t y: 4; // box y (top left corner)
 } Box_T;
 
 typedef struct {

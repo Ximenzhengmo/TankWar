@@ -80,7 +80,7 @@ HAL_StatusTypeDef createMap() {
             memset(&box[i][j], 0, sizeof(Box_T));
         }
     }
-    srand(HAL_GetTick());
+//    srand(HAL_GetTick());
     // 保护墙体
     for (uint8_t i = 0; i < XMAX; ++i) {
         box[i][0].up = 1;
@@ -101,6 +101,7 @@ HAL_StatusTypeDef createMap() {
     head->next = NULL;
     head->property.num = 0;
     // 生成迷宫
+    setVisited(0);
     insertAllWall(head, &box[0][0]);
     while (!isWallListEmpty(head)) {
         Wall_T wall = popWallFromList(head);
