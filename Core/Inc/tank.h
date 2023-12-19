@@ -13,13 +13,13 @@
 typedef Image_T TankImage_T;
 
 typedef struct Tank_T{
-    uint8_t isAlive;
+    uint8_t isAlive; // 0: died, 1: alive
     uint8_t bulletNum;
-    uint8_t subscript[DIRECTION_FIRST_DIM_LEN];
+    uint8_t subscript[DIRECTION_FIRST_DIM_LEN]; // pace
     const TankImage_T* const tankImage;
     uint8_t direction;
-    int16_t xPos;
-    int16_t yPos;
+    int16_t xPos; // x_center of tankImage
+    int16_t yPos; // y_center of tankImage
 }Tank_T;
 
 #define tankDiedTimeDelay_ms (3*1000)
