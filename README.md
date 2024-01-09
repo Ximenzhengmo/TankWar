@@ -5,7 +5,7 @@
 ## 项目介绍 Project introduction
 BUAA  2023秋单片机基础大作业
 
-使用 **STM32G474RE** 开发板，配合助教 zyy 的 PCB 板实现 **坦克动荡** 游戏
+使用 **NUCLEO-G474RE** 开发板，配合助教 zyy 的 PCB 板实现 **坦克动荡** 游戏
 
 ## 项目贡献者 contributors
 * 张尚谋

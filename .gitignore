@@ -1,13 +1,5 @@
-*.cproject
-*.mxproject
-*.project
-st_nucleo_g4.cfg
-*.ld
 *.txt
 
-/Core/Startup
-/cmake-build-debug/
-/blueTank/
 /Images/greenTank/
 /Images/redTank/
 /.idea/
