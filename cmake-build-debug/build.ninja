@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = D$:/zsm_codes/stm32/TankWar/cmake-build-debug/
+cmake_ninja_workdir = D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target TankWar.elf
 
@@ -49,995 +49,797 @@ cmake_ninja_workdir = D$:/zsm_codes/stm32/TankWar/cmake-build-debug/
 
 build cmake_object_order_depends_target_TankWar.elf: phony || CMakeFiles/TankWar.elf.dir
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/Touch.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/Touch.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/Touch.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/Touch.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\Touch.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/audio.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/audio.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/audio.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/audio.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\audio.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/bullet.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/bullet.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/bullet.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/bullet.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\bullet.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/crash.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/crash.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/crash.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/crash.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\crash.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/global.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/global.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/global.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/global.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\global.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green0.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green0.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green0.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green0.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green0.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green108.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green108.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green108.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green108.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green108.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green126.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green126.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green126.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green126.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green126.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green144.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green144.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green144.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green144.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green144.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green162.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green162.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green162.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green162.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green162.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green18.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green18.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green18.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green18.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green18.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green180.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green180.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green180.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green180.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green180.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green198.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green198.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green198.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green198.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green198.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green216.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green216.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green216.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green216.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green216.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green234.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green234.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green234.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green234.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green234.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green252.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green252.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green252.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green252.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green252.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green270.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green270.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green270.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green270.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green270.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green288.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green288.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green288.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green288.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green288.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green306.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green306.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green306.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green306.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green306.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green324.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green324.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green324.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green324.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green324.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green342.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green342.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green342.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green342.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green342.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green36.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green36.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green36.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green36.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green36.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green54.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green54.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green54.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green54.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green54.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green72.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green72.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green72.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green72.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green72.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green90.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/greenTankArray/green90.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green90.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/greenTankArray/green90.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray\green90.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\greenTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/laser.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/laser.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/laser.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/laser.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\laser.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/lcd_driver.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/lcd_driver.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/lcd_driver.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/lcd_driver.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\lcd_driver.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/lever_control.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/lever_control.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/lever_control.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/lever_control.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\lever_control.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/main.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/main.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/main.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/main.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\main.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/mainMenu.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/mainMenu.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/mainMenu.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/mainMenu.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\mainMenu.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/map.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/map.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/map.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/map.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\map.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/LaserArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/otherArray/LaserArray.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/LaserArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/otherArray/LaserArray.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray\LaserArray.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/MainMenuArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/otherArray/MainMenuArray.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/MainMenuArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/otherArray/MainMenuArray.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray\MainMenuArray.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/NumberArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/otherArray/NumberArray.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/NumberArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/otherArray/NumberArray.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray\NumberArray.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/SoundArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/otherArray/SoundArray.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/SoundArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/otherArray/SoundArray.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray\SoundArray.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/TargetArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/otherArray/TargetArray.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/TargetArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/otherArray/TargetArray.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray\TargetArray.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/WhiteBackgroundArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/otherArray/WhiteBackgroundArray.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/WhiteBackgroundArray.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/otherArray/WhiteBackgroundArray.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray\WhiteBackgroundArray.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\otherArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/record.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/record.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/record.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/record.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\record.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red0.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red0.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red0.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red0.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red0.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red108.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red108.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red108.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red108.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red108.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red126.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red126.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red126.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red126.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red126.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red144.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red144.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red144.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red144.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red144.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red162.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red162.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red162.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red162.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red162.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red18.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red18.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red18.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red18.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red18.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red180.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red180.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red180.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red180.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red180.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red198.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red198.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red198.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red198.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red198.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red216.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red216.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red216.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red216.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red216.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red234.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red234.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red234.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red234.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red234.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red252.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red252.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red252.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red252.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red252.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red270.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red270.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red270.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red270.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red270.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red288.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red288.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red288.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red288.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red288.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red306.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red306.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red306.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red306.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red306.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red324.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red324.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red324.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red324.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red324.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red342.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red342.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red342.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red342.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red342.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red36.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red36.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red36.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red36.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red36.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red54.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red54.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red54.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red54.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red54.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red72.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red72.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red72.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red72.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red72.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red90.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/redTankArray/red90.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red90.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/redTankArray/red90.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray\red90.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src\redTankArray
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/showScore.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/showScore.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/showScore.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/showScore.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\showScore.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/sound.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/sound.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/sound.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/sound.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\sound.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/stm32g4xx_hal_msp.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/stm32g4xx_hal_msp.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\stm32g4xx_hal_msp.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_it.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/stm32g4xx_it.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_it.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/stm32g4xx_it.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\stm32g4xx_it.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/syscalls.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/syscalls.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/syscalls.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/syscalls.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\syscalls.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/sysmem.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/sysmem.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/sysmem.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/sysmem.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\sysmem.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/system_stm32g4xx.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/system_stm32g4xx.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/system_stm32g4xx.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/system_stm32g4xx.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\system_stm32g4xx.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/tank.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/tank.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/tank.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/tank.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\tank.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Src/target.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Src/target.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Src/target.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Src/target.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Src\target.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Core/Startup/startup_stm32g474retx.s.obj: ASM_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Core/Startup/startup_stm32g474retx.s || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Core/Startup/startup_stm32g474retx.s.obj: ASM_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Startup/startup_stm32g474retx.s || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Core\Startup\startup_stm32g474retx.s.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -x assembler-with-cpp -Og -g
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Core\Startup
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_i2c_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rng.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rng.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rng.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rng.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rng.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_sai.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_sai_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_dma.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_exti.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_gpio.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_pwr.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_spi.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
-build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c || cmake_object_order_depends_target_TankWar.elf
+build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c.obj: C_COMPILER__TankWar.2eelf_Debug D$:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c || cmake_object_order_depends_target_TankWar.elf
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_utils.c.obj.d
   FLAGS = -g -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -ID:/zsm_codes/stm32/TankWar/Core/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include
+  INCLUDES = -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\TankWar.elf.dir\Drivers\STM32G4xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
-  TARGET_PDB = TankWar.elf.pdb
 
 
 # =============================================================================
@@ -1049,13 +851,12 @@ build CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_u
 
 build TankWar.elf: C_EXECUTABLE_LINKER__TankWar.2eelf_Debug CMakeFiles/TankWar.elf.dir/Core/Src/Touch.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/audio.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/bullet.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/crash.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/global.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green0.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green108.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green126.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green144.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green162.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green18.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green180.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green198.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green216.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green234.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green252.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green270.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green288.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green306.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green324.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green342.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green36.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green54.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green72.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green90.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/laser.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/lcd_driver.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/lever_control.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/main.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/mainMenu.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/map.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/LaserArray.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/MainMenuArray.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/NumberArray.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/SoundArray.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/TargetArray.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/WhiteBackgroundArray.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/record.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red0.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red108.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red126.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red144.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red162.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red18.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red180.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red198.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red216.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red234.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red252.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red270.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red288.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red306.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red324.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red342.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red36.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red54.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red72.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red90.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/showScore.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/sound.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_it.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/syscalls.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/sysmem.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/system_stm32g4xx.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/tank.c.obj CMakeFiles/TankWar.elf.dir/Core/Src/target.c.obj CMakeFiles/TankWar.elf.dir/Core/Startup/startup_stm32g474retx.s.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rng.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c.obj CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c.obj
   FLAGS = -g
-  LINK_FLAGS = -Wl,-gc-sections,--print-memory-usage,-Map=D:/zsm_codes/stm32/TankWar/cmake-build-debug/TankWar.map -mcpu=cortex-m4 -mthumb -mthumb-interwork -T D:/zsm_codes/stm32/TankWar/STM32G474RETX_FLASH.ld
+  LINK_FLAGS = -Wl,-gc-sections,--print-memory-usage,-Map=D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/cmake-build-debug/TankWar.map -mcpu=cortex-m4 -mthumb -mthumb-interwork -T D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/STM32G474RETX_FLASH.ld
   OBJECT_DIR = CMakeFiles\TankWar.elf.dir
-  POST_BUILD = cmd.exe /C "cd /D D:\zsm_codes\stm32\TankWar\cmake-build-debug && arm-none-eabi-objcopy -Oihex D:/zsm_codes/stm32/TankWar/cmake-build-debug/TankWar.elf D:/zsm_codes/stm32/TankWar/cmake-build-debug/TankWar.hex && arm-none-eabi-objcopy -Obinary D:/zsm_codes/stm32/TankWar/cmake-build-debug/TankWar.elf D:/zsm_codes/stm32/TankWar/cmake-build-debug/TankWar.bin"
+  POST_BUILD = cmd.exe /C "cd /D D:\zsm_codes\stm32\NUCLEO_G474RE\TankWar\cmake-build-debug && arm-none-eabi-objcopy -Oihex D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/cmake-build-debug/TankWar.elf D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/cmake-build-debug/TankWar.hex && arm-none-eabi-objcopy -Obinary D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/cmake-build-debug/TankWar.elf D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/cmake-build-debug/TankWar.bin"
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\TankWar.elf.dir\
   TARGET_FILE = TankWar.elf
-  TARGET_PDB = TankWar.elf.pdb
+  TARGET_PDB = TankWar.elf.dbg
   RSP_FILE = CMakeFiles\TankWar.elf.rsp
 
 
@@ -1063,7 +864,7 @@ build TankWar.elf: C_EXECUTABLE_LINKER__TankWar.2eelf_Debug CMakeFiles/TankWar.e
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\zsm_codes\stm32\TankWar\cmake-build-debug && "D:\zsm\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D D:\zsm_codes\stm32\NUCLEO_G474RE\TankWar\cmake-build-debug && "D:\zsm\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1074,7 +875,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\zsm_codes\stm32\TankWar\cmake-build-debug && "D:\zsm\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SD:\zsm_codes\stm32\TankWar -BD:\zsm_codes\stm32\TankWar\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D D:\zsm_codes\stm32\NUCLEO_G474RE\TankWar\cmake-build-debug && "D:\zsm\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SD:\zsm_codes\stm32\NUCLEO_G474RE\TankWar -BD:\zsm_codes\stm32\NUCLEO_G474RE\TankWar\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1090,7 +891,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: D:/zsm_codes/stm32/TankWar/cmake-build-debug
+# Folder: D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/cmake-build-debug
 
 build all: phony TankWar.elf
 
@@ -1101,14 +902,14 @@ build all: phony TankWar.elf
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeASMCompiler.cmake CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeASMCompiler.cmake.in D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeASMInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCCompilerABI.c D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineASMCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCXXCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystem.cmake.in D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestASMCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestCXXCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-ASM.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-FindBinUtils.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/HP-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XL-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Generic.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeASMCompiler.cmake CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeASMInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-ASM.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Generic.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeASMCompiler.cmake CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeASMCompiler.cmake.in D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeASMInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCCompilerABI.c D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineASMCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCXXCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystem.cmake.in D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestASMCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestCXXCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-ASM.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-FindBinUtils.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/HP-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XL-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Generic.cmake: phony
+build ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeASMCompiler.cmake CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeASMInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-ASM.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake D$:/zsm/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Generic.cmake: phony
 
 
 #############################################

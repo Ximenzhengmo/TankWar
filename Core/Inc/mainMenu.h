@@ -6,7 +6,7 @@
 #include "stdio.h"
 #include "tank.h"
 #include "map.h"
-#include "Touch.h"
+#include "touch.h"
 #include "bullet.h"
 #include "lever_control.h"
 #include "showScore.h"

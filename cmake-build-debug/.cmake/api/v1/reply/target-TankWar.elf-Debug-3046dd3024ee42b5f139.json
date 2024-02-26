@@ -158,23 +158,23 @@
 			[
 				{
 					"backtrace" : 10,
-					"path" : "D:/zsm_codes/stm32/TankWar/Core/Inc"
+					"path" : "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc"
+					"path" : "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"
+					"path" : "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include"
+					"path" : "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include"
+					"path" : "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "C",
@@ -362,23 +362,23 @@
 			[
 				{
 					"backtrace" : 10,
-					"path" : "D:/zsm_codes/stm32/TankWar/Core/Inc"
+					"path" : "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Core/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc"
+					"path" : "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/zsm_codes/stm32/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"
+					"path" : "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include"
+					"path" : "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Device/ST/STM32G4xx/Include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "D:/zsm_codes/stm32/TankWar/Drivers/CMSIS/Include"
+					"path" : "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "ASM",
@@ -403,7 +403,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=D:/zsm_codes/stm32/TankWar/cmake-build-debug/TankWar.map",
+				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/cmake-build-debug/TankWar.map",
 				"role" : "flags"
 			},
 			{
@@ -428,7 +428,7 @@
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "D:/zsm_codes/stm32/TankWar/STM32G474RETX_FLASH.ld",
+				"fragment" : "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/STM32G474RETX_FLASH.ld",
 				"role" : "flags"
 			}
 		],

@@ -54,7 +54,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "D:\zsm\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SD:\zsm_codes\stm32\TankWar -BD:\zsm_codes\stm32\TankWar\cmake-build-debug
+  command = "D:\zsm\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SD:\zsm_codes\stm32\NUCLEO_G474RE\TankWar -BD:\zsm_codes\stm32\NUCLEO_G474RE\TankWar\cmake-build-debug
   description = Re-running CMake...
   generator = 1
 

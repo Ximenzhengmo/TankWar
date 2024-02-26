@@ -1,4 +1,4 @@
-# Install script for directory: D:/zsm_codes/stm32/TankWar
+# Install script for directory: D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/zsm_codes/stm32/TankWar/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/zsm_codes/stm32/NUCLEO_G474RE/TankWar/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

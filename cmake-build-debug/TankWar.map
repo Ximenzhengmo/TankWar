@@ -696,8 +696,8 @@ Discarded input sections
                 0x00000000       0x40 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj
  .debug_rnglists
                 0x00000000       0x37 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj
- .debug_line    0x00000000      0x4db CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj
- .debug_str     0x00000000      0x69a CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj
+ .debug_line    0x00000000      0x513 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj
+ .debug_str     0x00000000      0x6b6 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj
  .comment       0x00000000       0x56 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj
  .debug_frame   0x00000000       0x8c CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj
  .ARM.attributes
@@ -731,8 +731,8 @@ Discarded input sections
                 0x00000000       0x60 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj
  .debug_rnglists
                 0x00000000       0x46 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj
- .debug_line    0x00000000      0x765 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj
- .debug_str     0x00000000      0x44d CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj
+ .debug_line    0x00000000      0x78f CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj
+ .debug_str     0x00000000      0x469 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj
  .comment       0x00000000       0x56 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj
  .debug_frame   0x00000000       0xf4 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj
  .ARM.attributes
@@ -777,8 +777,8 @@ Discarded input sections
                 0x00000000       0x88 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj
  .debug_rnglists
                 0x00000000       0x63 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj
- .debug_line    0x00000000      0x817 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj
- .debug_str     0x00000000      0x693 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj
+ .debug_line    0x00000000      0x84f CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj
+ .debug_str     0x00000000      0x6af CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj
  .comment       0x00000000       0x56 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj
  .debug_frame   0x00000000      0x138 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj
  .ARM.attributes
@@ -838,8 +838,8 @@ Discarded input sections
                 0x00000000       0xc8 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj
  .debug_rnglists
                 0x00000000       0x97 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj
- .debug_line    0x00000000      0xe41 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj
- .debug_str     0x00000000      0x803 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj
+ .debug_line    0x00000000      0xe6b CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj
+ .debug_str     0x00000000      0x81f CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj
  .comment       0x00000000       0x56 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj
  .debug_frame   0x00000000      0x1f8 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj
  .ARM.attributes
@@ -856,8 +856,8 @@ Discarded input sections
                 0x00000000       0x30 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj
  .debug_rnglists
                 0x00000000       0x20 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj
- .debug_line    0x00000000      0x385 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj
- .debug_str     0x00000000      0x4d2 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj
+ .debug_line    0x00000000      0x3af CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj
+ .debug_str     0x00000000      0x4ee CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj
  .comment       0x00000000       0x56 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj
  .debug_frame   0x00000000       0x40 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj
  .ARM.attributes
@@ -1064,8 +1064,8 @@ Discarded input sections
                 0x00000000       0x98 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj
  .debug_rnglists
                 0x00000000       0x6e CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj
- .debug_line    0x00000000      0x44b CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj
- .debug_str     0x00000000      0x6bd CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj
+ .debug_line    0x00000000      0x483 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj
+ .debug_str     0x00000000      0x6d9 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj
  .comment       0x00000000       0x56 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj
  .debug_frame   0x00000000      0x120 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj
  .ARM.attributes
@@ -1298,8 +1298,8 @@ Discarded input sections
                 0x00000000       0x20 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c.obj
  .debug_rnglists
                 0x00000000       0x13 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c.obj
- .debug_line    0x00000000      0x29e CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c.obj
- .debug_str     0x00000000      0x8a6 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c.obj
+ .debug_line    0x00000000      0x2c8 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c.obj
+ .debug_str     0x00000000      0x8c2 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c.obj
  .comment       0x00000000       0x56 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c.obj
  .debug_frame   0x00000000       0x2c CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai_ex.c.obj
  .ARM.attributes
@@ -1839,8 +1839,8 @@ Discarded input sections
                 0x00000000       0x68 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj
  .debug_rnglists
                 0x00000000       0x4b CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj
- .debug_line    0x00000000      0x766 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj
- .debug_str     0x00000000      0x7de CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj
+ .debug_line    0x00000000      0x790 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj
+ .debug_str     0x00000000      0x7fa CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj
  .comment       0x00000000       0x56 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj
  .debug_frame   0x00000000       0xf4 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj
  .ARM.attributes
@@ -1864,8 +1864,8 @@ Discarded input sections
                 0x00000000       0x30 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c.obj
  .debug_rnglists
                 0x00000000       0x98 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c.obj
- .debug_line    0x00000000      0x61d CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c.obj
- .debug_str     0x00000000      0x66c CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c.obj
+ .debug_line    0x00000000      0x647 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c.obj
+ .debug_str     0x00000000      0x688 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c.obj
  .comment       0x00000000       0x56 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c.obj
  .debug_frame   0x00000000       0x4c CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c.obj
  .ARM.attributes
@@ -1887,8 +1887,8 @@ Discarded input sections
                 0x00000000       0x30 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c.obj
  .debug_rnglists
                 0x00000000       0x44 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c.obj
- .debug_line    0x00000000      0x598 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c.obj
- .debug_str     0x00000000      0x4b9 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c.obj
+ .debug_line    0x00000000      0x5c2 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c.obj
+ .debug_str     0x00000000      0x4d5 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c.obj
  .comment       0x00000000       0x56 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c.obj
  .debug_frame   0x00000000       0x54 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c.obj
  .ARM.attributes
@@ -1913,8 +1913,8 @@ Discarded input sections
                 0x00000000       0x20 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c.obj
  .debug_rnglists
                 0x00000000       0x13 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c.obj
- .debug_line    0x00000000      0x203 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c.obj
- .debug_str     0x00000000      0x38f CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c.obj
+ .debug_line    0x00000000      0x22d CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c.obj
+ .debug_str     0x00000000      0x3ab CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c.obj
  .comment       0x00000000       0x56 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c.obj
  .debug_frame   0x00000000       0x20 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c.obj
  .ARM.attributes
@@ -5267,273 +5267,273 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_rnglists
                 0x00001942       0x47 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c.obj
 
-.debug_line     0x00000000    0x2a839
- .debug_line    0x00000000      0x538 CMakeFiles/TankWar.elf.dir/Core/Src/Touch.c.obj
- .debug_line    0x00000538      0x267 CMakeFiles/TankWar.elf.dir/Core/Src/audio.c.obj
- .debug_line    0x0000079f     0x1303 CMakeFiles/TankWar.elf.dir/Core/Src/bullet.c.obj
- .debug_line    0x00001aa2      0x176 CMakeFiles/TankWar.elf.dir/Core/Src/crash.c.obj
- .debug_line    0x00001c18      0x20a CMakeFiles/TankWar.elf.dir/Core/Src/global.c.obj
- .debug_line    0x00001e22       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green0.c.obj
- .debug_line    0x00001e7e       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green108.c.obj
- .debug_line    0x00001edc       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green126.c.obj
- .debug_line    0x00001f3a       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green144.c.obj
- .debug_line    0x00001f98       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green162.c.obj
- .debug_line    0x00001ff6       0x5d CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green18.c.obj
- .debug_line    0x00002053       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green180.c.obj
- .debug_line    0x000020b1       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green198.c.obj
- .debug_line    0x0000210f       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green216.c.obj
- .debug_line    0x0000216d       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green234.c.obj
- .debug_line    0x000021cb       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green252.c.obj
- .debug_line    0x00002229       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green270.c.obj
- .debug_line    0x00002287       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green288.c.obj
- .debug_line    0x000022e5       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green306.c.obj
- .debug_line    0x00002343       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green324.c.obj
- .debug_line    0x000023a1       0x5e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green342.c.obj
- .debug_line    0x000023ff       0x5d CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green36.c.obj
- .debug_line    0x0000245c       0x5d CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green54.c.obj
- .debug_line    0x000024b9       0x5d CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green72.c.obj
- .debug_line    0x00002516       0x5d CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green90.c.obj
- .debug_line    0x00002573      0xcb0 CMakeFiles/TankWar.elf.dir/Core/Src/laser.c.obj
- .debug_line    0x00003223      0x72e CMakeFiles/TankWar.elf.dir/Core/Src/lcd_driver.c.obj
- .debug_line    0x00003951      0x576 CMakeFiles/TankWar.elf.dir/Core/Src/lever_control.c.obj
- .debug_line    0x00003ec7     0x1155 CMakeFiles/TankWar.elf.dir/Core/Src/main.c.obj
- .debug_line    0x0000501c      0x79a CMakeFiles/TankWar.elf.dir/Core/Src/mainMenu.c.obj
- .debug_line    0x000057b6      0xb42 CMakeFiles/TankWar.elf.dir/Core/Src/map.c.obj
- .debug_line    0x000062f8       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/LaserArray.c.obj
- .debug_line    0x00006354       0x5f CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/MainMenuArray.c.obj
- .debug_line    0x000063b3       0x5d CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/NumberArray.c.obj
- .debug_line    0x00006410       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/SoundArray.c.obj
- .debug_line    0x0000646c       0x5d CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/TargetArray.c.obj
- .debug_line    0x000064c9       0x66 CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/WhiteBackgroundArray.c.obj
- .debug_line    0x0000652f      0x23b CMakeFiles/TankWar.elf.dir/Core/Src/record.c.obj
- .debug_line    0x0000676a       0x58 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red0.c.obj
- .debug_line    0x000067c2       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red108.c.obj
- .debug_line    0x0000681c       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red126.c.obj
- .debug_line    0x00006876       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red144.c.obj
- .debug_line    0x000068d0       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red162.c.obj
- .debug_line    0x0000692a       0x59 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red18.c.obj
- .debug_line    0x00006983       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red180.c.obj
- .debug_line    0x000069dd       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red198.c.obj
- .debug_line    0x00006a37       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red216.c.obj
- .debug_line    0x00006a91       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red234.c.obj
- .debug_line    0x00006aeb       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red252.c.obj
- .debug_line    0x00006b45       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red270.c.obj
- .debug_line    0x00006b9f       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red288.c.obj
- .debug_line    0x00006bf9       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red306.c.obj
- .debug_line    0x00006c53       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red324.c.obj
- .debug_line    0x00006cad       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red342.c.obj
- .debug_line    0x00006d07       0x59 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red36.c.obj
- .debug_line    0x00006d60       0x59 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red54.c.obj
- .debug_line    0x00006db9       0x59 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red72.c.obj
- .debug_line    0x00006e12       0x59 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red90.c.obj
- .debug_line    0x00006e6b      0x259 CMakeFiles/TankWar.elf.dir/Core/Src/showScore.c.obj
- .debug_line    0x000070c4      0x296 CMakeFiles/TankWar.elf.dir/Core/Src/sound.c.obj
- .debug_line    0x0000735a      0xad5 CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_line    0x00007e2f      0x3ee CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_line    0x0000821d      0x3dd CMakeFiles/TankWar.elf.dir/Core/Src/syscalls.c.obj
- .debug_line    0x000085fa      0x1aa CMakeFiles/TankWar.elf.dir/Core/Src/sysmem.c.obj
- .debug_line    0x000087a4      0x226 CMakeFiles/TankWar.elf.dir/Core/Src/system_stm32g4xx.c.obj
- .debug_line    0x000089ca      0xc4c CMakeFiles/TankWar.elf.dir/Core/Src/tank.c.obj
- .debug_line    0x00009616      0x5a4 CMakeFiles/TankWar.elf.dir/Core/Src/target.c.obj
- .debug_line    0x00009bba       0x7b CMakeFiles/TankWar.elf.dir/Core/Startup/startup_stm32g474retx.s.obj
- .debug_line    0x00009c35      0x6c8 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
- .debug_line    0x0000a2fd     0x274f CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
- .debug_line    0x0000ca4c     0x21df CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
- .debug_line    0x0000ec2b      0x84d CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_line    0x0000f478      0xc8a CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
- .debug_line    0x00010102      0x6c5 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
- .debug_line    0x000107c7     0x4b19 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
- .debug_line    0x000152e0      0x520 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
- .debug_line    0x00015800      0xa8b CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
- .debug_line    0x0001628b      0xe06 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
- .debug_line    0x00017091     0x1276 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
- .debug_line    0x00018307      0x52f CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rng.c.obj
- .debug_line    0x00018836     0x209a CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai.c.obj
- .debug_line    0x0001a8d0     0x51a8 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_line    0x0001fa78     0x2667 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
- .debug_line    0x000220df     0x6376 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
- .debug_line    0x00028455      0xd40 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
- .debug_line    0x00029195      0x814 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c.obj
- .debug_line    0x000299a9      0x5a6 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c.obj
- .debug_line    0x00029f4f      0x8ea CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c.obj
+.debug_line     0x00000000    0x2b28f
+ .debug_line    0x00000000      0x570 CMakeFiles/TankWar.elf.dir/Core/Src/Touch.c.obj
+ .debug_line    0x00000570      0x29f CMakeFiles/TankWar.elf.dir/Core/Src/audio.c.obj
+ .debug_line    0x0000080f     0x133b CMakeFiles/TankWar.elf.dir/Core/Src/bullet.c.obj
+ .debug_line    0x00001b4a      0x1a0 CMakeFiles/TankWar.elf.dir/Core/Src/crash.c.obj
+ .debug_line    0x00001cea      0x234 CMakeFiles/TankWar.elf.dir/Core/Src/global.c.obj
+ .debug_line    0x00001f1e       0x6a CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green0.c.obj
+ .debug_line    0x00001f88       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green108.c.obj
+ .debug_line    0x00001ff4       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green126.c.obj
+ .debug_line    0x00002060       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green144.c.obj
+ .debug_line    0x000020cc       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green162.c.obj
+ .debug_line    0x00002138       0x6b CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green18.c.obj
+ .debug_line    0x000021a3       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green180.c.obj
+ .debug_line    0x0000220f       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green198.c.obj
+ .debug_line    0x0000227b       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green216.c.obj
+ .debug_line    0x000022e7       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green234.c.obj
+ .debug_line    0x00002353       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green252.c.obj
+ .debug_line    0x000023bf       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green270.c.obj
+ .debug_line    0x0000242b       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green288.c.obj
+ .debug_line    0x00002497       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green306.c.obj
+ .debug_line    0x00002503       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green324.c.obj
+ .debug_line    0x0000256f       0x6c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green342.c.obj
+ .debug_line    0x000025db       0x6b CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green36.c.obj
+ .debug_line    0x00002646       0x6b CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green54.c.obj
+ .debug_line    0x000026b1       0x6b CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green72.c.obj
+ .debug_line    0x0000271c       0x6b CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green90.c.obj
+ .debug_line    0x00002787      0xce8 CMakeFiles/TankWar.elf.dir/Core/Src/laser.c.obj
+ .debug_line    0x0000346f      0x766 CMakeFiles/TankWar.elf.dir/Core/Src/lcd_driver.c.obj
+ .debug_line    0x00003bd5      0x5ae CMakeFiles/TankWar.elf.dir/Core/Src/lever_control.c.obj
+ .debug_line    0x00004183     0x119b CMakeFiles/TankWar.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x0000531e      0x7d2 CMakeFiles/TankWar.elf.dir/Core/Src/mainMenu.c.obj
+ .debug_line    0x00005af0      0xb7a CMakeFiles/TankWar.elf.dir/Core/Src/map.c.obj
+ .debug_line    0x0000666a       0x6a CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/LaserArray.c.obj
+ .debug_line    0x000066d4       0x6d CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/MainMenuArray.c.obj
+ .debug_line    0x00006741       0x6b CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/NumberArray.c.obj
+ .debug_line    0x000067ac       0x6a CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/SoundArray.c.obj
+ .debug_line    0x00006816       0x6b CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/TargetArray.c.obj
+ .debug_line    0x00006881       0x74 CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/WhiteBackgroundArray.c.obj
+ .debug_line    0x000068f5      0x273 CMakeFiles/TankWar.elf.dir/Core/Src/record.c.obj
+ .debug_line    0x00006b68       0x66 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red0.c.obj
+ .debug_line    0x00006bce       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red108.c.obj
+ .debug_line    0x00006c36       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red126.c.obj
+ .debug_line    0x00006c9e       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red144.c.obj
+ .debug_line    0x00006d06       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red162.c.obj
+ .debug_line    0x00006d6e       0x67 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red18.c.obj
+ .debug_line    0x00006dd5       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red180.c.obj
+ .debug_line    0x00006e3d       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red198.c.obj
+ .debug_line    0x00006ea5       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red216.c.obj
+ .debug_line    0x00006f0d       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red234.c.obj
+ .debug_line    0x00006f75       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red252.c.obj
+ .debug_line    0x00006fdd       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red270.c.obj
+ .debug_line    0x00007045       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red288.c.obj
+ .debug_line    0x000070ad       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red306.c.obj
+ .debug_line    0x00007115       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red324.c.obj
+ .debug_line    0x0000717d       0x68 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red342.c.obj
+ .debug_line    0x000071e5       0x67 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red36.c.obj
+ .debug_line    0x0000724c       0x67 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red54.c.obj
+ .debug_line    0x000072b3       0x67 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red72.c.obj
+ .debug_line    0x0000731a       0x67 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red90.c.obj
+ .debug_line    0x00007381      0x283 CMakeFiles/TankWar.elf.dir/Core/Src/showScore.c.obj
+ .debug_line    0x00007604      0x2ce CMakeFiles/TankWar.elf.dir/Core/Src/sound.c.obj
+ .debug_line    0x000078d2      0xb0d CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_line    0x000083df      0x426 CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_line    0x00008805      0x3eb CMakeFiles/TankWar.elf.dir/Core/Src/syscalls.c.obj
+ .debug_line    0x00008bf0      0x1b8 CMakeFiles/TankWar.elf.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x00008da8      0x242 CMakeFiles/TankWar.elf.dir/Core/Src/system_stm32g4xx.c.obj
+ .debug_line    0x00008fea      0xc84 CMakeFiles/TankWar.elf.dir/Core/Src/tank.c.obj
+ .debug_line    0x00009c6e      0x5dc CMakeFiles/TankWar.elf.dir/Core/Src/target.c.obj
+ .debug_line    0x0000a24a       0x7b CMakeFiles/TankWar.elf.dir/Core/Startup/startup_stm32g474retx.s.obj
+ .debug_line    0x0000a2c5      0x700 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
+ .debug_line    0x0000a9c5     0x2787 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
+ .debug_line    0x0000d14c     0x2217 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
+ .debug_line    0x0000f363      0x885 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+ .debug_line    0x0000fbe8      0xcb4 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
+ .debug_line    0x0001089c      0x6ef CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
+ .debug_line    0x00010f8b     0x4b43 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
+ .debug_line    0x00015ace      0x54a CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
+ .debug_line    0x00016018      0xac3 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
+ .debug_line    0x00016adb      0xe30 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
+ .debug_line    0x0001790b     0x12a0 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
+ .debug_line    0x00018bab      0x559 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rng.c.obj
+ .debug_line    0x00019104     0x20c4 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai.c.obj
+ .debug_line    0x0001b1c8     0x51d2 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_line    0x0002039a     0x2691 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
+ .debug_line    0x00022a2b     0x63ae CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
+ .debug_line    0x00028dd9      0xd78 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+ .debug_line    0x00029b51      0x84c CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c.obj
+ .debug_line    0x0002a39d      0x5d0 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c.obj
+ .debug_line    0x0002a96d      0x922 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c.obj
 
-.debug_str      0x00000000     0xa788
- .debug_str     0x00000000      0x370 CMakeFiles/TankWar.elf.dir/Core/Src/Touch.c.obj
-                                0x3d4 (size before relaxing)
- .debug_str     0x00000370      0x5aa CMakeFiles/TankWar.elf.dir/Core/Src/audio.c.obj
-                                0x7e7 (size before relaxing)
- .debug_str     0x0000091a      0x466 CMakeFiles/TankWar.elf.dir/Core/Src/bullet.c.obj
-                                0x72d (size before relaxing)
- .debug_str     0x00000d80      0x16f CMakeFiles/TankWar.elf.dir/Core/Src/crash.c.obj
-                                0x347 (size before relaxing)
- .debug_str     0x00000eef       0x44 CMakeFiles/TankWar.elf.dir/Core/Src/global.c.obj
-                                0x233 (size before relaxing)
- .debug_str     0x00000f33       0x4a CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green0.c.obj
-                                0x14d (size before relaxing)
- .debug_str     0x00000f7d       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green108.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x00000fcb       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green126.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x00001019       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green144.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x00001067       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green162.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x000010b5       0x4c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green18.c.obj
-                                0x14f (size before relaxing)
- .debug_str     0x00001101       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green180.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x0000114f       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green198.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x0000119d       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green216.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x000011eb       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green234.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x00001239       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green252.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x00001287       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green270.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x000012d5       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green288.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x00001323       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green306.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x00001371       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green324.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x000013bf       0x4e CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green342.c.obj
-                                0x151 (size before relaxing)
- .debug_str     0x0000140d       0x4c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green36.c.obj
-                                0x14f (size before relaxing)
- .debug_str     0x00001459       0x4c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green54.c.obj
-                                0x14f (size before relaxing)
- .debug_str     0x000014a5       0x4c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green72.c.obj
-                                0x14f (size before relaxing)
- .debug_str     0x000014f1       0x4c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green90.c.obj
-                                0x14f (size before relaxing)
- .debug_str     0x0000153d      0x20c CMakeFiles/TankWar.elf.dir/Core/Src/laser.c.obj
-                                0x6de (size before relaxing)
- .debug_str     0x00001749      0x2bb CMakeFiles/TankWar.elf.dir/Core/Src/lcd_driver.c.obj
-                                0x66e (size before relaxing)
- .debug_str     0x00001a04      0x3c2 CMakeFiles/TankWar.elf.dir/Core/Src/lever_control.c.obj
-                                0x8ff (size before relaxing)
- .debug_str     0x00001dc6     0x1665 CMakeFiles/TankWar.elf.dir/Core/Src/main.c.obj
-                               0x2530 (size before relaxing)
- .debug_str     0x0000342b      0x1dd CMakeFiles/TankWar.elf.dir/Core/Src/mainMenu.c.obj
-                                0xd27 (size before relaxing)
- .debug_str     0x00003608      0x137 CMakeFiles/TankWar.elf.dir/Core/Src/map.c.obj
-                                0x539 (size before relaxing)
- .debug_str     0x0000373f       0x3c CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/LaserArray.c.obj
-                                0x150 (size before relaxing)
- .debug_str     0x0000377b       0x3f CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/MainMenuArray.c.obj
-                                0x152 (size before relaxing)
- .debug_str     0x000037ba       0x46 CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/NumberArray.c.obj
-                                0x149 (size before relaxing)
- .debug_str     0x00003800       0x4c CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/SoundArray.c.obj
-                                0x15f (size before relaxing)
- .debug_str     0x0000384c       0x4b CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/TargetArray.c.obj
-                                0x14e (size before relaxing)
- .debug_str     0x00003897       0x46 CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/WhiteBackgroundArray.c.obj
-                                0x159 (size before relaxing)
- .debug_str     0x000038dd       0x2d CMakeFiles/TankWar.elf.dir/Core/Src/record.c.obj
-                                0x7e6 (size before relaxing)
- .debug_str     0x0000390a       0x44 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red0.c.obj
-                                0x147 (size before relaxing)
- .debug_str     0x0000394e       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red108.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003996       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red126.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x000039de       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red144.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003a26       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red162.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003a6e       0x46 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red18.c.obj
-                                0x149 (size before relaxing)
- .debug_str     0x00003ab4       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red180.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003afc       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red198.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003b44       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red216.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003b8c       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red234.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003bd4       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red252.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003c1c       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red270.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003c64       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red288.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003cac       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red306.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003cf4       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red324.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003d3c       0x48 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red342.c.obj
-                                0x14b (size before relaxing)
- .debug_str     0x00003d84       0x46 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red36.c.obj
-                                0x149 (size before relaxing)
- .debug_str     0x00003dca       0x46 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red54.c.obj
-                                0x149 (size before relaxing)
- .debug_str     0x00003e10       0x46 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red72.c.obj
-                                0x149 (size before relaxing)
- .debug_str     0x00003e56       0x46 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red90.c.obj
-                                0x149 (size before relaxing)
- .debug_str     0x00003e9c       0x54 CMakeFiles/TankWar.elf.dir/Core/Src/showScore.c.obj
-                                0x265 (size before relaxing)
- .debug_str     0x00003ef0       0x90 CMakeFiles/TankWar.elf.dir/Core/Src/sound.c.obj
-                                0x886 (size before relaxing)
- .debug_str     0x00003f80      0x3c9 CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
-                               0x1ef1 (size before relaxing)
- .debug_str     0x00004349      0x183 CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_it.c.obj
-                                0xa51 (size before relaxing)
- .debug_str     0x000044cc      0x223 CMakeFiles/TankWar.elf.dir/Core/Src/syscalls.c.obj
-                                0x411 (size before relaxing)
- .debug_str     0x000046ef       0x8d CMakeFiles/TankWar.elf.dir/Core/Src/sysmem.c.obj
-                                0x23d (size before relaxing)
- .debug_str     0x0000477c       0x8f CMakeFiles/TankWar.elf.dir/Core/Src/system_stm32g4xx.c.obj
-                                0x38f (size before relaxing)
- .debug_str     0x0000480b       0x76 CMakeFiles/TankWar.elf.dir/Core/Src/tank.c.obj
-                                0x84d (size before relaxing)
- .debug_str     0x00004881       0xa5 CMakeFiles/TankWar.elf.dir/Core/Src/target.c.obj
-                                0x5f9 (size before relaxing)
- .debug_str     0x00004926       0x5c CMakeFiles/TankWar.elf.dir/Core/Startup/startup_stm32g474retx.s.obj
-                                 0x89 (size before relaxing)
- .debug_str     0x00004982      0x432 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
-                                0xe34 (size before relaxing)
- .debug_str     0x00004db4      0x9e7 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
-                               0x1327 (size before relaxing)
- .debug_str     0x0000579b      0x5cc CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
-                               0x1301 (size before relaxing)
- .debug_str     0x00005d67      0x474 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
-                                0xd79 (size before relaxing)
- .debug_str     0x000061db      0x26f CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
-                                0x7bd (size before relaxing)
- .debug_str     0x0000644a       0xf9 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
-                                0x55c (size before relaxing)
- .debug_str     0x00006543      0x858 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
-                               0x10b0 (size before relaxing)
- .debug_str     0x00006d9b       0xd0 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
-                                0xa16 (size before relaxing)
- .debug_str     0x00006e6b      0x4f3 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
-                                0x7fe (size before relaxing)
- .debug_str     0x0000735e      0x296 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
-                                0x871 (size before relaxing)
- .debug_str     0x000075f4      0x371 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
-                                0xa81 (size before relaxing)
- .debug_str     0x00007965      0x108 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rng.c.obj
-                                0x467 (size before relaxing)
- .debug_str     0x00007a6d      0x3bc CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai.c.obj
-                                0xcc8 (size before relaxing)
- .debug_str     0x00007e29      0xf0b CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
-                               0x18b1 (size before relaxing)
- .debug_str     0x00008d34      0x8ee CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
-                               0x1534 (size before relaxing)
- .debug_str     0x00009622      0x868 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
-                               0x121e (size before relaxing)
- .debug_str     0x00009e8a      0x240 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
-                                0xb38 (size before relaxing)
- .debug_str     0x0000a0ca      0x134 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c.obj
-                                0x4fd (size before relaxing)
- .debug_str     0x0000a1fe      0x20a CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c.obj
-                                0x5fc (size before relaxing)
- .debug_str     0x0000a408      0x380 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c.obj
-                                0x826 (size before relaxing)
+.debug_str      0x00000000     0xac66
+ .debug_str     0x00000000      0x38c CMakeFiles/TankWar.elf.dir/Core/Src/Touch.c.obj
+                                0x3f0 (size before relaxing)
+ .debug_str     0x0000038c      0x5b8 CMakeFiles/TankWar.elf.dir/Core/Src/audio.c.obj
+                                0x803 (size before relaxing)
+ .debug_str     0x00000944      0x474 CMakeFiles/TankWar.elf.dir/Core/Src/bullet.c.obj
+                                0x749 (size before relaxing)
+ .debug_str     0x00000db8      0x17d CMakeFiles/TankWar.elf.dir/Core/Src/crash.c.obj
+                                0x363 (size before relaxing)
+ .debug_str     0x00000f35       0x52 CMakeFiles/TankWar.elf.dir/Core/Src/global.c.obj
+                                0x24f (size before relaxing)
+ .debug_str     0x00000f87       0x58 CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green0.c.obj
+                                0x169 (size before relaxing)
+ .debug_str     0x00000fdf       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green108.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x0000103b       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green126.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x00001097       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green144.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x000010f3       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green162.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x0000114f       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green18.c.obj
+                                0x16b (size before relaxing)
+ .debug_str     0x000011a9       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green180.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x00001205       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green198.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x00001261       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green216.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x000012bd       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green234.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x00001319       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green252.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x00001375       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green270.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x000013d1       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green288.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x0000142d       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green306.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x00001489       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green324.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x000014e5       0x5c CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green342.c.obj
+                                0x16d (size before relaxing)
+ .debug_str     0x00001541       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green36.c.obj
+                                0x16b (size before relaxing)
+ .debug_str     0x0000159b       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green54.c.obj
+                                0x16b (size before relaxing)
+ .debug_str     0x000015f5       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green72.c.obj
+                                0x16b (size before relaxing)
+ .debug_str     0x0000164f       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/greenTankArray/green90.c.obj
+                                0x16b (size before relaxing)
+ .debug_str     0x000016a9      0x21a CMakeFiles/TankWar.elf.dir/Core/Src/laser.c.obj
+                                0x6fa (size before relaxing)
+ .debug_str     0x000018c3      0x2c9 CMakeFiles/TankWar.elf.dir/Core/Src/lcd_driver.c.obj
+                                0x68a (size before relaxing)
+ .debug_str     0x00001b8c      0x3d0 CMakeFiles/TankWar.elf.dir/Core/Src/lever_control.c.obj
+                                0x91b (size before relaxing)
+ .debug_str     0x00001f5c     0x1673 CMakeFiles/TankWar.elf.dir/Core/Src/main.c.obj
+                               0x254c (size before relaxing)
+ .debug_str     0x000035cf      0x1eb CMakeFiles/TankWar.elf.dir/Core/Src/mainMenu.c.obj
+                                0xd43 (size before relaxing)
+ .debug_str     0x000037ba      0x145 CMakeFiles/TankWar.elf.dir/Core/Src/map.c.obj
+                                0x555 (size before relaxing)
+ .debug_str     0x000038ff       0x4a CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/LaserArray.c.obj
+                                0x16c (size before relaxing)
+ .debug_str     0x00003949       0x4d CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/MainMenuArray.c.obj
+                                0x16e (size before relaxing)
+ .debug_str     0x00003996       0x54 CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/NumberArray.c.obj
+                                0x165 (size before relaxing)
+ .debug_str     0x000039ea       0x5a CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/SoundArray.c.obj
+                                0x17b (size before relaxing)
+ .debug_str     0x00003a44       0x59 CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/TargetArray.c.obj
+                                0x16a (size before relaxing)
+ .debug_str     0x00003a9d       0x54 CMakeFiles/TankWar.elf.dir/Core/Src/otherArray/WhiteBackgroundArray.c.obj
+                                0x175 (size before relaxing)
+ .debug_str     0x00003af1       0x3b CMakeFiles/TankWar.elf.dir/Core/Src/record.c.obj
+                                0x802 (size before relaxing)
+ .debug_str     0x00003b2c       0x52 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red0.c.obj
+                                0x163 (size before relaxing)
+ .debug_str     0x00003b7e       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red108.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003bd4       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red126.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003c2a       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red144.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003c80       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red162.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003cd6       0x54 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red18.c.obj
+                                0x165 (size before relaxing)
+ .debug_str     0x00003d2a       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red180.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003d80       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red198.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003dd6       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red216.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003e2c       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red234.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003e82       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red252.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003ed8       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red270.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003f2e       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red288.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003f84       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red306.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00003fda       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red324.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00004030       0x56 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red342.c.obj
+                                0x167 (size before relaxing)
+ .debug_str     0x00004086       0x54 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red36.c.obj
+                                0x165 (size before relaxing)
+ .debug_str     0x000040da       0x54 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red54.c.obj
+                                0x165 (size before relaxing)
+ .debug_str     0x0000412e       0x54 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red72.c.obj
+                                0x165 (size before relaxing)
+ .debug_str     0x00004182       0x54 CMakeFiles/TankWar.elf.dir/Core/Src/redTankArray/red90.c.obj
+                                0x165 (size before relaxing)
+ .debug_str     0x000041d6       0x62 CMakeFiles/TankWar.elf.dir/Core/Src/showScore.c.obj
+                                0x281 (size before relaxing)
+ .debug_str     0x00004238       0x9e CMakeFiles/TankWar.elf.dir/Core/Src/sound.c.obj
+                                0x8a2 (size before relaxing)
+ .debug_str     0x000042d6      0x3d7 CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+                               0x1f0d (size before relaxing)
+ .debug_str     0x000046ad      0x191 CMakeFiles/TankWar.elf.dir/Core/Src/stm32g4xx_it.c.obj
+                                0xa6d (size before relaxing)
+ .debug_str     0x0000483e      0x231 CMakeFiles/TankWar.elf.dir/Core/Src/syscalls.c.obj
+                                0x42d (size before relaxing)
+ .debug_str     0x00004a6f       0x9b CMakeFiles/TankWar.elf.dir/Core/Src/sysmem.c.obj
+                                0x259 (size before relaxing)
+ .debug_str     0x00004b0a       0x9d CMakeFiles/TankWar.elf.dir/Core/Src/system_stm32g4xx.c.obj
+                                0x3ab (size before relaxing)
+ .debug_str     0x00004ba7       0x84 CMakeFiles/TankWar.elf.dir/Core/Src/tank.c.obj
+                                0x869 (size before relaxing)
+ .debug_str     0x00004c2b       0xb3 CMakeFiles/TankWar.elf.dir/Core/Src/target.c.obj
+                                0x615 (size before relaxing)
+ .debug_str     0x00004cde       0x6a CMakeFiles/TankWar.elf.dir/Core/Startup/startup_stm32g474retx.s.obj
+                                 0xa5 (size before relaxing)
+ .debug_str     0x00004d48      0x440 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
+                                0xe50 (size before relaxing)
+ .debug_str     0x00005188      0x9f5 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
+                               0x1343 (size before relaxing)
+ .debug_str     0x00005b7d      0x5da CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
+                               0x131d (size before relaxing)
+ .debug_str     0x00006157      0x482 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+                                0xd95 (size before relaxing)
+ .debug_str     0x000065d9      0x27d CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj
+                                0x7d9 (size before relaxing)
+ .debug_str     0x00006856      0x107 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
+                                0x578 (size before relaxing)
+ .debug_str     0x0000695d      0x866 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
+                               0x10cc (size before relaxing)
+ .debug_str     0x000071c3       0xde CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
+                                0xa32 (size before relaxing)
+ .debug_str     0x000072a1      0x501 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
+                                0x81a (size before relaxing)
+ .debug_str     0x000077a2      0x2a4 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
+                                0x88d (size before relaxing)
+ .debug_str     0x00007a46      0x37f CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
+                                0xa9d (size before relaxing)
+ .debug_str     0x00007dc5      0x116 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rng.c.obj
+                                0x483 (size before relaxing)
+ .debug_str     0x00007edb      0x3ca CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_sai.c.obj
+                                0xce4 (size before relaxing)
+ .debug_str     0x000082a5      0xf19 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+                               0x18cd (size before relaxing)
+ .debug_str     0x000091be      0x8fc CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
+                               0x1550 (size before relaxing)
+ .debug_str     0x00009aba      0x876 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
+                               0x123a (size before relaxing)
+ .debug_str     0x0000a330      0x24e CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+                                0xb54 (size before relaxing)
+ .debug_str     0x0000a57e      0x142 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c.obj
+                                0x519 (size before relaxing)
+ .debug_str     0x0000a6c0      0x218 CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c.obj
+                                0x618 (size before relaxing)
+ .debug_str     0x0000a8d8      0x38e CMakeFiles/TankWar.elf.dir/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c.obj
+                                0x842 (size before relaxing)
 
 .comment        0x00000000       0x55
  .comment       0x00000000       0x55 CMakeFiles/TankWar.elf.dir/Core/Src/Touch.c.obj
@@ -5739,39 +5739,39 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_frame   0x00006884       0x24 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixdfsi.o)
 
 .debug_line_str
-                0x00000000      0x271
+                0x00000000      0x28d
  .debug_line_str
-                0x00000000       0x6d CMakeFiles/TankWar.elf.dir/Core/Startup/startup_stm32g474retx.s.obj
+                0x00000000       0x89 CMakeFiles/TankWar.elf.dir/Core/Startup/startup_stm32g474retx.s.obj
  .debug_line_str
-                0x0000006d       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_mulsf3.o)
+                0x00000089       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_mulsf3.o)
  .debug_line_str
-                0x00000148       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubsf3.o)
+                0x00000164       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubsf3.o)
  .debug_line_str
-                0x00000148       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpsf2.o)
+                0x00000164       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpsf2.o)
  .debug_line_str
-                0x00000148       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixsfsi.o)
+                0x00000164       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixsfsi.o)
  .debug_line_str
-                0x00000148        0x8 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+                0x00000164        0x8 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_aeabi_uldivmod.o)
                                  0xd6 (size before relaxing)
  .debug_line_str
-                0x00000150        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_dvmd_tls.o)
+                0x0000016c        0xc c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_dvmd_tls.o)
                                  0xda (size before relaxing)
  .debug_line_str
-                0x0000015c       0xef c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libg.a(libc_a-strlen.o)
+                0x00000178       0xef c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libg.a(libc_a-strlen.o)
  .debug_line_str
-                0x0000024b        0x9 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libg.a(libc_a-memchr.o)
+                0x00000267        0x9 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libg.a(libc_a-memchr.o)
                                  0xe9 (size before relaxing)
  .debug_line_str
-                0x00000254       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libg.a(libc_a-memcpy.o)
+                0x00000270       0x10 c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libg.a(libc_a-memcpy.o)
                                  0xf0 (size before relaxing)
  .debug_line_str
-                0x00000264        0xd c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
+                0x00000280        0xd c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
                                  0xdb (size before relaxing)
  .debug_line_str
-                0x00000271       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
+                0x0000028d       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
  .debug_line_str
-                0x00000271       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpdf2.o)
+                0x0000028d       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpdf2.o)
  .debug_line_str
-                0x00000271       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unorddf2.o)
+                0x0000028d       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unorddf2.o)
  .debug_line_str
-                0x00000271       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixdfsi.o)
+                0x0000028d       0xdb c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixdfsi.o)
